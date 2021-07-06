@@ -1,4 +1,4 @@
-﻿15:08:27.363     0>将用于 $(MSBuildExtensionsPath) 的搜索路径为 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild;$(MSBuildProgramFiles32)\MSBuild
+﻿15:20:11.253     0>将用于 $(MSBuildExtensionsPath) 的搜索路径为 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild;$(MSBuildProgramFiles32)\MSBuild
                    尝试使用扩展路径 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild 导入 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\$(MSBuildToolsVersion)\Microsoft.Common.props
                    在 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Microsoft.Common.props (57,5) 处重新分配属性: $(MSBuildProjectExtensionsPath)=“D:\gitTry\TRY\try\try\obj\”(先前值:“obj\”)
                    将用于 $(MSBuildExtensionsPath) 的搜索路径为 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild;$(MSBuildProgramFiles32)\MSBuild
@@ -950,7 +950,7 @@
                    正在使用项目“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“ComputeMetaGenInputs”重写项目“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.MetaGen.targets”中的目标“ComputeMetaGenInputs”。
                    正在使用项目“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“GetNativeManifest”重写项目“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“GetNativeManifest”。
                    正在使用项目“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.DesignTime.targets”中的目标“GetTargetPathWithTargetPlatformMoniker”重写项目“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“GetTargetPathWithTargetPlatformMoniker”。
-生成启动时间为 2021/7/6 15:08:27。
+生成启动时间为 2021/7/6 15:20:11。
 开始生成时的环境:
                    ALLUSERSPROFILE = C:\ProgramData
                    APPDATA = C:\Users\NORA\AppData\Roaming
@@ -964,6 +964,8 @@
                    ComSpec = C:\Windows\system32\cmd.exe
                    DriverData = C:\Windows\System32\Drivers\DriverData
                    ForceIdentityAuthenticationType = Embedded
+                   FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
+                   FPS_BROWSER_USER_PROFILE_STRING = Default
                    HOMEDRIVE = C:
                    HOMEPATH = \Users\NORA
                    IntelliJ IDEA = C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin;
@@ -975,7 +977,7 @@
                    OneDrive = C:\Users\NORA\OneDrive
                    OneDriveConsumer = C:\Users\NORA\OneDrive
                    OS = Windows_NT
-                   Path = D:\JAVA\jdk-16\bin;D:\JAVA\jdk-16\jre\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\SQL SERVER x86\100\Tools\Binn\;D:\SQL SERVER\100\Tools\Binn\;D:\SQL SERVER\100\DTS\Binn\;C:\Program Files\dotnet\;D:\Git\cmd;C:\Users\NORA\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\WebStorm 2020.3.3\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin;C:\Program Files\JetBrains\CLion 2020.3.3\bin;C:\Users\NORA\.dotnet\tools;C:\Users\NORA\AppData\Local\gitkraken\bin;C:\Users\NORA\AppData\Local\GitHubDesktop\bin
+                   Path = D:\JAVA\jdk-16\bin;D:\JAVA\jdk-16\jre\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\SQL SERVER x86\100\Tools\Binn\;D:\SQL SERVER\100\Tools\Binn\;D:\SQL SERVER\100\DTS\Binn\;C:\Program Files\dotnet\;D:\Git\cmd;C:\Users\NORA\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\WebStorm 2020.3.3\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin;C:\Program Files\JetBrains\CLion 2020.3.3\bin;C:\Users\NORA\.dotnet\tools;C:\Users\NORA\AppData\Local\gitkraken\bin
                    PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
                    PkgDefApplicationConfigFile = C:\Users\NORA\AppData\Local\Microsoft\VisualStudio\16.0_7dd54f4f\devenv.exe.config
                    PROCESSOR_ARCHITECTURE = x86
@@ -989,7 +991,7 @@
                    ProgramW6432 = C:\Program Files
                    PSModulePath = C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
                    PUBLIC = C:\Users\Public
-                   ServiceHubLogSessionKey = 826C192A
+                   ServiceHubLogSessionKey = 827B277A
                    SESSIONNAME = Console
                    SignInWithHomeTenantOnly = False
                    SystemDrive = C:
@@ -1012,8 +1014,8 @@
                    WebStorm = C:\Program Files\JetBrains\WebStorm 2020.3.3\bin;
                    windir = C:\Windows
 
-日志记录详细程度设置为: Diagnostic。15:08:27.469     1>项目“D:\gitTry\TRY\try\try\try.vcxproj”在节点 2 上(Build 个目标)。
-15:08:27.469     1>初始属性:
+日志记录详细程度设置为: Diagnostic。15:20:11.344     1>项目“D:\gitTry\TRY\try\try\try.vcxproj”在节点 2 上(Build 个目标)。
+15:20:11.344     1>初始属性:
                    _AfterCompileWinFXInternalDependsOn = 
                            PrepareResourcesForSatelliteAssemblies;
                            MergeLocalizationDirectives;
@@ -1461,7 +1463,7 @@
                          ResolveReferences;
                        
                    CommonExcludePath = C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\include;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\atlmfc\include;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\VS\include;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt;;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\Include\um;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\arm64\2052;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x64\2052;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86\2052;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX64\arm64\2052;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX64\arm\2052;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX64\x64\2052;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX64\x86\2052;;;;;;;;;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;C:\Windows
-                   CommonExecutablePath = C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;;D:\JAVA\jdk-16\bin;D:\JAVA\jdk-16\jre\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\SQL SERVER x86\100\Tools\Binn\;D:\SQL SERVER\100\Tools\Binn\;D:\SQL SERVER\100\DTS\Binn\;C:\Program Files\dotnet\;D:\Git\cmd;C:\Users\NORA\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\WebStorm 2020.3.3\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin;C:\Program Files\JetBrains\CLion 2020.3.3\bin;C:\Users\NORA\.dotnet\tools;C:\Users\NORA\AppData\Local\gitkraken\bin;C:\Users\NORA\AppData\Local\GitHubDesktop\bin;
+                   CommonExecutablePath = C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;;D:\JAVA\jdk-16\bin;D:\JAVA\jdk-16\jre\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\SQL SERVER x86\100\Tools\Binn\;D:\SQL SERVER\100\Tools\Binn\;D:\SQL SERVER\100\DTS\Binn\;C:\Program Files\dotnet\;D:\Git\cmd;C:\Users\NORA\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\WebStorm 2020.3.3\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin;C:\Program Files\JetBrains\CLion 2020.3.3\bin;C:\Users\NORA\.dotnet\tools;C:\Users\NORA\AppData\Local\gitkraken\bin;
                    CommonOutputGroupsDependsOn = 
                          ;
                          BuildOnlySettings;
@@ -1756,7 +1758,7 @@
                    EntityDeployIntermediateResourcePath = Debug\edmxResourcesToEmbed\
                    EspXtensions = ConcurrencyCheck.dll;VariantClear.dll;HResultCheck.dll;EnumIndex.dll;CppCoreCheck.dll;
                    ExcludePath = C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\include;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\atlmfc\include;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\VS\include;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt;;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\Include\um;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\arm64\2052;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x64\2052;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86\2052;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX64\arm64\2052;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX64\arm\2052;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX64\x64\2052;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX64\x86\2052;;;;;;;;;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;C:\Windows;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\lib\x86;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\atlmfc\lib\x86;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\VS\lib\x86;;C:\Program Files (x86)\Windows Kits\10\lib\10.0.19041.0\ucrt\x86;;
-                   ExecutablePath = C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;;D:\JAVA\jdk-16\bin;D:\JAVA\jdk-16\jre\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\SQL SERVER x86\100\Tools\Binn\;D:\SQL SERVER\100\Tools\Binn\;D:\SQL SERVER\100\DTS\Binn\;C:\Program Files\dotnet\;D:\Git\cmd;C:\Users\NORA\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\WebStorm 2020.3.3\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin;C:\Program Files\JetBrains\CLion 2020.3.3\bin;C:\Users\NORA\.dotnet\tools;C:\Users\NORA\AppData\Local\gitkraken\bin;C:\Users\NORA\AppData\Local\GitHubDesktop\bin;
+                   ExecutablePath = C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;;D:\JAVA\jdk-16\bin;D:\JAVA\jdk-16\jre\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\SQL SERVER x86\100\Tools\Binn\;D:\SQL SERVER\100\Tools\Binn\;D:\SQL SERVER\100\DTS\Binn\;C:\Program Files\dotnet\;D:\Git\cmd;C:\Users\NORA\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\WebStorm 2020.3.3\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin;C:\Program Files\JetBrains\CLion 2020.3.3\bin;C:\Users\NORA\.dotnet\tools;C:\Users\NORA\AppData\Local\gitkraken\bin;
                    ExpandSDKAllowedReferenceExtensions = 
                          .winmd;
                          .dll
@@ -2003,7 +2005,7 @@
                    OutputType = exe
                    OverwriteReadOnlyFiles = false
                    PackageDownloadSupported = true
-                   Path = D:\JAVA\jdk-16\bin;D:\JAVA\jdk-16\jre\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\SQL SERVER x86\100\Tools\Binn\;D:\SQL SERVER\100\Tools\Binn\;D:\SQL SERVER\100\DTS\Binn\;C:\Program Files\dotnet\;D:\Git\cmd;C:\Users\NORA\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\WebStorm 2020.3.3\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin;C:\Program Files\JetBrains\CLion 2020.3.3\bin;C:\Users\NORA\.dotnet\tools;C:\Users\NORA\AppData\Local\gitkraken\bin;C:\Users\NORA\AppData\Local\GitHubDesktop\bin
+                   Path = D:\JAVA\jdk-16\bin;D:\JAVA\jdk-16\jre\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\SQL SERVER x86\100\Tools\Binn\;D:\SQL SERVER\100\Tools\Binn\;D:\SQL SERVER\100\DTS\Binn\;C:\Program Files\dotnet\;D:\Git\cmd;C:\Users\NORA\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\WebStorm 2020.3.3\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin;C:\Program Files\JetBrains\CLion 2020.3.3\bin;C:\Users\NORA\.dotnet\tools;C:\Users\NORA\AppData\Local\gitkraken\bin
                    PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
                    PkgDefApplicationConfigFile = C:\Users\NORA\AppData\Local\Microsoft\VisualStudio\16.0_7dd54f4f\devenv.exe.config
                    Platform = Win32
@@ -2223,7 +2225,7 @@
                    SDKReferenceDirectoryRoot = C:\Users\NORA\AppData\Local\Microsoft SDKs;C:\Program Files (x86)\Microsoft SDKs
                    SDKReferenceRegistryRoot = Software\Microsoft\Microsoft SDKs
                    SDKVersion = 10.0
-                   ServiceHubLogSessionKey = 826C192A
+                   ServiceHubLogSessionKey = 827B277A
                    SESSIONNAME = Console
                    SetBuildDefaultEnvironmentVariablesDependsOn = 
                          AddExternalIncludDirectoriesToPaths;
@@ -2467,8 +2469,8 @@
                    VsInstallRoot = C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional
                    VSLANG = 2052
                    VSSKUEDITION = Professional
-                   VSTEL_CurrentSolutionBuildID = 2057668311
-                   VSTEL_SolutionSessionID = {F926F40C-78F7-46C3-9E13-3BE9EEE7B77B}
+                   VSTEL_CurrentSolutionBuildID = 2058372354
+                   VSTEL_SolutionSessionID = {AD2F82C4-BD27-4B8E-BF6A-5F637F3D8229}
                    VSVersion = $(VisualStudioVersion)
                    WebBrowserDebuggerDebuggerType = Auto
                    WebReference_EnableLegacyEventingModel = false
@@ -2529,9 +2531,9 @@
                    XamlTemporaryAssemblyName = try
                    YieldDuringToolExecution = true
 
-15:08:27.469     1>正在使用工具版本“Current”进行生成。
+15:20:11.344     1>正在使用工具版本“Current”进行生成。
                    由于条件的计算结果为 false，已跳过目标“EnableIntermediateOutputPathMismatchWarning”；('$(RestoreProjectStyle)' == 'PackageReference')的计算结果为('' == 'PackageReference')。
-15:08:27.469     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“_CheckForInvalidConfigurationAndPlatform: (目标 ID: 2)”(目标“SetTelemetryEnvironmentVariables”依赖于它):
+15:20:11.345     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“_CheckForInvalidConfigurationAndPlatform: (目标 ID: 2)”(目标“SetTelemetryEnvironmentVariables”依赖于它):
                    设置属性: _InvalidConfigurationMessageText=The BaseOutputPath/OutputPath property is not set for project 'try.vcxproj'.  Please check to make sure that you have specified a valid combination of Configuration and Platform for this project.  Configuration='Debug'  Platform='Win32'.
                    设置属性: _InvalidConfigurationMessageText=The BaseOutputPath/OutputPath property is not set for project 'try.vcxproj'.  Please check to make sure that you have specified a valid combination of Configuration and Platform for this project.  Configuration='Debug'  Platform='Win32'.  This error may also appear if some other project is trying to follow a project-to-project reference to this project, this project has been unloaded or is not included in the solution, and the referencing project does not build using the same or an equivalent Configuration or Platform.
                    由于 false 条件，已跳过任务“Error”；( '$(_InvalidConfigurationError)' == 'true' )计算为( '' == 'true' )。
@@ -2552,21 +2554,21 @@
                    由于 false 条件，已跳过任务“Error”；('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)'))计算为('obj\' != '' and !HasTrailingSlash('obj\'))。
                    由于 false 条件，已跳过任务“Error”；( '$(_InitialMSBuildProjectExtensionsPath)' != '' And '$(MSBuildProjectExtensionsPath)' != '$(_InitialMSBuildProjectExtensionsPath)' )计算为( 'D:\gitTry\TRY\try\try\obj\' != '' And 'D:\gitTry\TRY\try\try\obj\' != 'D:\gitTry\TRY\try\try\obj\' )。
                    由于 false 条件，已跳过任务“Warning”；( '$(EnableBaseIntermediateOutputPathMismatchWarning)' == 'true' And '$(_InitialBaseIntermediateOutputPath)' != '$(BaseIntermediateOutputPath)' And '$(BaseIntermediateOutputPath)' != '$(MSBuildProjectExtensionsPath)' )计算为( '' == 'true' And 'obj\' != 'obj\' And 'obj\' != 'D:\gitTry\TRY\try\try\obj\' )。
-15:08:27.509     1>已完成在项目“try.vcxproj”中生成目标“_CheckForInvalidConfigurationAndPlatform”的操作。: (目标 ID: 2)
+15:20:11.367     1>已完成在项目“try.vcxproj”中生成目标“_CheckForInvalidConfigurationAndPlatform”的操作。: (目标 ID: 2)
                    已跳过目标“_CheckForInvalidConfigurationAndPlatform”。以前的生成已成功。
-15:08:27.510     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.DesignTime.targets”中的目标“SetTelemetryEnvironmentVariables: (目标 ID: 3)”(目标“Build”依赖于它):
+15:20:11.367     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.DesignTime.targets”中的目标“SetTelemetryEnvironmentVariables: (目标 ID: 3)”(目标“Build”依赖于它):
                    正在使用程序集“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.Build.CppTasks.Common.dll”中的“SetEnv”任务。
                    任务“SetEnv” (任务 ID: 4)
                      任务参数:Prefix=False (任务 ID: 4)
-                     任务参数:Value={F926F40C-78F7-46C3-9E13-3BE9EEE7B77B} (任务 ID: 4)
+                     任务参数:Value={AD2F82C4-BD27-4B8E-BF6A-5F637F3D8229} (任务 ID: 4)
                      任务参数:Name=VSTEL_SolutionSessionID (任务 ID: 4)
-                     VSTEL_SolutionSessionID={F926F40C-78F7-46C3-9E13-3BE9EEE7B77B} (任务 ID: 4)
+                     VSTEL_SolutionSessionID={AD2F82C4-BD27-4B8E-BF6A-5F637F3D8229} (任务 ID: 4)
                    已完成执行任务“SetEnv”的操作。 (任务 ID: 4)
                    任务“SetEnv” (任务 ID: 5)
                      任务参数:Prefix=False (任务 ID: 5)
-                     任务参数:Value=2057668311 (任务 ID: 5)
+                     任务参数:Value=2058372354 (任务 ID: 5)
                      任务参数:Name=VSTEL_CurrentSolutionBuildID (任务 ID: 5)
-                     VSTEL_CurrentSolutionBuildID=2057668311 (任务 ID: 5)
+                     VSTEL_CurrentSolutionBuildID=2058372354 (任务 ID: 5)
                    已完成执行任务“SetEnv”的操作。 (任务 ID: 5)
                    任务“SetEnv” (任务 ID: 6)
                      任务参数:Prefix=False (任务 ID: 6)
@@ -2575,8 +2577,8 @@
                      VSTEL_ProjectID={362aafc9-c491-405e-8c68-6d67107059e0} (任务 ID: 6)
                      输出属性: VSTEL_ProjectID={362aafc9-c491-405e-8c68-6d67107059e0} (任务 ID: 6)
                    已完成执行任务“SetEnv”的操作。 (任务 ID: 6)
-15:08:27.519     1>已完成在项目“try.vcxproj”中生成目标“SetTelemetryEnvironmentVariables”的操作。: (目标 ID: 3)
-15:08:27.519     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets”中的目标“_PrepareForBuild: (目标 ID: 4)”(目标“Build”依赖于它):
+15:20:11.373     1>已完成在项目“try.vcxproj”中生成目标“SetTelemetryEnvironmentVariables”的操作。: (目标 ID: 3)
+15:20:11.373     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets”中的目标“_PrepareForBuild: (目标 ID: 4)”(目标“Build”依赖于它):
                    设置属性: BuildType=Build
                    设置属性: _BuildActionType=Build
                    由于 false 条件，已跳过任务“CreateItem”；('%(CustomBuild.IncludeFileToTool)'!='')计算为(''!='')。
@@ -2584,17 +2586,17 @@
                        CustomBuildStep=
                            try
                                    Message=Performing Custom Build Step
-15:08:27.520     1>已完成在项目“try.vcxproj”中生成目标“_PrepareForBuild”的操作。: (目标 ID: 4)
-15:08:27.520     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_PrepareForReferenceResolution: (目标 ID: 5)”(目标“ResolveReferences”依赖于它):
+15:20:11.374     1>已完成在项目“try.vcxproj”中生成目标“_PrepareForBuild”的操作。: (目标 ID: 4)
+15:20:11.374     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_PrepareForReferenceResolution: (目标 ID: 5)”(目标“ResolveReferences”依赖于它):
                    设置属性: TargetFrameworkMoniker=
                    设置属性: _FindDependencies=false
                    设置属性: AdditionalExplicitAssemblyReferences=
                    由于 false 条件，已跳过任务“Message”；('$(_REFERENCE_DEBUG)'=='true')计算为(''=='true')。
-15:08:27.520     1>已完成在项目“try.vcxproj”中生成目标“_PrepareForReferenceResolution”的操作。: (目标 ID: 5)
-                   由于条件的计算结果为 false，已跳过目标“ComputeCrtSDKReference”；('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false')的计算结果为('源.cpp'!='' and 'false'=='true' and '' != 'false')。
-15:08:27.520     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“BeforeResolveReferences: (目标 ID: 6)”(目标“ResolveReferences”依赖于它):
-15:08:27.520     1>已完成在项目“try.vcxproj”中生成目标“BeforeResolveReferences”的操作。: (目标 ID: 6)
-15:08:27.520     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“AssignProjectConfiguration: (目标 ID: 7)”(目标“ResolveReferences”依赖于它):
+15:20:11.374     1>已完成在项目“try.vcxproj”中生成目标“_PrepareForReferenceResolution”的操作。: (目标 ID: 5)
+                   由于条件的计算结果为 false，已跳过目标“ComputeCrtSDKReference”；('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false')的计算结果为('main.cpp'!='' and 'false'=='true' and '' != 'false')。
+15:20:11.374     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“BeforeResolveReferences: (目标 ID: 6)”(目标“ResolveReferences”依赖于它):
+15:20:11.374     1>已完成在项目“try.vcxproj”中生成目标“BeforeResolveReferences”的操作。: (目标 ID: 6)
+15:20:11.374     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“AssignProjectConfiguration: (目标 ID: 7)”(目标“ResolveReferences”依赖于它):
                    设置属性: ShouldUnsetParentConfigurationAndPlatform=true
                    正在使用程序集“Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”中的“AssignProjectConfiguration”任务。
                    任务“AssignProjectConfiguration” (任务 ID: 7)
@@ -2609,14 +2611,14 @@
                      任务参数:OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration=True (任务 ID: 7)
                      任务参数:CurrentProjectConfiguration=Debug (任务 ID: 7)
                    已完成执行任务“AssignProjectConfiguration”的操作。 (任务 ID: 7)
-15:08:27.524     1>已完成在项目“try.vcxproj”中生成目标“AssignProjectConfiguration”的操作。: (目标 ID: 7)
+15:20:11.376     1>已完成在项目“try.vcxproj”中生成目标“AssignProjectConfiguration”的操作。: (目标 ID: 7)
                    已跳过目标“AssignProjectConfiguration”。以前的生成已成功。
-15:08:27.524     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“_SplitProjectReferencesByFileExistence: (目标 ID: 8)”(目标“PrepareProjectReferences”依赖于它):
+15:20:11.376     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“_SplitProjectReferencesByFileExistence: (目标 ID: 8)”(目标“PrepareProjectReferences”依赖于它):
                    由于 false 条件，已跳过任务“ResolveNonMSBuildProjectOutput”；('$(BuildingInsideVisualStudio)'=='true' and '@(ProjectReferenceWithConfiguration)'!='')计算为('true'=='true' and ''!='')。
-15:08:27.524     1>已完成在项目“try.vcxproj”中生成目标“_SplitProjectReferencesByFileExistence”的操作。: (目标 ID: 8)
-15:08:27.524     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“_AddOutputPathToGlobalPropertiesToRemove: (目标 ID: 9)”(目标“_GetProjectReferenceTargetFrameworkProperties”依赖于它):
-15:08:27.524     1>已完成在项目“try.vcxproj”中生成目标“_AddOutputPathToGlobalPropertiesToRemove”的操作。: (目标 ID: 9)
-15:08:27.524     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“_GetProjectReferenceTargetFrameworkProperties: (目标 ID: 10)”(目标“PrepareProjectReferences”依赖于它):
+15:20:11.376     1>已完成在项目“try.vcxproj”中生成目标“_SplitProjectReferencesByFileExistence”的操作。: (目标 ID: 8)
+15:20:11.376     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“_AddOutputPathToGlobalPropertiesToRemove: (目标 ID: 9)”(目标“_GetProjectReferenceTargetFrameworkProperties”依赖于它):
+15:20:11.376     1>已完成在项目“try.vcxproj”中生成目标“_AddOutputPathToGlobalPropertiesToRemove”的操作。: (目标 ID: 9)
+15:20:11.376     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“_GetProjectReferenceTargetFrameworkProperties: (目标 ID: 10)”(目标“PrepareProjectReferences”依赖于它):
                    设置属性: ReferringTargetFrameworkForProjectReferences=.NETFramework,Version=v4.0
                    正在使用程序集“Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”中的“MSBuild”任务。
                    任务“MSBuild” (任务 ID: 8)
@@ -2631,22 +2633,22 @@
                    由于 false 条件，已跳过任务“GetReferenceNearestTargetFrameworkTask”；('@(_ProjectReferenceTargetFrameworkPossibilities->Count())' != '0' and '$(ReferringTargetFrameworkForProjectReferences)' != ''
                                                                            And '$(GetReferenceNearestTargetFrameworkTaskSupportsTargetPlatformParameter)' != 'true')计算为('0' != '0' and '.NETFramework,Version=v4.0' != ''
                                                                            And 'true' != 'true')。
-15:08:27.525     1>已完成在项目“try.vcxproj”中生成目标“_GetProjectReferenceTargetFrameworkProperties”的操作。: (目标 ID: 10)
-15:08:27.525     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“PrepareProjectReferences: (目标 ID: 11)”(目标“ResolveProjectReferences”依赖于它):
-15:08:27.525     1>已完成在项目“try.vcxproj”中生成目标“PrepareProjectReferences”的操作。: (目标 ID: 11)
+15:20:11.377     1>已完成在项目“try.vcxproj”中生成目标“_GetProjectReferenceTargetFrameworkProperties”的操作。: (目标 ID: 10)
+15:20:11.377     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“PrepareProjectReferences: (目标 ID: 11)”(目标“ResolveProjectReferences”依赖于它):
+15:20:11.377     1>已完成在项目“try.vcxproj”中生成目标“PrepareProjectReferences”的操作。: (目标 ID: 11)
                    由于条件的计算结果为 false，已跳过目标“_RemoveNameMetadataFromProjectReferenceItems”；('@(ProjectReference)'!='')的计算结果为(''!='')。
-15:08:27.525     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“ResolveProjectReferences: (目标 ID: 12)”(目标“ResolveReferences”依赖于它):
+15:20:11.377     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“ResolveProjectReferences: (目标 ID: 12)”(目标“ResolveReferences”依赖于它):
                    由于 false 条件，已跳过任务“MSBuild”；('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' != '10.0' and '@(_MSBuildProjectReferenceExistent)' != '')计算为('' == 'true' and '' != '' and ('true' == 'true' or 'true' != 'true') and '16.0' != '10.0' and '' != '')。
                    由于 false 条件，已跳过任务“MSBuild”；('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '')计算为('' == 'true' and '' != '' and 'true' != 'true' and 'true' == 'true' and '' != '')。
                    由于 false 条件，已跳过任务“MSBuild”；('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingProject)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '')计算为('' == 'true' and '' != '' and 'true' == 'true' and '' != '')。
                    由于 false 条件，已跳过任务“Warning”；('@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceNonexistent)' != '')计算为('' != '' and '' != '')。
-15:08:27.538     1>已完成在项目“try.vcxproj”中生成目标“ResolveProjectReferences”的操作。: (目标 ID: 12)
+15:20:11.390     1>已完成在项目“try.vcxproj”中生成目标“ResolveProjectReferences”的操作。: (目标 ID: 12)
                    由于条件的计算结果为 false，已跳过目标“FindInvalidProjectReferences”；('$(FindInvalidProjectReferences)' == 'true')的计算结果为('' == 'true')。
                    由于条件的计算结果为 false，已跳过目标“ResolveNativeReferences”；('@(NativeReference)'!='')的计算结果为(''!='')。
                    已跳过目标“_PrepareForReferenceResolution”。以前的生成已成功。
                    已跳过目标“ResolveProjectReferences”。以前的生成已成功。
                    由于条件的计算结果为 false，已跳过目标“FindInvalidProjectReferences”；('$(FindInvalidProjectReferences)' == 'true')的计算结果为('' == 'true')。
-15:08:27.538     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.NETFramework.CurrentVersion.targets”中的目标“GetFrameworkPaths: (目标 ID: 13)”(目标“ResolveAssemblyReferences”依赖于它):
+15:20:11.390     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.NETFramework.CurrentVersion.targets”中的目标“GetFrameworkPaths: (目标 ID: 13)”(目标“ResolveAssemblyReferences”依赖于它):
                    添加的项: _TargetFramework40DirectoryItem=C:\Windows\Microsoft.NET\Framework\v4.0.30319
                    添加的项: _TargetFramework35DirectoryItem=C:\Windows\Microsoft.NET\Framework\v3.5
                    添加的项: _TargetFramework30DirectoryItem=C:\Windows\Microsoft.NET\Framework\v3.0
@@ -2656,18 +2658,18 @@
                    设置属性: TargetFrameworkDirectory=C:\Windows\Microsoft.NET\Framework\v4.0.30319
                    设置属性: TargetFrameworkSDKDirectory=C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\
                    添加的项: _TargetFrameworkSDKDirectoryItem=C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\
-15:08:27.538     1>已完成在项目“try.vcxproj”中生成目标“GetFrameworkPaths”的操作。: (目标 ID: 13)
+15:20:11.391     1>已完成在项目“try.vcxproj”中生成目标“GetFrameworkPaths”的操作。: (目标 ID: 13)
                    已跳过目标“_PrepareForReferenceResolution”。以前的生成已成功。
                    由于条件的计算结果为 false，已跳过目标“GetWinFXPath”；(('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' ))的计算结果为(('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' ))。
                    已跳过目标“GetFrameworkPaths”。以前的生成已成功。
-15:08:27.538     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“GetReferenceAssemblyPaths: (目标 ID: 14)”(目标“ResolveAssemblyReferences”依赖于它):
+15:20:11.391     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“GetReferenceAssemblyPaths: (目标 ID: 14)”(目标“ResolveAssemblyReferences”依赖于它):
                    设置属性: TargetFrameworkDirectory=
                    由于 false 条件，已跳过任务“GetReferenceAssemblyPaths”；('$(TargetFrameworkMoniker)' != '' and ('$(_TargetFrameworkDirectories)' == '' or '$(_FullFrameworkReferenceAssemblyPaths)' == ''))计算为('' != '' and ('C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '' or 'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == ''))。
                    设置属性: TargetFrameworkDirectory=C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0;;
                    设置属性: TargetFrameworkDirectory=C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0;;;C:\Program Files %28x86%29\Windows Kits\10\References
                    设置属性: RemoveAssemblyFoldersIfNoTargetFramework=true
-15:08:27.538     1>已完成在项目“try.vcxproj”中生成目标“GetReferenceAssemblyPaths”的操作。: (目标 ID: 14)
-15:08:27.538     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Current.targets”中的目标“AddExternalIncludDirectoriesToPaths: (目标 ID: 15)”(目标“SetBuildDefaultEnvironmentVariables”依赖于它):
+15:20:11.391     1>已完成在项目“try.vcxproj”中生成目标“GetReferenceAssemblyPaths”的操作。: (目标 ID: 14)
+15:20:11.391     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Current.targets”中的目标“AddExternalIncludDirectoriesToPaths: (目标 ID: 15)”(目标“SetBuildDefaultEnvironmentVariables”依赖于它):
                    添加的项: 
                        _ExternalIncludePathToInclude=
                            C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\include
@@ -2712,14 +2714,14 @@
                            C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\winrt
                            C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\cppwinrt
                            C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\Include\um
-15:08:27.539     1>已完成在项目“try.vcxproj”中生成目标“AddExternalIncludDirectoriesToPaths”的操作。: (目标 ID: 15)
-15:08:27.539     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Current.targets”中的目标“SetBuildDefaultEnvironmentVariables: (目标 ID: 16)”(目标“PrepareForBuild”依赖于它):
+15:20:11.391     1>已完成在项目“try.vcxproj”中生成目标“AddExternalIncludDirectoriesToPaths”的操作。: (目标 ID: 15)
+15:20:11.391     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Current.targets”中的目标“SetBuildDefaultEnvironmentVariables: (目标 ID: 16)”(目标“PrepareForBuild”依赖于它):
                    任务“SetEnv” (任务 ID: 9)
                      任务参数:Prefix=False (任务 ID: 9)
-                     任务参数:Value=C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;;D:\JAVA\jdk-16\bin;D:\JAVA\jdk-16\jre\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\SQL SERVER x86\100\Tools\Binn\;D:\SQL SERVER\100\Tools\Binn\;D:\SQL SERVER\100\DTS\Binn\;C:\Program Files\dotnet\;D:\Git\cmd;C:\Users\NORA\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\WebStorm 2020.3.3\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin;C:\Program Files\JetBrains\CLion 2020.3.3\bin;C:\Users\NORA\.dotnet\tools;C:\Users\NORA\AppData\Local\gitkraken\bin;C:\Users\NORA\AppData\Local\GitHubDesktop\bin; (任务 ID: 9)
+                     任务参数:Value=C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;;D:\JAVA\jdk-16\bin;D:\JAVA\jdk-16\jre\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\SQL SERVER x86\100\Tools\Binn\;D:\SQL SERVER\100\Tools\Binn\;D:\SQL SERVER\100\DTS\Binn\;C:\Program Files\dotnet\;D:\Git\cmd;C:\Users\NORA\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\WebStorm 2020.3.3\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin;C:\Program Files\JetBrains\CLion 2020.3.3\bin;C:\Users\NORA\.dotnet\tools;C:\Users\NORA\AppData\Local\gitkraken\bin; (任务 ID: 9)
                      任务参数:Name=PATH (任务 ID: 9)
-                     PATH=C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;;D:\JAVA\jdk-16\bin;D:\JAVA\jdk-16\jre\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\SQL SERVER x86\100\Tools\Binn\;D:\SQL SERVER\100\Tools\Binn\;D:\SQL SERVER\100\DTS\Binn\;C:\Program Files\dotnet\;D:\Git\cmd;C:\Users\NORA\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\WebStorm 2020.3.3\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin;C:\Program Files\JetBrains\CLion 2020.3.3\bin;C:\Users\NORA\.dotnet\tools;C:\Users\NORA\AppData\Local\gitkraken\bin;C:\Users\NORA\AppData\Local\GitHubDesktop\bin; (任务 ID: 9)
-                     输出属性: Path=C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86%3bC:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\x86%3b%3bC:\Program Files %28x86%29\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools%3bC:\Program Files %28x86%29\Microsoft Visual Studio\2019\Professional\Common7\tools%3bC:\Program Files %28x86%29\Microsoft Visual Studio\2019\Professional\Common7\ide%3bC:\Program Files %28x86%29\HTML Help Workshop%3b%3bC:\Program Files %28x86%29\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin%3bC:\Windows\Microsoft.NET\Framework\v4.0.30319\%3b%3bD:\JAVA\jdk-16\bin%3bD:\JAVA\jdk-16\jre\bin%3bC:\Program Files\Microsoft SQL Server\130\Tools\Binn\%3bC:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\%3bD:\SQL SERVER x86\100\Tools\Binn\%3bD:\SQL SERVER\100\Tools\Binn\%3bD:\SQL SERVER\100\DTS\Binn\%3bC:\Program Files\dotnet\%3bD:\Git\cmd%3bC:\Users\NORA\AppData\Local\Microsoft\WindowsApps%3bC:\Program Files\JetBrains\WebStorm 2020.3.3\bin%3bC:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin%3bC:\Program Files\JetBrains\CLion 2020.3.3\bin%3bC:\Users\NORA\.dotnet\tools%3bC:\Users\NORA\AppData\Local\gitkraken\bin%3bC:\Users\NORA\AppData\Local\GitHubDesktop\bin%3b (任务 ID: 9)
+                     PATH=C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86;C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;;D:\JAVA\jdk-16\bin;D:\JAVA\jdk-16\jre\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\SQL SERVER x86\100\Tools\Binn\;D:\SQL SERVER\100\Tools\Binn\;D:\SQL SERVER\100\DTS\Binn\;C:\Program Files\dotnet\;D:\Git\cmd;C:\Users\NORA\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\WebStorm 2020.3.3\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin;C:\Program Files\JetBrains\CLion 2020.3.3\bin;C:\Users\NORA\.dotnet\tools;C:\Users\NORA\AppData\Local\gitkraken\bin; (任务 ID: 9)
+                     输出属性: Path=C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86%3bC:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\x86%3b%3bC:\Program Files %28x86%29\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools%3bC:\Program Files %28x86%29\Microsoft Visual Studio\2019\Professional\Common7\tools%3bC:\Program Files %28x86%29\Microsoft Visual Studio\2019\Professional\Common7\ide%3bC:\Program Files %28x86%29\HTML Help Workshop%3b%3bC:\Program Files %28x86%29\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin%3bC:\Windows\Microsoft.NET\Framework\v4.0.30319\%3b%3bD:\JAVA\jdk-16\bin%3bD:\JAVA\jdk-16\jre\bin%3bC:\Program Files\Microsoft SQL Server\130\Tools\Binn\%3bC:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\%3bD:\SQL SERVER x86\100\Tools\Binn\%3bD:\SQL SERVER\100\Tools\Binn\%3bD:\SQL SERVER\100\DTS\Binn\%3bC:\Program Files\dotnet\%3bD:\Git\cmd%3bC:\Users\NORA\AppData\Local\Microsoft\WindowsApps%3bC:\Program Files\JetBrains\WebStorm 2020.3.3\bin%3bC:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin%3bC:\Program Files\JetBrains\CLion 2020.3.3\bin%3bC:\Users\NORA\.dotnet\tools%3bC:\Users\NORA\AppData\Local\gitkraken\bin%3b (任务 ID: 9)
                    已完成执行任务“SetEnv”的操作。 (任务 ID: 9)
                    任务“SetEnv” (任务 ID: 10)
                      任务参数:Prefix=False (任务 ID: 10)
@@ -2749,10 +2751,10 @@
                      EXTERNAL_INCLUDE=C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\include;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\atlmfc\include;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\VS\include;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt;;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\Include\um; (任务 ID: 13)
                      输出属性: EXTERNAL_INCLUDE=C:\Program Files %28x86%29\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\include%3b%3bC:\Program Files %28x86%29\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\atlmfc\include%3b%3bC:\Program Files %28x86%29\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\VS\include%3b%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.19041.0\ucrt%3b%3b%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.19041.0\um%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.19041.0\shared%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.19041.0\winrt%3bC:\Program Files %28x86%29\Windows Kits\10\Include\10.0.19041.0\cppwinrt%3bC:\Program Files %28x86%29\Windows Kits\NETFXSDK\4.8\Include\um%3b (任务 ID: 13)
                    已完成执行任务“SetEnv”的操作。 (任务 ID: 13)
-15:08:27.539     1>已完成在项目“try.vcxproj”中生成目标“SetBuildDefaultEnvironmentVariables”的操作。: (目标 ID: 16)
+15:20:11.392     1>已完成在项目“try.vcxproj”中生成目标“SetBuildDefaultEnvironmentVariables”的操作。: (目标 ID: 16)
                    由于条件的计算结果为 false，已跳过目标“SetUserMacroEnvironmentVariables”；('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true')的计算结果为('' != '' and '' != 'true')。
                    已跳过目标“_PrepareForReferenceResolution”。以前的生成已成功。
-15:08:27.539     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“GetResolvedWinMD: (目标 ID: 17)”(目标“PrepareForBuild”依赖于它):
+15:20:11.392     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“GetResolvedWinMD: (目标 ID: 17)”(目标“PrepareForBuild”依赖于它):
                    添加的项: 
                        Link=
                            tmp
@@ -2839,8 +2841,8 @@
                                    TypeLibraryResourceID=1
                                    UACExecutionLevel=AsInvoker
                                    UACUIAccess=false
-15:08:27.539     1>已完成在项目“try.vcxproj”中生成目标“GetResolvedWinMD”的操作。: (目标 ID: 17)
-15:08:27.539     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.WindowsSDK.targets”中的目标“_CheckWindowsSDKInstalled: (目标 ID: 18)”(目标“PrepareForBuild”依赖于它):
+15:20:11.392     1>已完成在项目“try.vcxproj”中生成目标“GetResolvedWinMD”的操作。: (目标 ID: 17)
+15:20:11.392     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.WindowsSDK.targets”中的目标“_CheckWindowsSDKInstalled: (目标 ID: 18)”(目标“PrepareForBuild”依赖于它):
                    设置属性: WindowsSDKInstalled=false
                    设置属性: WindowsSDK_UAP_Support=false
                    设置属性: WindowsSDK_Desktop_Support=false
@@ -2849,11 +2851,11 @@
                    设置属性: WindowsSDK_Desktop_Support=true
                    由于 false 条件，已跳过任务“VCMessage”；('$(WindowsSDKInstalled)' != 'true')计算为('true' != 'true')。
                    由于 false 条件，已跳过任务“VCMessage”；('$(WindowsAppContainer)' != 'true' and '$(WindowsSDK_Desktop_Support)' != true)计算为('false' != 'true' and 'true' != true)。
-15:08:27.540     1>已完成在项目“try.vcxproj”中生成目标“_CheckWindowsSDKInstalled”的操作。: (目标 ID: 18)
+15:20:11.392     1>已完成在项目“try.vcxproj”中生成目标“_CheckWindowsSDKInstalled”的操作。: (目标 ID: 18)
                    已跳过目标“GetFrameworkPaths”。以前的生成已成功。
                    已跳过目标“GetReferenceAssemblyPaths”。以前的生成已成功。
                    由于条件的计算结果为 false，已跳过目标“AssignLinkMetadata”；( '$(SynthesizeLinkMetadata)' == 'true' )的计算结果为( '' == 'true' )。
-15:08:27.540     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VisualStudio\v16.0\CodeAnalysis\Microsoft.CodeAnalysis.targets”中的目标“SetCABuildNativeEnvironmentVariables: (目标 ID: 19)”(目标“PrepareForBuild”依赖于它):
+15:20:11.392     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VisualStudio\v16.0\CodeAnalysis\Microsoft.CodeAnalysis.targets”中的目标“SetCABuildNativeEnvironmentVariables: (目标 ID: 19)”(目标“PrepareForBuild”依赖于它):
                    任务“SetEnv” (任务 ID: 14)
                      任务参数:Prefix=False (任务 ID: 14)
                      任务参数:Value=C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\atlmfc\include;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\Include\um; (任务 ID: 14)
@@ -2861,8 +2863,8 @@
                      CAExcludePath=C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\atlmfc\include;C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\Include\um; (任务 ID: 14)
                    已完成执行任务“SetEnv”的操作。 (任务 ID: 14)
                    由于 false 条件，已跳过任务“SetEnv”；('$(RunMsvcAnalysis)'=='true' and '$(VCCodeAnalysisUX)'=='true')计算为('false'=='true' and 'true'=='true')。
-15:08:27.541     1>已完成在项目“try.vcxproj”中生成目标“SetCABuildNativeEnvironmentVariables”的操作。: (目标 ID: 19)
-15:08:27.541     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“PrepareForBuild: (目标 ID: 20)”(目标“ResolveAssemblyReferences”依赖于它):
+15:20:11.393     1>已完成在项目“try.vcxproj”中生成目标“SetCABuildNativeEnvironmentVariables”的操作。: (目标 ID: 19)
+15:20:11.393     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“PrepareForBuild: (目标 ID: 20)”(目标“ResolveAssemblyReferences”依赖于它):
                    设置属性: TargetDir=D:\gitTry\TRY\try\Debug\
                    设置属性: LocalDebuggerCommand=D:\gitTry\TRY\try\Debug\try.exe
                    设置属性: BuildProjectReferences=false
@@ -2997,22 +2999,22 @@
                              D:\gitTry\TRY\try\Debug\
                              Debug\try.tlog\ (任务 ID: 17)
                    已完成执行任务“MakeDir”的操作。 (任务 ID: 17)
-15:08:27.551     1>已完成在项目“try.vcxproj”中生成目标“PrepareForBuild”的操作。: (目标 ID: 20)
+15:20:11.402     1>已完成在项目“try.vcxproj”中生成目标“PrepareForBuild”的操作。: (目标 ID: 20)
                    已跳过目标“_PrepareForReferenceResolution”。以前的生成已成功。
-                   由于条件的计算结果为 false，已跳过目标“ComputeCrtSDKReference”；('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false')的计算结果为('源.cpp'!='' and 'false'=='true' and '' != 'false')。
+                   由于条件的计算结果为 false，已跳过目标“ComputeCrtSDKReference”；('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false')的计算结果为('main.cpp'!='' and 'false'=='true' and '' != 'false')。
                    由于条件的计算结果为 false，已跳过目标“GetInstalledSDKLocations”；('@(SDKReference)' != '')的计算结果为('' != '')。
-15:08:27.551     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“ResolveSDKReferences: (目标 ID: 21)”(目标“ResolveAssemblyReferences”依赖于它):
+15:20:11.402     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“ResolveSDKReferences: (目标 ID: 21)”(目标“ResolveAssemblyReferences”依赖于它):
                    由于 false 条件，已跳过任务“ResolveSDKReference”；('@(SDKReference)'!='')计算为(''!='')。
-15:08:27.551     1>已完成在项目“try.vcxproj”中生成目标“ResolveSDKReferences”的操作。: (目标 ID: 21)
+15:20:11.402     1>已完成在项目“try.vcxproj”中生成目标“ResolveSDKReferences”的操作。: (目标 ID: 21)
                    已跳过目标“ResolveSDKReferences”。以前的生成已成功。
-15:08:27.551     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“ExpandSDKReferences: (目标 ID: 22)”(目标“ResolveAssemblyReferences”依赖于它):
+15:20:11.402     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“ExpandSDKReferences: (目标 ID: 22)”(目标“ResolveAssemblyReferences”依赖于它):
                    由于 false 条件，已跳过任务“GetSDKReferenceFiles”；('@(ResolvedSDKReference)'!='')计算为(''!='')。
-15:08:27.551     1>已完成在项目“try.vcxproj”中生成目标“ExpandSDKReferences”的操作。: (目标 ID: 22)
+15:20:11.402     1>已完成在项目“try.vcxproj”中生成目标“ExpandSDKReferences”的操作。: (目标 ID: 22)
                    由于条件的计算结果为 false，已跳过目标“ResolveNuGetPackageAssets”；('$(ResolveNuGetPackages)' == 'true' and exists('$(ProjectLockFile)'))的计算结果为('true' == 'true' and exists('obj\project.assets.json'))。
                    由于条件的计算结果为 false，已跳过目标“ImplicitlyExpandNETStandardFacades”；('$(ImplicitlyExpandNETStandardFacades)' == 'true')的计算结果为('' == 'true')。
                    由于条件的计算结果为 false，已跳过目标“_HandlePackageFileConflicts”；('@(Reference)' != '' Or '@(ReferenceCopyLocalPaths)' != '')的计算结果为('' != '' Or '' != '')。
                    由于条件的计算结果为 false，已跳过目标“ImplicitlyExpandNETStandardFacades”；('$(ImplicitlyExpandNETStandardFacades)' == 'true')的计算结果为('' == 'true')。
-15:08:27.551     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“ResolveAssemblyReferences: (目标 ID: 23)”(目标“ResolveReferences”依赖于它):
+15:20:11.403     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“ResolveAssemblyReferences: (目标 ID: 23)”(目标“ResolveReferences”依赖于它):
                    添加的项: 
                        _ReferenceInstalledAssemblyDirectory=
                            C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0
@@ -3026,27 +3028,27 @@
                    设置属性: ResolveAssemblyReferenceOutputUnresolvedAssemblyConflicts=false
                    设置属性: FindDependenciesOfExternallyResolvedReferences=false
                    由于 false 条件，已跳过任务“ResolveAssemblyReference”；('@(Reference)'!='' or '@(_ResolvedProjectReferencePaths)'!='' or '@(_ExplicitReference)' != '')计算为(''!='' or ''!='' or '' != '')。
-15:08:27.551     1>已完成在项目“try.vcxproj”中生成目标“ResolveAssemblyReferences”的操作。: (目标 ID: 23)
+15:20:11.403     1>已完成在项目“try.vcxproj”中生成目标“ResolveAssemblyReferences”的操作。: (目标 ID: 23)
                    由于条件的计算结果为 false，已跳过目标“GenerateBindingRedirects”；('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true')的计算结果为('' == 'true' and 'true' == 'true')。
                    由于条件的计算结果为 false，已跳过目标“_RemoveZipFileSuggestedRedirect”；('$(_TargetFrameworkVersionWithoutV)' >= '4.7.1' And '$(AllowZipFileRedirect)' != 'true')的计算结果为('4.0' >= '4.7.1' And '' != 'true')。
                    由于条件的计算结果为 false，已跳过目标“GenerateBindingRedirectsUpdateAppConfig”；('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true' and Exists('$(_GenerateBindingRedirectsIntermediateAppConfig)'))的计算结果为('' == 'true' and 'true' == 'true' and Exists('Debug\try.exe.config'))。
                    由于条件的计算结果为 false，已跳过目标“ResolveComReferences”；('@(COMReference)'!='' or '@(COMFileReference)'!='')的计算结果为(''!='' or ''!='')。
-15:08:27.551     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“AfterResolveReferences: (目标 ID: 24)”(目标“ResolveReferences”依赖于它):
-15:08:27.551     1>已完成在项目“try.vcxproj”中生成目标“AfterResolveReferences”的操作。: (目标 ID: 24)
+15:20:11.403     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“AfterResolveReferences: (目标 ID: 24)”(目标“ResolveReferences”依赖于它):
+15:20:11.403     1>已完成在项目“try.vcxproj”中生成目标“AfterResolveReferences”的操作。: (目标 ID: 24)
                    由于条件的计算结果为 false，已跳过目标“ImplicitlyExpandDesignTimeFacades”；('$(ImplicitlyExpandDesignTimeFacades)' == 'true')的计算结果为('' == 'true')。
                    由于条件的计算结果为 false，已跳过目标“ResolveTestReferences”；('@(Shadow)'!='')的计算结果为(''!='')。
-15:08:27.551     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“ResolveReferences: (目标 ID: 25)”(目标“Build”依赖于它):
-15:08:27.551     1>已完成在项目“try.vcxproj”中生成目标“ResolveReferences”的操作。: (目标 ID: 25)
+15:20:11.403     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“ResolveReferences: (目标 ID: 25)”(目标“Build”依赖于它):
+15:20:11.403     1>已完成在项目“try.vcxproj”中生成目标“ResolveReferences”的操作。: (目标 ID: 25)
                    已跳过目标“PrepareForBuild”。以前的生成已成功。
                    已跳过目标“PrepareForBuild”。以前的生成已成功。
-15:08:27.551     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“InitializeBuildStatus: (目标 ID: 26)”(目标“Build”依赖于它):
+15:20:11.403     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“InitializeBuildStatus: (目标 ID: 26)”(目标“Build”依赖于它):
                    正在使用程序集“Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”中的“ReadLinesFromFile”任务。
                    任务“ReadLinesFromFile” (任务 ID: 18)
                      任务参数:File=Debug\try.tlog\try.lastbuildstate (任务 ID: 18)
                      输出项: 
                          _ReadProjectStateLine=
                              PlatformToolSet=v142:VCToolArchitecture=Native32Bit:VCToolsVersion=14.29.30037:VCServicingVersionATL=14.29.30038:VCServicingVersionCrtHeaders=14.29.30038:VCServicingVersionCompilers=14.29.30038:TargetPlatformVersion=10.0.19041.0:
-                             Debug|Win32|D:\实训\代码\C++\try\| (任务 ID: 18)
+                             Debug|Win32|D:\gitTry\TRY\try\| (任务 ID: 18)
                    已完成执行任务“ReadLinesFromFile”的操作。 (任务 ID: 18)
                    设置属性: ProjectStateLine=TargetPlatformVersion=10.0.19041.0:
                    设置属性: ProjectStateLine=VCServicingVersionCompilers=14.29.30038:TargetPlatformVersion=10.0.19041.0:
@@ -3068,35 +3070,35 @@
                    任务“Touch” (任务 ID: 20)
                      任务参数:AlwaysCreate=True (任务 ID: 20)
                      任务参数:Files=Debug\try.tlog\unsuccessfulbuild (任务 ID: 20)
-                     正在创建“Debug\try.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。 (任务 ID: 20)
+                     正在对“Debug\try.tlog\unsuccessfulbuild”执行 Touch 任务。 (任务 ID: 20)
                    已完成执行任务“Touch”的操作。 (任务 ID: 20)
-15:08:27.571     1>已完成在项目“try.vcxproj”中生成目标“InitializeBuildStatus”的操作。: (目标 ID: 26)
+15:20:11.413     1>已完成在项目“try.vcxproj”中生成目标“InitializeBuildStatus”的操作。: (目标 ID: 26)
                    已跳过目标“PrepareProjectReferences”。以前的生成已成功。
-15:08:27.571     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“BuildGenerateSourcesTraverse: (目标 ID: 27)”(目标“BuildGenerateSources”依赖于它):
+15:20:11.413     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“BuildGenerateSourcesTraverse: (目标 ID: 27)”(目标“BuildGenerateSources”依赖于它):
                    由于 false 条件，已跳过任务“MSBuild”；('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '' and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true')计算为('' == 'true' and '' != '' and '' != '' and '' == 'true')。
-15:08:27.572     1>已完成在项目“try.vcxproj”中生成目标“BuildGenerateSourcesTraverse”的操作。: (目标 ID: 27)
+15:20:11.413     1>已完成在项目“try.vcxproj”中生成目标“BuildGenerateSourcesTraverse”的操作。: (目标 ID: 27)
                    已跳过目标“PrepareForBuild”。以前的生成已成功。
                    已跳过目标“ResolveReferences”。以前的生成已成功。
-15:08:27.572     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets”中的目标“BeforeBuildGenerateSources: (目标 ID: 28)”(目标“_BuildGenerateSourcesAction”依赖于它):
-15:08:27.572     1>已完成在项目“try.vcxproj”中生成目标“BeforeBuildGenerateSources”的操作。: (目标 ID: 28)
-15:08:27.572     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“PreBuildEvent: (目标 ID: 29)”(目标“_BuildGenerateSourcesAction”依赖于它):
+15:20:11.413     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets”中的目标“BeforeBuildGenerateSources: (目标 ID: 28)”(目标“_BuildGenerateSourcesAction”依赖于它):
+15:20:11.413     1>已完成在项目“try.vcxproj”中生成目标“BeforeBuildGenerateSources”的操作。: (目标 ID: 28)
+15:20:11.413     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“PreBuildEvent: (目标 ID: 29)”(目标“_BuildGenerateSourcesAction”依赖于它):
                    由于 false 条件，已跳过任务“Message”；('%(PreBuildEvent.Message)' != '' and '%(PreBuildEvent.Command)' != '')计算为('' != '' and '' != '')。
                    由于 false 条件，已跳过任务“Exec”；('%(PreBuildEvent.Command)' != '')计算为('' != '')。
-15:08:27.572     1>已完成在项目“try.vcxproj”中生成目标“PreBuildEvent”的操作。: (目标 ID: 29)
+15:20:11.413     1>已完成在项目“try.vcxproj”中生成目标“PreBuildEvent”的操作。: (目标 ID: 29)
                    已跳过目标“PrepareForBuild”。以前的生成已成功。
                    已跳过目标“InitializeBuildStatus”。以前的生成已成功。
                    已跳过目标“SetBuildDefaultEnvironmentVariables”。以前的生成已成功。
                    由于条件的计算结果为 false，已跳过目标“SetUserMacroEnvironmentVariables”；('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true')的计算结果为('' != '' and '' != 'true')。
-15:08:27.572     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_SelectedFiles: (目标 ID: 30)”(目标“SelectCustomBuild”依赖于它):
-15:08:27.572     1>已完成在项目“try.vcxproj”中生成目标“_SelectedFiles”的操作。: (目标 ID: 30)
-15:08:27.572     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“SelectCustomBuild: (目标 ID: 31)”(目标“CustomBuild”依赖于它):
-15:08:27.572     1>已完成在项目“try.vcxproj”中生成目标“SelectCustomBuild”的操作。: (目标 ID: 31)
-15:08:27.572     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeCustomBuildOutput: (目标 ID: 32)”(目标“CustomBuild”依赖于它):
+15:20:11.413     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_SelectedFiles: (目标 ID: 30)”(目标“SelectCustomBuild”依赖于它):
+15:20:11.413     1>已完成在项目“try.vcxproj”中生成目标“_SelectedFiles”的操作。: (目标 ID: 30)
+15:20:11.413     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“SelectCustomBuild: (目标 ID: 31)”(目标“CustomBuild”依赖于它):
+15:20:11.413     1>已完成在项目“try.vcxproj”中生成目标“SelectCustomBuild”的操作。: (目标 ID: 31)
+15:20:11.413     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeCustomBuildOutput: (目标 ID: 32)”(目标“CustomBuild”依赖于它):
                    由于 false 条件，已跳过任务“CreateItem”；('%(CustomBuildOutputs.OutputItemType)'!='')计算为(''!='')。
                    任务“MakeDir” (任务 ID: 21)
                    已完成执行任务“MakeDir”的操作。 (任务 ID: 21)
-15:08:27.572     1>已完成在项目“try.vcxproj”中生成目标“ComputeCustomBuildOutput”的操作。: (目标 ID: 32)
-15:08:27.572     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“CustomBuild: (目标 ID: 33)”(目标“_BuildGenerateSourcesAction”依赖于它):
+15:20:11.413     1>已完成在项目“try.vcxproj”中生成目标“ComputeCustomBuildOutput”的操作。: (目标 ID: 32)
+15:20:11.413     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“CustomBuild: (目标 ID: 33)”(目标“_BuildGenerateSourcesAction”依赖于它):
                    设置属性: CustomBuildToolArchitecture=Native32Bit
                    正在使用程序集“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.Build.CppTasks.Common.dll”中的“GetOutOfDateItems”任务。
                    任务“GetOutOfDateItems” (任务 ID: 22)
@@ -3116,12 +3118,12 @@
                    已完成执行任务“GetOutOfDateItems”的操作。 (任务 ID: 23)
                    由于 false 条件，已跳过任务“ParallelCustomBuild”；('@(_ParallelCustomBuild)' != '')计算为('' != '')。
                    由于 false 条件，已跳过任务“CustomBuild”；('@(_CustomBuild)' != '')计算为('' != '')。
-15:08:27.577     1>已完成在项目“try.vcxproj”中生成目标“CustomBuild”的操作。: (目标 ID: 33)
+15:20:11.418     1>已完成在项目“try.vcxproj”中生成目标“CustomBuild”的操作。: (目标 ID: 33)
                    由于条件的计算结果为 false，已跳过目标“FxExport”；('@(FxCompile)' != '')的计算结果为('' != '')。
                    由于条件的计算结果为 false，已跳过目标“FxCompile”；('@(FxCompile)' != '')的计算结果为('' != '')。
                    由于条件的计算结果为 false，已跳过目标“_CreateCopyFileItems”；('@(CopyFileToFolders)' != '')的计算结果为('' != '')。
                    已跳过目标“_SelectedFiles”。以前的生成已成功。
-15:08:27.577     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“CopyFileToFolders: (目标 ID: 34)”(目标“_BuildGenerateSourcesAction”依赖于它):
+15:20:11.418     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“CopyFileToFolders: (目标 ID: 34)”(目标“_BuildGenerateSourcesAction”依赖于它):
                    任务“GetOutOfDateItems” (任务 ID: 24)
                      任务参数:TLogNamePrefix=CopyFile (任务 ID: 24)
                      任务参数:TLogDirectory=Debug\try.tlog\ (任务 ID: 24)
@@ -3129,65 +3131,65 @@
                      任务参数:CommandMetadataName=FullDestinationPath (任务 ID: 24)
                    已完成执行任务“GetOutOfDateItems”的操作。 (任务 ID: 24)
                    由于 false 条件，已跳过任务“Copy”；('@(_OutOfDateCopyFile)' != '')计算为('' != '')。
-15:08:27.577     1>已完成在项目“try.vcxproj”中生成目标“CopyFileToFolders”的操作。: (目标 ID: 34)
+15:20:11.418     1>已完成在项目“try.vcxproj”中生成目标“CopyFileToFolders”的操作。: (目标 ID: 34)
                    由于条件的计算结果为 false，已跳过目标“Xsd”；('@(Xsd)' != '')的计算结果为('' != '')。
-15:08:27.578     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_Xsd: (目标 ID: 35)”(目标“_BuildGenerateSourcesAction”依赖于它):
-15:08:27.578     1>已完成在项目“try.vcxproj”中生成目标“_Xsd”的操作。: (目标 ID: 35)
-15:08:27.578     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“MakeDirsForMidl: (目标 ID: 36)”(目标“_Midl”依赖于它):
+15:20:11.418     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_Xsd: (目标 ID: 35)”(目标“_BuildGenerateSourcesAction”依赖于它):
+15:20:11.418     1>已完成在项目“try.vcxproj”中生成目标“_Xsd”的操作。: (目标 ID: 35)
+15:20:11.418     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“MakeDirsForMidl: (目标 ID: 36)”(目标“_Midl”依赖于它):
                    设置属性: Midl_OutputDir=
                    任务“Makedir” (任务 ID: 25)
                    已完成执行任务“Makedir”的操作。 (任务 ID: 25)
-15:08:27.578     1>已完成在项目“try.vcxproj”中生成目标“MakeDirsForMidl”的操作。: (目标 ID: 36)
+15:20:11.419     1>已完成在项目“try.vcxproj”中生成目标“MakeDirsForMidl”的操作。: (目标 ID: 36)
                    由于条件的计算结果为 false，已跳过目标“Midl”；('@(Midl)' != '')的计算结果为('' != '')。
                    由于条件的计算结果为 false，已跳过目标“FxExport”；('@(FxCompile)' != '')的计算结果为('' != '')。
                    由于条件的计算结果为 false，已跳过目标“FxCompile”；('@(FxCompile)' != '')的计算结果为('' != '')。
-15:08:27.578     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeMIDLGeneratedCompileInputs: (目标 ID: 37)”(目标“_Midl”依赖于它):
+15:20:11.419     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeMIDLGeneratedCompileInputs: (目标 ID: 37)”(目标“_Midl”依赖于它):
                    设置属性: Midl_OutputDir=
-15:08:27.578     1>已完成在项目“try.vcxproj”中生成目标“ComputeMIDLGeneratedCompileInputs”的操作。: (目标 ID: 37)
-15:08:27.578     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“AfterMidl: (目标 ID: 38)”(目标“_Midl”依赖于它):
-15:08:27.578     1>已完成在项目“try.vcxproj”中生成目标“AfterMidl”的操作。: (目标 ID: 38)
-15:08:27.578     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_Midl: (目标 ID: 39)”(目标“_BuildGenerateSourcesAction”依赖于它):
-15:08:27.578     1>已完成在项目“try.vcxproj”中生成目标“_Midl”的操作。: (目标 ID: 39)
-15:08:27.578     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets”中的目标“AfterBuildGenerateSources: (目标 ID: 40)”(目标“_BuildGenerateSourcesAction”依赖于它):
-15:08:27.578     1>已完成在项目“try.vcxproj”中生成目标“AfterBuildGenerateSources”的操作。: (目标 ID: 40)
-15:08:27.578     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“AfterBuildGenerateSourcesEvent: (目标 ID: 41)”(目标“_BuildGenerateSourcesAction”依赖于它):
-15:08:27.578     1>已完成在项目“try.vcxproj”中生成目标“AfterBuildGenerateSourcesEvent”的操作。: (目标 ID: 41)
-15:08:27.578     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_BuildGenerateSourcesAction: (目标 ID: 42)”(目标“BuildGenerateSources”依赖于它):
-15:08:27.578     1>已完成在项目“try.vcxproj”中生成目标“_BuildGenerateSourcesAction”的操作。: (目标 ID: 42)
-15:08:27.578     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“BuildGenerateSources: (目标 ID: 43)”(目标“Build”依赖于它):
-15:08:27.578     1>已完成在项目“try.vcxproj”中生成目标“BuildGenerateSources”的操作。: (目标 ID: 43)
+15:20:11.419     1>已完成在项目“try.vcxproj”中生成目标“ComputeMIDLGeneratedCompileInputs”的操作。: (目标 ID: 37)
+15:20:11.419     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“AfterMidl: (目标 ID: 38)”(目标“_Midl”依赖于它):
+15:20:11.419     1>已完成在项目“try.vcxproj”中生成目标“AfterMidl”的操作。: (目标 ID: 38)
+15:20:11.419     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_Midl: (目标 ID: 39)”(目标“_BuildGenerateSourcesAction”依赖于它):
+15:20:11.419     1>已完成在项目“try.vcxproj”中生成目标“_Midl”的操作。: (目标 ID: 39)
+15:20:11.419     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets”中的目标“AfterBuildGenerateSources: (目标 ID: 40)”(目标“_BuildGenerateSourcesAction”依赖于它):
+15:20:11.419     1>已完成在项目“try.vcxproj”中生成目标“AfterBuildGenerateSources”的操作。: (目标 ID: 40)
+15:20:11.419     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“AfterBuildGenerateSourcesEvent: (目标 ID: 41)”(目标“_BuildGenerateSourcesAction”依赖于它):
+15:20:11.419     1>已完成在项目“try.vcxproj”中生成目标“AfterBuildGenerateSourcesEvent”的操作。: (目标 ID: 41)
+15:20:11.419     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_BuildGenerateSourcesAction: (目标 ID: 42)”(目标“BuildGenerateSources”依赖于它):
+15:20:11.419     1>已完成在项目“try.vcxproj”中生成目标“_BuildGenerateSourcesAction”的操作。: (目标 ID: 42)
+15:20:11.419     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“BuildGenerateSources: (目标 ID: 43)”(目标“Build”依赖于它):
+15:20:11.419     1>已完成在项目“try.vcxproj”中生成目标“BuildGenerateSources”的操作。: (目标 ID: 43)
                    已跳过目标“PrepareProjectReferences”。以前的生成已成功。
-15:08:27.578     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“BuildCompileTraverse: (目标 ID: 44)”(目标“BuildCompile”依赖于它):
+15:20:11.419     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“BuildCompileTraverse: (目标 ID: 44)”(目标“BuildCompile”依赖于它):
                    由于 false 条件，已跳过任务“MSBuild”；('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != ''  and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true')计算为('' == 'true' and '' != '' and '' != ''  and '' == 'true')。
-15:08:27.578     1>已完成在项目“try.vcxproj”中生成目标“BuildCompileTraverse”的操作。: (目标 ID: 44)
+15:20:11.419     1>已完成在项目“try.vcxproj”中生成目标“BuildCompileTraverse”的操作。: (目标 ID: 44)
                    已跳过目标“PrepareForBuild”。以前的生成已成功。
                    已跳过目标“ResolveReferences”。以前的生成已成功。
-15:08:27.578     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“BeforeClCompile: (目标 ID: 45)”(目标“_ClCompile”依赖于它):
-15:08:27.578     1>已完成在项目“try.vcxproj”中生成目标“BeforeClCompile”的操作。: (目标 ID: 45)
+15:20:11.419     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“BeforeClCompile: (目标 ID: 45)”(目标“_ClCompile”依赖于它):
+15:20:11.419     1>已完成在项目“try.vcxproj”中生成目标“BeforeClCompile”的操作。: (目标 ID: 45)
                    由于条件的计算结果为 false，已跳过目标“GenerateTargetFrameworkMonikerAttribute”；('$(GenerateTargetFrameworkAttribute)' == 'true')的计算结果为('false' == 'true')。
                    已跳过目标“ComputeMIDLGeneratedCompileInputs”。以前的生成已成功。
-15:08:27.578     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeCLInputPDBName: (目标 ID: 46)”(目标“_ClCompile”依赖于它):
-15:08:27.579     1>已完成在项目“try.vcxproj”中生成目标“ComputeCLInputPDBName”的操作。: (目标 ID: 46)
+15:20:11.419     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeCLInputPDBName: (目标 ID: 46)”(目标“_ClCompile”依赖于它):
+15:20:11.419     1>已完成在项目“try.vcxproj”中生成目标“ComputeCLInputPDBName”的操作。: (目标 ID: 46)
                    已跳过目标“ResolveReferences”。以前的生成已成功。
-15:08:27.579     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“FindReferenceAssembliesForReferences: (目标 ID: 47)”(目标“ComputeReferenceCLInput”依赖于它):
-15:08:27.579     1>已完成在项目“try.vcxproj”中生成目标“FindReferenceAssembliesForReferences”的操作。: (目标 ID: 47)
+15:20:11.419     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“FindReferenceAssembliesForReferences: (目标 ID: 47)”(目标“ComputeReferenceCLInput”依赖于它):
+15:20:11.419     1>已完成在项目“try.vcxproj”中生成目标“FindReferenceAssembliesForReferences”的操作。: (目标 ID: 47)
                    已跳过目标“PrepareForBuild”。以前的生成已成功。
                    已跳过目标“ResolveReferences”。以前的生成已成功。
-15:08:27.579     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“GetReferencedVCProjectsInfo: (目标 ID: 48)”(目标“ComputeReferenceCLInput”依赖于它):
+15:20:11.419     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“GetReferencedVCProjectsInfo: (目标 ID: 48)”(目标“ComputeReferenceCLInput”依赖于它):
                    由于 false 条件，已跳过任务“MSBuild”；('%(_MSBuildProjectReferenceExistent.Extension)' == '.vcxproj' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '')计算为('' == '.vcxproj' and '' != '' and '' != '')。
-15:08:27.579     1>已完成在项目“try.vcxproj”中生成目标“GetReferencedVCProjectsInfo”的操作。: (目标 ID: 48)
-15:08:27.579     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeReferenceCLInput: (目标 ID: 49)”(目标“_ClCompile”依赖于它):
+15:20:11.420     1>已完成在项目“try.vcxproj”中生成目标“GetReferencedVCProjectsInfo”的操作。: (目标 ID: 48)
+15:20:11.420     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeReferenceCLInput: (目标 ID: 49)”(目标“_ClCompile”依赖于它):
                    由于 false 条件，已跳过任务“WriteLinesToFile”；('@(_ReferenceOutputsToCopyLocally)'!='' and '$(DesignTimeBuild)' != 'true' and '$(TrackFileAccess)' == 'true')计算为(''!='' and '' != 'true' and 'true' == 'true')。
                    由于 false 条件，已跳过任务“WriteLinesToFile”；('@(_ReferenceOutputsToCopyLocally)'!='' and '$(DesignTimeBuild)' != 'true' and '$(TrackFileAccess)' == 'true')计算为(''!='' and '' != 'true' and 'true' == 'true')。
                    由于 false 条件，已跳过任务“Message”；('$(_REFERENCE_DEBUG)'=='true')计算为(''=='true')。
-15:08:27.579     1>已完成在项目“try.vcxproj”中生成目标“ComputeReferenceCLInput”的操作。: (目标 ID: 49)
-15:08:27.579     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“WarnCompileDuplicatedFilename: (目标 ID: 50)”(目标“_ClCompile”依赖于它):
-                   由于 false 条件，已跳过任务“VCMessage”；('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())')计算为('' != 'true' and '源.cpp' != '源.cpp' and 'Debug\' == 'Debug\')。
-15:08:27.582     1>已完成在项目“try.vcxproj”中生成目标“WarnCompileDuplicatedFilename”的操作。: (目标 ID: 50)
-15:08:27.582     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“FixupCLCompileOptions: (目标 ID: 51)”(目标“_ClCompile”依赖于它):
+15:20:11.420     1>已完成在项目“try.vcxproj”中生成目标“ComputeReferenceCLInput”的操作。: (目标 ID: 49)
+15:20:11.420     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“WarnCompileDuplicatedFilename: (目标 ID: 50)”(目标“_ClCompile”依赖于它):
+                   由于 false 条件，已跳过任务“VCMessage”；('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())')计算为('' != 'true' and 'main.cpp' != 'main.cpp' and 'Debug\' == 'Debug\')。
+15:20:11.422     1>已完成在项目“try.vcxproj”中生成目标“WarnCompileDuplicatedFilename”的操作。: (目标 ID: 50)
+15:20:11.422     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“FixupCLCompileOptions: (目标 ID: 51)”(目标“_ClCompile”依赖于它):
                    设置属性: _PCHForceSyncWrite=true
-15:08:27.583     1>已完成在项目“try.vcxproj”中生成目标“FixupCLCompileOptions”的操作。: (目标 ID: 51)
-15:08:27.583     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“MakeDirsForCl: (目标 ID: 52)”(目标“_ClCompile”依赖于它):
+15:20:11.423     1>已完成在项目“try.vcxproj”中生成目标“FixupCLCompileOptions”的操作。: (目标 ID: 51)
+15:20:11.423     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“MakeDirsForCl: (目标 ID: 52)”(目标“_ClCompile”依赖于它):
                    添加的项: ClDirsToMake=D:\gitTry\TRY\try\try\Debug
                    添加的项: ClDirsToMake=D:\gitTry\TRY\try\try\Debug
                    添加的项: ClDirsToMake=D:\gitTry\TRY\try\try\Debug
@@ -3206,7 +3208,7 @@
                            D:\gitTry\TRY\try\try\Debug
                            D:\gitTry\TRY\try\try\Debug
                            D:\gitTry\TRY\try\try\Debug
-15:08:27.586     1>已完成在项目“try.vcxproj”中生成目标“MakeDirsForCl”的操作。: (目标 ID: 52)
+15:20:11.426     1>已完成在项目“try.vcxproj”中生成目标“MakeDirsForCl”的操作。: (目标 ID: 52)
                    已跳过目标“_SelectedFiles”。以前的生成已成功。
                    由于条件的计算结果为 false，已跳过目标“GenerateTargetFrameworkMonikerAttribute”；('$(GenerateTargetFrameworkAttribute)' == 'true')的计算结果为('false' == 'true')。
                    已跳过目标“ComputeMIDLGeneratedCompileInputs”。以前的生成已成功。
@@ -3216,11 +3218,11 @@
                    已跳过目标“FixupCLCompileOptions”。以前的生成已成功。
                    已跳过目标“SelectCustomBuild”。以前的生成已成功。
                    由于条件的计算结果为 false，已跳过目标“SetModuleDependencies”；('$(DesignTimeBuild)' != 'true' and '$(EnableCppModules)' == 'true')的计算结果为('' != 'true' and '' == 'true')。
-15:08:27.586     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“SelectClCompile: (目标 ID: 53)”(目标“ClCompile”依赖于它):
-15:08:27.586     1>已完成在项目“try.vcxproj”中生成目标“SelectClCompile”的操作。: (目标 ID: 53)
+15:20:11.426     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“SelectClCompile: (目标 ID: 53)”(目标“ClCompile”依赖于它):
+15:20:11.426     1>已完成在项目“try.vcxproj”中生成目标“SelectClCompile”的操作。: (目标 ID: 53)
                    由于条件的计算结果为 false，已跳过目标“SelectAnalysisManifest”；('$(RunMsvcAnalysis)'=='true' and '$(SelectedFiles)'!='')的计算结果为('false'=='true' and ''!='')。
-                   由于条件的计算结果为 false，已跳过目标“ManagedIncrementalBuildPreProcessDependencyGraph”；('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True')的计算结果为('源.cpp' != '' and 'false' == 'True')。
-15:08:27.586     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“ClCompile: (目标 ID: 54)”(目标“_ClCompile”依赖于它):
+                   由于条件的计算结果为 false，已跳过目标“ManagedIncrementalBuildPreProcessDependencyGraph”；('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True')的计算结果为('main.cpp' != '' and 'false' == 'True')。
+15:20:11.426     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“ClCompile: (目标 ID: 54)”(目标“_ClCompile”依赖于它):
                    设置属性: CLToolArchitecture=Native32Bit
                    由于 false 条件，已跳过任务“Delete”；('%(ClCompile.DebugInformationFormat)' != '' and '%(ClCompile.DebugInformationFormat)' != 'None' and '%(ClCompile.DebugInformationFormat)' != 'OldStyle' and '%(ClCompile.ProgramDataBaseFileName)' != '' and !Exists(%(ClCompile.ProgramDataBaseFileName)))计算为('EditAndContinue' != '' and 'EditAndContinue' != 'None' and 'EditAndContinue' != 'OldStyle' and 'Debug\vc142.pdb' != '' and !Exists(Debug\vc142.pdb))。
                    由于 false 条件，已跳过任务“MultiToolTask”；('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(ClCompile.CompilerIteration)' == 'Modules')计算为('' != 'true' and '' == 'Modules')。
@@ -3295,7 +3297,7 @@
                      任务参数:SDLCheck=True (任务 ID: 27)
                      任务参数:
                          Sources=
-                             源.cpp
+                             main.cpp
                                      AcceptableNonZeroExitCodes=
                                      AnalyzeExternalRuleset=
                                      AssemblerListingLocation=
@@ -3425,62 +3427,57 @@
                      任务参数:AssemblerOutput=NoListing (任务 ID: 27)
                      任务参数:FavorSizeOrSpeed=Neither (任务 ID: 27)
                      任务参数:DiagnosticsFormat=Column (任务 ID: 27)
-                     读取跟踪日志: (任务 ID: 27)
-                     	Debug\try.tlog\CL.read.1.tlog (任务 ID: 27)
-                     D:\GITTRY\TRY\TRY\TRY\源.CPP 的输出: (任务 ID: 27)
-                     	D:\GITTRY\TRY\TRY\TRY\DEBUG\源.OBJ (任务 ID: 27)
-                     将编译 源.cpp，因为未能在跟踪日志中找到它。 (任务 ID: 27)
-                     D:\GITTRY\TRY\TRY\TRY\源.CPP 的输出: (任务 ID: 27)
-                     	D:\GITTRY\TRY\TRY\TRY\DEBUG\源.OBJ (任务 ID: 27)
-                     写入跟踪日志: (任务 ID: 27)
-                     	Debug\try.tlog\CL.write.1.tlog (任务 ID: 27)
+                     D:\GITTRY\TRY\TRY\TRY\MAIN.CPP 的输出: (任务 ID: 27)
+                     	D:\GITTRY\TRY\TRY\TRY\DEBUG\MAIN.OBJ (任务 ID: 27)
+                     将编译 main.cpp，因为跟踪日志不可用。 (任务 ID: 27)
+                     写入跟踪日志不可用，将禁用最小重新生成。 (任务 ID: 27)
                      传递给工具的环境变量为: (任务 ID: 27)
-                       VS_UNICODE_OUTPUT=1628 (任务 ID: 27)
-                     C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt "源.cpp" (任务 ID: 27)
+                       VS_UNICODE_OUTPUT=1792 (任务 ID: 27)
+                     C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt main.cpp (任务 ID: 27)
                      跟踪命令: (任务 ID: 27)
-                     C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Tracker.exe /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i D:\gitTry\TRY\try\try\Debug\try.tlog /r "D:\GITTRY\TRY\TRY\TRY\源.CPP" /b MSBuildConsole_CancelEventaf5583d3eee34898ac81803bf1ef7767  /c "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86\CL.exe"  /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt "源.cpp" (任务 ID: 27)
-                     源.cpp (任务 ID: 27)
+                     C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Tracker.exe /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i D:\gitTry\TRY\try\try\Debug\try.tlog /r D:\GITTRY\TRY\TRY\TRY\MAIN.CPP /b MSBuildConsole_CancelEvente8af466ad87b4f3ebc0f6ed78788ce67  /c "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86\CL.exe"  /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt main.cpp (任务 ID: 27)
+                     main.cpp (任务 ID: 27)
                    已完成执行任务“CL”的操作。 (任务 ID: 27)
-15:08:28.158     1>已完成在项目“try.vcxproj”中生成目标“ClCompile”的操作。: (目标 ID: 54)
+15:20:11.951     1>已完成在项目“try.vcxproj”中生成目标“ClCompile”的操作。: (目标 ID: 54)
                    由于条件的计算结果为 false，已跳过目标“RunSelectedFileNativeCodeAnalysis”；('$(RunMsvcAnalysis)'=='true' and '$(SelectedFiles)'!='')的计算结果为('false'=='true' and ''!='')。
-                   由于条件的计算结果为 false，已跳过目标“ManagedIncrementalBuildPostProcessDependencyGraph”；('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True')的计算结果为('源.cpp' != '' and 'false' == 'True')。
+                   由于条件的计算结果为 false，已跳过目标“ManagedIncrementalBuildPostProcessDependencyGraph”；('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True')的计算结果为('main.cpp' != '' and 'false' == 'True')。
                    由于条件的计算结果为 false，已跳过目标“NoAnalysisToolEnabledWarning”；('$(RunCppAnalysis)'=='true' AND '$(EnableMicrosoftCodeAnalysis)'=='false' AND '$(EnableClangTidyCodeAnalysis)'=='false')的计算结果为('false'=='true' AND 'true'=='false' AND 'false'=='false')。
                    由于条件的计算结果为 false，已跳过目标“RunSelectedFileClangTidy”；('$(RunClangCppAnalysis)'=='true' AND '$(SelectedFiles)'!='')的计算结果为('false'=='true' AND ''!='')。
                    由于条件的计算结果为 false，已跳过目标“MicrosoftAnalysisIncompatiableWithClangCl”；('$(RunCppAnalysis)'=='true' AND '$(EnableMicrosoftCodeAnalysis)'=='true' AND '$(UseClangCl)'=='true')的计算结果为('false'=='true' AND 'true'=='true' AND ''=='true')。
-15:08:28.158     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“AfterClCompile: (目标 ID: 55)”(目标“_ClCompile”依赖于它):
-15:08:28.158     1>已完成在项目“try.vcxproj”中生成目标“AfterClCompile”的操作。: (目标 ID: 55)
-15:08:28.158     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_ClCompile: (目标 ID: 56)”(目标“_BuildCompileAction”依赖于它):
-15:08:28.158     1>已完成在项目“try.vcxproj”中生成目标“_ClCompile”的操作。: (目标 ID: 56)
+15:20:11.951     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“AfterClCompile: (目标 ID: 55)”(目标“_ClCompile”依赖于它):
+15:20:11.951     1>已完成在项目“try.vcxproj”中生成目标“AfterClCompile”的操作。: (目标 ID: 55)
+15:20:11.951     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_ClCompile: (目标 ID: 56)”(目标“_BuildCompileAction”依赖于它):
+15:20:11.951     1>已完成在项目“try.vcxproj”中生成目标“_ClCompile”的操作。: (目标 ID: 56)
                    由于条件的计算结果为 false，已跳过目标“_ResGen”；('@(EmbeddedResource)'!='')的计算结果为(''!='')。
-15:08:28.158     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“BeforeResourceCompile: (目标 ID: 57)”(目标“_ResourceCompile”依赖于它):
-15:08:28.158     1>已完成在项目“try.vcxproj”中生成目标“BeforeResourceCompile”的操作。: (目标 ID: 57)
-15:08:28.158     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“MakeDirsForResourceCompile: (目标 ID: 58)”(目标“_ResourceCompile”依赖于它):
+15:20:11.951     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“BeforeResourceCompile: (目标 ID: 57)”(目标“_ResourceCompile”依赖于它):
+15:20:11.951     1>已完成在项目“try.vcxproj”中生成目标“BeforeResourceCompile”的操作。: (目标 ID: 57)
+15:20:11.951     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“MakeDirsForResourceCompile: (目标 ID: 58)”(目标“_ResourceCompile”依赖于它):
                    添加的项: RcDirsToMake=D:\gitTry\TRY\try\try\Debug
                    任务“MakeDir” (任务 ID: 28)
                      任务参数:Directories=D:\gitTry\TRY\try\try\Debug (任务 ID: 28)
                    已完成执行任务“MakeDir”的操作。 (任务 ID: 28)
                    删除的项: RcDirsToMake=D:\gitTry\TRY\try\try\Debug
-15:08:28.159     1>已完成在项目“try.vcxproj”中生成目标“MakeDirsForResourceCompile”的操作。: (目标 ID: 58)
+15:20:11.951     1>已完成在项目“try.vcxproj”中生成目标“MakeDirsForResourceCompile”的操作。: (目标 ID: 58)
                    由于条件的计算结果为 false，已跳过目标“ResourceCompile”；('@(ResourceCompile)' != '')的计算结果为('' != '')。
-15:08:28.159     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“AfterResourceCompile: (目标 ID: 59)”(目标“_ResourceCompile”依赖于它):
-15:08:28.159     1>已完成在项目“try.vcxproj”中生成目标“AfterResourceCompile”的操作。: (目标 ID: 59)
-15:08:28.159     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_ResourceCompile: (目标 ID: 60)”(目标“_BuildCompileAction”依赖于它):
-15:08:28.159     1>已完成在项目“try.vcxproj”中生成目标“_ResourceCompile”的操作。: (目标 ID: 60)
+15:20:11.951     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“AfterResourceCompile: (目标 ID: 59)”(目标“_ResourceCompile”依赖于它):
+15:20:11.951     1>已完成在项目“try.vcxproj”中生成目标“AfterResourceCompile”的操作。: (目标 ID: 59)
+15:20:11.951     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_ResourceCompile: (目标 ID: 60)”(目标“_BuildCompileAction”依赖于它):
+15:20:11.951     1>已完成在项目“try.vcxproj”中生成目标“_ResourceCompile”的操作。: (目标 ID: 60)
                    由于条件的计算结果为 false，已跳过目标“_ImpLib”；('$(ImpLibCompiled)' == 'true')的计算结果为('' == 'true')。
                    由于条件的计算结果为 false，已跳过目标“_Lib”；('$(LibCompiled)' == 'true')的计算结果为('' == 'true')。
-15:08:28.159     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“AfterBuildCompileEvent: (目标 ID: 61)”(目标“_BuildCompileAction”依赖于它):
-15:08:28.159     1>已完成在项目“try.vcxproj”中生成目标“AfterBuildCompileEvent”的操作。: (目标 ID: 61)
-15:08:28.159     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_BuildCompileAction: (目标 ID: 62)”(目标“BuildCompile”依赖于它):
-15:08:28.159     1>已完成在项目“try.vcxproj”中生成目标“_BuildCompileAction”的操作。: (目标 ID: 62)
-15:08:28.159     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“BuildCompile: (目标 ID: 63)”(目标“Build”依赖于它):
-15:08:28.159     1>已完成在项目“try.vcxproj”中生成目标“BuildCompile”的操作。: (目标 ID: 63)
+15:20:11.951     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“AfterBuildCompileEvent: (目标 ID: 61)”(目标“_BuildCompileAction”依赖于它):
+15:20:11.951     1>已完成在项目“try.vcxproj”中生成目标“AfterBuildCompileEvent”的操作。: (目标 ID: 61)
+15:20:11.951     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_BuildCompileAction: (目标 ID: 62)”(目标“BuildCompile”依赖于它):
+15:20:11.951     1>已完成在项目“try.vcxproj”中生成目标“_BuildCompileAction”的操作。: (目标 ID: 62)
+15:20:11.951     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“BuildCompile: (目标 ID: 63)”(目标“Build”依赖于它):
+15:20:11.951     1>已完成在项目“try.vcxproj”中生成目标“BuildCompile”的操作。: (目标 ID: 63)
                    已跳过目标“PrepareProjectReferences”。以前的生成已成功。
-15:08:28.159     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“BuildLinkTraverse: (目标 ID: 64)”(目标“BuildLink”依赖于它):
+15:20:11.951     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“BuildLinkTraverse: (目标 ID: 64)”(目标“BuildLink”依赖于它):
                    由于 false 条件，已跳过任务“MSBuild”；('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != ''  and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true')计算为('' == 'true' and '' != '' and '' != ''  and '' == 'true')。
-15:08:28.159     1>已完成在项目“try.vcxproj”中生成目标“BuildLinkTraverse”的操作。: (目标 ID: 64)
+15:20:11.951     1>已完成在项目“try.vcxproj”中生成目标“BuildLinkTraverse”的操作。: (目标 ID: 64)
                    已跳过目标“PrepareForBuild”。以前的生成已成功。
                    已跳过目标“ResolveReferences”。以前的生成已成功。
-15:08:28.159     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeLegacyManifestEmbedding: (目标 ID: 65)”(目标“_BuildLinkAction”依赖于它):
+15:20:11.951     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeLegacyManifestEmbedding: (目标 ID: 65)”(目标“_BuildLinkAction”依赖于它):
                    添加的项: 
                        Manifest=
                            temp
@@ -3510,15 +3507,15 @@
                                    UpdateFileHashes=false
                                    VerboseOutput=true
                                    _LocalVariable=true
-15:08:28.159     1>已完成在项目“try.vcxproj”中生成目标“ComputeLegacyManifestEmbedding”的操作。: (目标 ID: 65)
-15:08:28.159     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“BeforeLink: (目标 ID: 66)”(目标“_Link”依赖于它):
-15:08:28.159     1>已完成在项目“try.vcxproj”中生成目标“BeforeLink”的操作。: (目标 ID: 66)
-15:08:28.159     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeRCOutputs: (目标 ID: 67)”(目标“ComputeRCGeneratedLinkInputs”依赖于它):
-15:08:28.159     1>已完成在项目“try.vcxproj”中生成目标“ComputeRCOutputs”的操作。: (目标 ID: 67)
-15:08:28.159     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeRCGeneratedLinkInputs: (目标 ID: 68)”(目标“_Link”依赖于它):
-15:08:28.159     1>已完成在项目“try.vcxproj”中生成目标“ComputeRCGeneratedLinkInputs”的操作。: (目标 ID: 68)
-15:08:28.159     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeManifestGeneratedLinkerInputs: (目标 ID: 69)”(目标“_Link”依赖于它):
-15:08:28.159     1>已完成在项目“try.vcxproj”中生成目标“ComputeManifestGeneratedLinkerInputs”的操作。: (目标 ID: 69)
+15:20:11.951     1>已完成在项目“try.vcxproj”中生成目标“ComputeLegacyManifestEmbedding”的操作。: (目标 ID: 65)
+15:20:11.951     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“BeforeLink: (目标 ID: 66)”(目标“_Link”依赖于它):
+15:20:11.951     1>已完成在项目“try.vcxproj”中生成目标“BeforeLink”的操作。: (目标 ID: 66)
+15:20:11.951     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeRCOutputs: (目标 ID: 67)”(目标“ComputeRCGeneratedLinkInputs”依赖于它):
+15:20:11.951     1>已完成在项目“try.vcxproj”中生成目标“ComputeRCOutputs”的操作。: (目标 ID: 67)
+15:20:11.951     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeRCGeneratedLinkInputs: (目标 ID: 68)”(目标“_Link”依赖于它):
+15:20:11.951     1>已完成在项目“try.vcxproj”中生成目标“ComputeRCGeneratedLinkInputs”的操作。: (目标 ID: 68)
+15:20:11.951     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeManifestGeneratedLinkerInputs: (目标 ID: 69)”(目标“_Link”依赖于它):
+15:20:11.951     1>已完成在项目“try.vcxproj”中生成目标“ComputeManifestGeneratedLinkerInputs”的操作。: (目标 ID: 69)
                    已跳过目标“ComputeCustomBuildOutput”。以前的生成已成功。
                    由于条件的计算结果为 false，已跳过目标“GenerateTargetFrameworkMonikerAttribute”；('$(GenerateTargetFrameworkAttribute)' == 'true')的计算结果为('false' == 'true')。
                    已跳过目标“ComputeMIDLGeneratedCompileInputs”。以前的生成已成功。
@@ -3526,10 +3523,10 @@
                    已跳过目标“ComputeReferenceCLInput”。以前的生成已成功。
                    已跳过目标“WarnCompileDuplicatedFilename”。以前的生成已成功。
                    已跳过目标“FixupCLCompileOptions”。以前的生成已成功。
-15:08:28.159     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeCLOutputs: (目标 ID: 70)”(目标“ComputeCLGeneratedLinkInputs”依赖于它):
+15:20:11.952     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeCLOutputs: (目标 ID: 70)”(目标“ComputeCLGeneratedLinkInputs”依赖于它):
                    添加的项: 
                        Obj=
-                           Debug\源.obj
+                           Debug\main.obj
                                    AcceptableNonZeroExitCodes=
                                    AnalyzeExternalRuleset=
                                    AssemblerListingLocation=
@@ -3614,11 +3611,11 @@
                                    WholeProgramOptimization=false
                                    WinRTNoStdLib=false
                                    XMLDocumentationFileName=Debug\
-15:08:28.160     1>已完成在项目“try.vcxproj”中生成目标“ComputeCLOutputs”的操作。: (目标 ID: 70)
-15:08:28.160     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeCLGeneratedLinkInputs: (目标 ID: 71)”(目标“_Link”依赖于它):
+15:20:11.952     1>已完成在项目“try.vcxproj”中生成目标“ComputeCLOutputs”的操作。: (目标 ID: 70)
+15:20:11.952     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeCLGeneratedLinkInputs: (目标 ID: 71)”(目标“_Link”依赖于它):
                    添加的项: 
                        Link=
-                           Debug\源.obj
+                           Debug\main.obj
                                    AcceptableNonZeroExitCodes=
                                    AdditionalDependencies=kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;
                                    AllowIsolation=true
@@ -3658,11 +3655,11 @@
                                    TypeLibraryResourceID=1
                                    UACExecutionLevel=AsInvoker
                                    UACUIAccess=false
-15:08:28.160     1>已完成在项目“try.vcxproj”中生成目标“ComputeCLGeneratedLinkInputs”的操作。: (目标 ID: 71)
-15:08:28.160     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeLinkInputsFromProject: (目标 ID: 72)”(目标“_Link”依赖于它):
-15:08:28.160     1>已完成在项目“try.vcxproj”中生成目标“ComputeLinkInputsFromProject”的操作。: (目标 ID: 72)
+15:20:11.952     1>已完成在项目“try.vcxproj”中生成目标“ComputeCLGeneratedLinkInputs”的操作。: (目标 ID: 71)
+15:20:11.952     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeLinkInputsFromProject: (目标 ID: 72)”(目标“_Link”依赖于它):
+15:20:11.952     1>已完成在项目“try.vcxproj”中生成目标“ComputeLinkInputsFromProject”的操作。: (目标 ID: 72)
                    由于条件的计算结果为 false，已跳过目标“ComputeReferenceLinkInputs”；(@(ProjectReference) != '')的计算结果为( != '')。
-15:08:28.160     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeManifestInputsTargets: (目标 ID: 73)”(目标“_Link”依赖于它):
+15:20:11.952     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeManifestInputsTargets: (目标 ID: 73)”(目标“_Link”依赖于它):
                    添加的项: 
                        Manifest=
                            temp
@@ -3693,10 +3690,10 @@
                                    UpdateFileHashes=false
                                    VerboseOutput=true
                                    _LocalVariable=true
-15:08:28.160     1>已完成在项目“try.vcxproj”中生成目标“ComputeManifestInputsTargets”的操作。: (目标 ID: 73)
+15:20:11.952     1>已完成在项目“try.vcxproj”中生成目标“ComputeManifestInputsTargets”的操作。: (目标 ID: 73)
                    由于条件的计算结果为 false，已跳过目标“ManifestResourceCompile”；('$(EmbedManifestBy)' == 'LINK' and '@(Manifest)' != '')的计算结果为('LINK' == 'LINK' and '' != '')。
                    由于条件的计算结果为 false，已跳过目标“AssignWinFXEmbeddedResource”；('@(WinFXEmbeddedResource)' != '')的计算结果为('' != '')。
-15:08:28.160     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“AssignTargetPaths: (目标 ID: 74)”(目标“PrepareResourceNames”依赖于它):
+15:20:11.952     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“AssignTargetPaths: (目标 ID: 74)”(目标“PrepareResourceNames”依赖于它):
                    正在使用程序集“Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”中的“AssignTargetPath”任务。
                    任务“AssignTargetPath” (任务 ID: 29)
                      任务参数:RootFolder=D:\gitTry\TRY\try\try (任务 ID: 29)
@@ -3711,9 +3708,9 @@
                      任务参数:RootFolder=D:\gitTry\TRY\try\try (任务 ID: 32)
                    已完成执行任务“AssignTargetPath”的操作。 (任务 ID: 32)
                    由于 false 条件，已跳过任务“AssignTargetPath”；('@(_DeploymentBaseManifestWithTargetPath)'=='' and '%(None.Extension)'=='.manifest')计算为(''=='' and ''=='.manifest')。
-15:08:28.163     1>已完成在项目“try.vcxproj”中生成目标“AssignTargetPaths”的操作。: (目标 ID: 74)
+15:20:11.954     1>已完成在项目“try.vcxproj”中生成目标“AssignTargetPaths”的操作。: (目标 ID: 74)
                    已跳过目标“AssignTargetPaths”。以前的生成已成功。
-15:08:28.163     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“SplitResourcesByCulture: (目标 ID: 75)”(目标“PrepareResourceNames”依赖于它):
+15:20:11.954     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“SplitResourcesByCulture: (目标 ID: 75)”(目标“PrepareResourceNames”依赖于它):
                    由于 false 条件，已跳过任务“Warning”；('@(ResxWithNoCulture)'!='')计算为(''!='')。
                    由于 false 条件，已跳过任务“Warning”；('@(ResxWithCulture)'!='')计算为(''!='')。
                    由于 false 条件，已跳过任务“Warning”；('@(NonResxWithCulture)'!='')计算为(''!='')。
@@ -3721,13 +3718,13 @@
                    正在使用程序集“Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”中的“AssignCulture”任务。
                    任务“AssignCulture” (任务 ID: 33)
                    已完成执行任务“AssignCulture”的操作。 (任务 ID: 33)
-15:08:28.164     1>已完成在项目“try.vcxproj”中生成目标“SplitResourcesByCulture”的操作。: (目标 ID: 75)
+15:20:11.956     1>已完成在项目“try.vcxproj”中生成目标“SplitResourcesByCulture”的操作。: (目标 ID: 75)
                    由于条件的计算结果为 false，已跳过目标“CreateManifestResourceNames”；('@(EmbeddedResource)' != '')的计算结果为('' != '')。
-15:08:28.164     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“CreateCustomManifestResourceNames: (目标 ID: 76)”(目标“PrepareResourceNames”依赖于它):
-15:08:28.164     1>已完成在项目“try.vcxproj”中生成目标“CreateCustomManifestResourceNames”的操作。: (目标 ID: 76)
-15:08:28.164     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“PrepareResourceNames: (目标 ID: 77)”(目标“_Link”依赖于它):
-15:08:28.164     1>已完成在项目“try.vcxproj”中生成目标“PrepareResourceNames”的操作。: (目标 ID: 77)
-15:08:28.164     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“MakeDirsForLink: (目标 ID: 78)”(目标“_Link”依赖于它):
+15:20:11.956     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“CreateCustomManifestResourceNames: (目标 ID: 76)”(目标“PrepareResourceNames”依赖于它):
+15:20:11.956     1>已完成在项目“try.vcxproj”中生成目标“CreateCustomManifestResourceNames”的操作。: (目标 ID: 76)
+15:20:11.956     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“PrepareResourceNames: (目标 ID: 77)”(目标“_Link”依赖于它):
+15:20:11.956     1>已完成在项目“try.vcxproj”中生成目标“PrepareResourceNames”的操作。: (目标 ID: 77)
+15:20:11.956     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“MakeDirsForLink: (目标 ID: 78)”(目标“_Link”依赖于它):
                    设置属性: _LinkImportLibrary=D:\gitTry\TRY\try\Debug\try.lib
                    添加的项: _LinkImportLibraryFile=D:\gitTry\TRY\try\Debug\try.lib
                    添加的项: LinkDirsToMake=D:\gitTry\TRY\try\Debug
@@ -3749,25 +3746,25 @@
                            D:\gitTry\TRY\try\Debug
                            D:\gitTry\TRY\try\Debug\
                    删除的项: _LinkImportLibraryFile=D:\gitTry\TRY\try\Debug\try.lib
-15:08:28.165     1>已完成在项目“try.vcxproj”中生成目标“MakeDirsForLink”的操作。: (目标 ID: 78)
-15:08:28.165     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“DoLinkOutputFilesMatch: (目标 ID: 79)”(目标“_Link”依赖于它):
+15:20:11.956     1>已完成在项目“try.vcxproj”中生成目标“MakeDirsForLink”的操作。: (目标 ID: 78)
+15:20:11.956     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“DoLinkOutputFilesMatch: (目标 ID: 79)”(目标“_Link”依赖于它):
                    添加的项: _OutputFileFromLink=D:\gitTry\TRY\try\Debug\try.exe
                    由于 false 条件，已跳过任务“VCMessage”；('@(_OutputFileFromLink)' == '')计算为('D:\gitTry\TRY\try\Debug\try.exe' == '')。
                    由于 false 条件，已跳过任务“VCMessage”；('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.FullPath)' != '$([System.IO.Path]::GetFullPath($(TargetPath)))')计算为('D:\gitTry\TRY\try\Debug\try.exe' != '' and 'D:\gitTry\TRY\try\Debug\try.exe' != 'D:\gitTry\TRY\try\Debug\try.exe')。
                    由于 false 条件，已跳过任务“VCMessage”；('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.Extension)' != '' and '%(_OutputFileFromLink.Extension)' != '$(TargetExt)')计算为('D:\gitTry\TRY\try\Debug\try.exe' != '' and '.exe' != '' and '.exe' != '.exe')。
                    由于 false 条件，已跳过任务“VCMessage”；('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.Filename)' != '' and '%(_OutputFileFromLink.Filename)' != '$(TargetName)')计算为('D:\gitTry\TRY\try\Debug\try.exe' != '' and 'try' != '' and 'try' != 'try')。
                    由于 false 条件，已跳过任务“VCMessage”；('%(Link.MinimumRequiredVersion)' != '' and ('%(Link.Subsystem)' == '' or '%(Link.Subsystem)' == 'NotSet'))计算为('' != '' and ('Console' == '' or 'Console' == 'NotSet'))。
-15:08:28.166     1>已完成在项目“try.vcxproj”中生成目标“DoLinkOutputFilesMatch”的操作。: (目标 ID: 79)
-15:08:28.166     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“PreLinkEvent: (目标 ID: 80)”(目标“_Link”依赖于它):
+15:20:11.957     1>已完成在项目“try.vcxproj”中生成目标“DoLinkOutputFilesMatch”的操作。: (目标 ID: 79)
+15:20:11.957     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“PreLinkEvent: (目标 ID: 80)”(目标“_Link”依赖于它):
                    由于 false 条件，已跳过任务“Message”；('%(PreLinkEvent.Message)' != '' and '%(PreLinkEvent.Command)' != '')计算为('' != '' and '' != '')。
                    由于 false 条件，已跳过任务“Exec”；('%(PreLinkEvent.Command)' != '')计算为('' != '')。
-15:08:28.166     1>已完成在项目“try.vcxproj”中生成目标“PreLinkEvent”的操作。: (目标 ID: 80)
-15:08:28.166     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“ComputeLinkSwitches: (目标 ID: 81)”(目标“Link”依赖于它):
+15:20:11.957     1>已完成在项目“try.vcxproj”中生成目标“PreLinkEvent”的操作。: (目标 ID: 80)
+15:20:11.957     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“ComputeLinkSwitches: (目标 ID: 81)”(目标“Link”依赖于它):
                    设置属性: Link_MinimalRebuildFromTracking=true
                    设置属性: LinkToolArchitecture=Native32Bit
                    设置属性: _GenerateWindowsMetadata=
-15:08:28.166     1>已完成在项目“try.vcxproj”中生成目标“ComputeLinkSwitches”的操作。: (目标 ID: 81)
-15:08:28.166     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“Link: (目标 ID: 82)”(目标“_Link”依赖于它):
+15:20:11.957     1>已完成在项目“try.vcxproj”中生成目标“ComputeLinkSwitches”的操作。: (目标 ID: 81)
+15:20:11.957     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“Link: (目标 ID: 82)”(目标“_Link”依赖于它):
                    正在使用程序集“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.Build.CppTasks.Common.dll”中的“Link”任务。
                    任务“Link” (任务 ID: 35)
                      任务参数:OutputFile=D:\gitTry\TRY\try\Debug\try.exe (任务 ID: 35)
@@ -3839,7 +3836,7 @@
                      任务参数:TargetMachine=MachineX86 (任务 ID: 35)
                      任务参数:
                          Sources=
-                             Debug\源.obj
+                             Debug\main.obj
                                      AcceptableNonZeroExitCodes=
                                      AdditionalDependencies=kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;
                                      AllowIsolation=true
@@ -3908,457 +3905,139 @@
                      	Debug\try.tlog\link.write.1.tlog (任务 ID: 35)
                      读取跟踪日志: (任务 ID: 35)
                      	Debug\try.tlog\link.read.1.tlog (任务 ID: 35)
-                     在跟踪日志中未找到 D:\GITTRY\TRY\TRY\TRY\DEBUG\源.OBJ 的输出；需要编译源。 (任务 ID: 35)
-                     在跟踪日志中未找到输出 D:\GITTRY\TRY\TRY\TRY\DEBUG\源.OBJ 的依赖项；需要编译源。 (任务 ID: 35)
+                     在跟踪日志中未找到 D:\GITTRY\TRY\TRY\TRY\DEBUG\MAIN.OBJ 的输出；需要编译源。 (任务 ID: 35)
+                     在跟踪日志中未找到输出 D:\GITTRY\TRY\TRY\TRY\DEBUG\MAIN.OBJ 的依赖项；需要编译源。 (任务 ID: 35)
                      传递给工具的环境变量为: (任务 ID: 35)
-                       VS_UNICODE_OUTPUT=1688 (任务 ID: 35)
-                     C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"D:\gitTry\TRY\try\Debug\try.exe" /INCREMENTAL /ILK:"Debug\try.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\gitTry\TRY\try\Debug\try.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\gitTry\TRY\try\Debug\try.lib" /MACHINE:X86 "Debug\源.obj" (任务 ID: 35)
+                       VS_UNICODE_OUTPUT=1860 (任务 ID: 35)
+                     C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"D:\gitTry\TRY\try\Debug\try.exe" /INCREMENTAL /ILK:"Debug\try.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\gitTry\TRY\try\Debug\try.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\gitTry\TRY\try\Debug\try.lib" /MACHINE:X86 Debug\main.obj (任务 ID: 35)
                      跟踪命令: (任务 ID: 35)
-                     C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Tracker.exe /a /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i D:\gitTry\TRY\try\try\Debug\try.tlog /r "D:\GITTRY\TRY\TRY\TRY\DEBUG\源.OBJ" /b MSBuildConsole_CancelEventdb32d38e45df419f918400928c0fe80f  /c "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86\link.exe"  /ERRORREPORT:PROMPT /OUT:"D:\gitTry\TRY\try\Debug\try.exe" /INCREMENTAL /ILK:"Debug\try.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\gitTry\TRY\try\Debug\try.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\gitTry\TRY\try\Debug\try.lib" /MACHINE:X86 "Debug\源.obj" (任务 ID: 35)
+                     C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Tracker.exe /a /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i D:\gitTry\TRY\try\try\Debug\try.tlog /r D:\GITTRY\TRY\TRY\TRY\DEBUG\MAIN.OBJ /b MSBuildConsole_CancelEvent388990d5cf384bc4b1515432b20c328e  /c "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30037\bin\HostX86\x86\link.exe"  /ERRORREPORT:PROMPT /OUT:"D:\gitTry\TRY\try\Debug\try.exe" /INCREMENTAL /ILK:"Debug\try.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\gitTry\TRY\try\Debug\try.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\gitTry\TRY\try\Debug\try.lib" /MACHINE:X86 Debug\main.obj (任务 ID: 35)
+15:20:12.398     1>main.obj : error LNK2019: 无法解析的外部符号 "public: __thiscall MySpace::String::String(void)" (??0String@MySpace@@QAE@XZ)，函数 _main 中引用了该符号
+15:20:12.399     1>main.obj : error LNK2019: 无法解析的外部符号 "public: __thiscall MySpace::String::String(char const *)" (??0String@MySpace@@QAE@PBD@Z)，函数 _main 中引用了该符号
+15:20:12.399     1>main.obj : error LNK2019: 无法解析的外部符号 "public: __thiscall MySpace::String::~String(void)" (??1String@MySpace@@QAE@XZ)，函数 _main 中引用了该符号
+15:20:12.399     1>D:\gitTry\TRY\try\Debug\try.exe : fatal error LNK1120: 3 个无法解析的外部命令
+                     命令已退出，代码为 1120。 (任务 ID: 35)
                      输出属性: LinkSkippedExecution=False (任务 ID: 35)
-                   已完成执行任务“Link”的操作。 (任务 ID: 35)
-                   任务“Message” (任务 ID: 36)
-                     任务参数:Importance=High (任务 ID: 36)
-                     任务参数:Text=try.vcxproj -> D:\gitTry\TRY\try\Debug\try.exe (任务 ID: 36)
-                     try.vcxproj -> D:\gitTry\TRY\try\Debug\try.exe (任务 ID: 36)
-                   已完成执行任务“Message”的操作。 (任务 ID: 36)
-                   由于 false 条件，已跳过任务“VCMessage”；(('$(EmbedManifestBy)' != 'LINK' or '$(LegacyManifestEmbedding)' != 'true' or '$(LinkSkippedExecution)' == 'true') and
-                                %(Link.GenerateDebugInformation) == 'DebugFastLink' and %(Link.ProgramDataBaseFileName) != '')计算为(('LINK' != 'LINK' or '' != 'true' or 'False' == 'true') and
-                                true == 'DebugFastLink' and  != '')。
-                   由于 false 条件，已跳过任务“VCMessage”；(('$(EmbedManifestBy)' != 'LINK' or '$(LegacyManifestEmbedding)' != 'true' or '$(LinkSkippedExecution)' == 'true') and
-                                %(Link.GenerateDebugInformation) == 'true' and %(Link.ProgramDataBaseFileName) != '')计算为(('LINK' != 'LINK' or '' != 'true' or 'False' == 'true') and
-                                true == 'true' and  != '')。
-15:08:28.668     1>已完成在项目“try.vcxproj”中生成目标“Link”的操作。: (目标 ID: 82)
-                   由于条件的计算结果为 false，已跳过目标“MetaGenInputsOutputs”；('$(EnableManagedIncrementalBuild)' == 'True')的计算结果为('false' == 'True')。
-                   由于条件的计算结果为 false，已跳过目标“ComputeMetaGenInputs”；('$(CLRSupport)'!='' and '$(CLRSupport)'!='false' and '$(CLRSupport)'!='NetCore')的计算结果为('false'!='' and 'false'!='false' and 'false'!='NetCore')。
-                   由于条件的计算结果为 false，已跳过目标“MetaGen”；('@(MetaGen)' != '')的计算结果为('' != '')。
-15:08:28.668     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeLinkImportLibraryOutputsForClean: (目标 ID: 83)”(目标“_Link”依赖于它):
-                   由于 false 条件，已跳过任务“WriteLinesToFile”；('@(_LinkSecondaryOutput)' != '')计算为('' != '')。
-15:08:28.668     1>已完成在项目“try.vcxproj”中生成目标“ComputeLinkImportLibraryOutputsForClean”的操作。: (目标 ID: 83)
-15:08:28.668     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“AfterLink: (目标 ID: 84)”(目标“_Link”依赖于它):
-15:08:28.668     1>已完成在项目“try.vcxproj”中生成目标“AfterLink”的操作。: (目标 ID: 84)
-15:08:28.668     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_Link: (目标 ID: 85)”(目标“_BuildLinkAction”依赖于它):
-15:08:28.668     1>已完成在项目“try.vcxproj”中生成目标“_Link”的操作。: (目标 ID: 85)
-15:08:28.668     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_ALink: (目标 ID: 86)”(目标“_BuildLinkAction”依赖于它):
-15:08:28.668     1>已完成在项目“try.vcxproj”中生成目标“_ALink”的操作。: (目标 ID: 86)
-                   已跳过目标“ComputeLegacyManifestEmbedding”。以前的生成已成功。
-15:08:28.668     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_Manifest: (目标 ID: 87)”(目标“_BuildLinkAction”依赖于它):
-                   由于 false 条件，已跳过任务“CallTarget”；('$(LegacyManifestEmbedding)' == 'true')计算为('' == 'true')。
-15:08:28.668     1>已完成在项目“try.vcxproj”中生成目标“_Manifest”的操作。: (目标 ID: 87)
-15:08:28.668     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“RegisterOutput: (目标 ID: 88)”(目标“_BuildLinkAction”依赖于它):
-                   由于 false 条件，已跳过任务“Exec”；('$(ConfigurationType)'=='DynamicLibrary' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'!='true')计算为('Application'=='DynamicLibrary' and 'false'=='true' and 'false'!='true')。
-                   由于 false 条件，已跳过任务“Exec”；('$(ConfigurationType)'=='DynamicLibrary' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'=='true')计算为('Application'=='DynamicLibrary' and 'false'=='true' and 'false'=='true')。
-                   由于 false 条件，已跳过任务“Exec”；('$(ConfigurationType)'=='Application' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'!='true')计算为('Application'=='Application' and 'false'=='true' and 'false'!='true')。
-                   由于 false 条件，已跳过任务“Exec”；('$(ConfigurationType)'=='Application' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'=='true')计算为('Application'=='Application' and 'false'=='true' and 'false'=='true')。
-                   由于 false 条件，已跳过任务“VCMessage”；('$(_RegisterOutputExitCode)' != '' and '$(_RegisterOutputExitCode)' != '0')计算为('' != '' and '' != '0')。
-15:08:28.673     1>已完成在项目“try.vcxproj”中生成目标“RegisterOutput”的操作。: (目标 ID: 88)
-                   已跳过目标“PrepareForBuild”。以前的生成已成功。
-                   已跳过目标“ResolveReferences”。以前的生成已成功。
-15:08:28.673     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ResolvedXDCMake: (目标 ID: 89)”(目标“_XdcMake”依赖于它):
-                   由于 false 条件，已跳过任务“MSBuild”；('%(_MSBuildProjectReferenceExistent.Extension)' == '.vcxproj' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '' and '$(_ClCompileGenerateXMLDocumentationFiles)' == 'true')计算为('' == '.vcxproj' and '' != '' and '' != '' and '' == 'true')。
-15:08:28.673     1>已完成在项目“try.vcxproj”中生成目标“ResolvedXDCMake”的操作。: (目标 ID: 89)
-15:08:28.673     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeCLCompileGeneratedXDCFiles: (目标 ID: 90)”(目标“_XdcMake”依赖于它):
-                   添加的项: 
-                       XdcMake=
-                           temp
-                                   AcceptableNonZeroExitCodes=
-                                   DocumentLibraryDependencies=true
-                                   Local=true
-                                   MinimalRebuildFromTracking=true
-                                   OutputFile=D:\gitTry\TRY\try\Debug\try.xml
-                                   SuppressStartupBanner=true
-                                   TrackerLogDirectory=Debug\try.tlog\
-                   设置属性: XdcMakeDocumentLibraryDependencies=true
-                   设置属性: XdcMakeAdditionalDocumentFile=
-                   删除的项: 
-                       XdcMake=
-                           temp
-                                   AcceptableNonZeroExitCodes=
-                                   DocumentLibraryDependencies=true
-                                   Local=true
-                                   MinimalRebuildFromTracking=true
-                                   OutputFile=D:\gitTry\TRY\try\Debug\try.xml
-                                   SuppressStartupBanner=true
-                                   TrackerLogDirectory=Debug\try.tlog\
-15:08:28.673     1>已完成在项目“try.vcxproj”中生成目标“ComputeCLCompileGeneratedXDCFiles”的操作。: (目标 ID: 90)
-15:08:28.673     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“MakeDirsForXdcMake: (目标 ID: 91)”(目标“_XdcMake”依赖于它):
-                   任务“MakeDir” (任务 ID: 37)
-                   已完成执行任务“MakeDir”的操作。 (任务 ID: 37)
-15:08:28.673     1>已完成在项目“try.vcxproj”中生成目标“MakeDirsForXdcMake”的操作。: (目标 ID: 91)
-                   由于条件的计算结果为 false，已跳过目标“XdcMake”；('@(XdcMake)' != '')的计算结果为('' != '')。
-15:08:28.673     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_XdcMake: (目标 ID: 92)”(目标“_BuildLinkAction”依赖于它):
-15:08:28.673     1>已完成在项目“try.vcxproj”中生成目标“_XdcMake”的操作。: (目标 ID: 92)
-15:08:28.673     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ComputeCLCompileGeneratedSbrFiles: (目标 ID: 93)”(目标“_BscMake”依赖于它):
-15:08:28.673     1>已完成在项目“try.vcxproj”中生成目标“ComputeCLCompileGeneratedSbrFiles”的操作。: (目标 ID: 93)
-15:08:28.673     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“MakeDirsForBscMake: (目标 ID: 94)”(目标“_BscMake”依赖于它):
-                   任务“MakeDir” (任务 ID: 38)
-                   已完成执行任务“MakeDir”的操作。 (任务 ID: 38)
-15:08:28.674     1>已完成在项目“try.vcxproj”中生成目标“MakeDirsForBscMake”的操作。: (目标 ID: 94)
-                   由于条件的计算结果为 false，已跳过目标“BscMake”；('@(BscMake)' != '')的计算结果为('' != '')。
-                   由于条件的计算结果为 false，已跳过目标“CustomBuildStep”；('@(CustomBuildStep)' != '' and '$(SelectedFiles)'=='')的计算结果为('' != '' and ''=='')。
-15:08:28.674     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_BscMake: (目标 ID: 95)”(目标“_BuildLinkAction”依赖于它):
-15:08:28.674     1>已完成在项目“try.vcxproj”中生成目标“_BscMake”的操作。: (目标 ID: 95)
-                   已跳过目标“PrepareForBuild”。以前的生成已成功。
-15:08:28.674     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“BuiltProjectOutputGroup: (目标 ID: 96)”(目标“CreateRecipeFile”依赖于它):
-                   添加的项: 
-                       _BuiltProjectOutputGroupOutputIntermediate=
-                           D:\gitTry\TRY\try\Debug\try.exe
-                                   FinalOutputPath=D:\gitTry\TRY\try\Debug\try.exe
-                   添加的项: 
-                       BuiltProjectOutputGroupOutput=
-                           D:\gitTry\TRY\try\Debug\try.exe
-                                   FinalOutputPath=D:\gitTry\TRY\try\Debug\try.exe
-                                   OriginalItemSpec=D:\gitTry\TRY\try\Debug\try.exe
-15:08:28.674     1>已完成在项目“try.vcxproj”中生成目标“BuiltProjectOutputGroup”的操作。: (目标 ID: 96)
-                   已跳过目标“PrepareResourceNames”。以前的生成已成功。
-15:08:28.674     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFx.targets”中的目标“SatelliteDllsProjectOutputGroup: (目标 ID: 97)”(目标“CreateRecipeFile”依赖于它):
-                   由于 false 条件，已跳过任务“CreateItem”；('@(ResxWithCulture)' != '')计算为('' != '')。
-                   由于 false 条件，已跳过任务“CreateItem”；('$(UICulture)' != '')计算为('' != '')。
-                   由于 false 条件，已跳过任务“CreateItem”；('@(NonResxWithCulture)' != '')计算为('' != '')。
-                   正在使用程序集“Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”中的“CreateItem”任务。
-                   任务“CreateItem” (任务 ID: 39)
-                     任务参数:Include=Debug\ (任务 ID: 39)
-                     输出项: SatelliteDllsProjectOutputGroupRootRelativeUrlBaseIntermediate=Debug\ (任务 ID: 39)
-                   已完成执行任务“CreateItem”的操作。 (任务 ID: 39)
-                   任务“CreateItem” (任务 ID: 40)
-                   已完成执行任务“CreateItem”的操作。 (任务 ID: 40)
-15:08:28.676     1>已完成在项目“try.vcxproj”中生成目标“SatelliteDllsProjectOutputGroup”的操作。: (目标 ID: 97)
-                   已跳过目标“PrepareForBuild”。以前的生成已成功。
-                   已跳过目标“AssignTargetPaths”。以前的生成已成功。
-                   已跳过目标“PrepareForBuild”。以前的生成已成功。
-                   已跳过目标“AssignTargetPaths”。以前的生成已成功。
-15:08:28.676     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“MakeDirsForFxc: (目标 ID: 98)”(目标“ContentFilesProjectOutputGroup”依赖于它):
-                   任务“MakeDir” (任务 ID: 41)
-                   已完成执行任务“MakeDir”的操作。 (任务 ID: 41)
-15:08:28.676     1>已完成在项目“try.vcxproj”中生成目标“MakeDirsForFxc”的操作。: (目标 ID: 98)
-                   由于条件的计算结果为 false，已跳过目标“_CreateCopyFileItems”；('@(CopyFileToFolders)' != '')的计算结果为('' != '')。
-15:08:28.676     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“ContentFilesProjectOutputGroup: (目标 ID: 99)”(目标“CreateRecipeFile”依赖于它):
-                   由于 false 条件，已跳过任务“AssignTargetPath”；('@(ContentFilesProjectOutputGroupOutputFullPath)' != '' and '%(ContentFilesProjectOutputGroupOutputFullPath.RootFolder)' != '')计算为('' != '' and '' != '')。
-                   由于 false 条件，已跳过任务“AssignTargetPath”；('@(ContentFilesProjectOutputGroupOutputFullPath)' != '' and '%(ContentFilesProjectOutputGroupOutputFullPath.RootFolder)' == '')计算为('' != '' and '' == '')。
-15:08:28.676     1>已完成在项目“try.vcxproj”中生成目标“ContentFilesProjectOutputGroup”的操作。: (目标 ID: 99)
-                   已跳过目标“GetReferencedVCProjectsInfo”。以前的生成已成功。
-15:08:28.676     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“CreateRecipeFile: (目标 ID: 100)”(目标“_BuildLinkAction”依赖于它):
-                   正在使用程序集“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.Build.CppTasks.Common.dll”中的“GenerateDesktopDeployRecipe”任务。
-                   任务“GenerateDesktopDeployRecipe” (任务 ID: 42)
-                     任务参数:
-                         BuiltProjectOutputs=
-                             D:\gitTry\TRY\try\Debug\try.exe
-                                     FinalOutputPath=D:\gitTry\TRY\try\Debug\try.exe
-                                     OriginalItemSpec=D:\gitTry\TRY\try\Debug\try.exe (任务 ID: 42)
-                     任务参数:OutputFile=D:\gitTry\TRY\try\try\Debug\try.exe.recipe (任务 ID: 42)
-                     任务参数:ProjectDir=D:\gitTry\TRY\try\try\ (任务 ID: 42)
-                   已完成执行任务“GenerateDesktopDeployRecipe”的操作。 (任务 ID: 42)
-15:08:28.688     1>已完成在项目“try.vcxproj”中生成目标“CreateRecipeFile”的操作。: (目标 ID: 100)
-15:08:28.688     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“_GenerateSatelliteAssemblyInputs: (目标 ID: 101)”(目标“CreateSatelliteAssemblies”依赖于它):
-                   由于 false 条件，已跳过任务“Warning”；('@(ManifestResourceWithCulture)'!='' and '%(ManifestResourceWithCulture.EmittedForCompatibilityOnly)'=='')计算为(''!='' and ''=='')。
-                   由于 false 条件，已跳过任务“Warning”；('@(ManifestNonResxWithCultureOnDisk)'!='' and '%(ManifestNonResxWithCultureOnDisk.EmittedForCompatibilityOnly)'=='')计算为(''!='' and ''=='')。
-15:08:28.688     1>已完成在项目“try.vcxproj”中生成目标“_GenerateSatelliteAssemblyInputs”的操作。: (目标 ID: 101)
-                   由于条件的计算结果为 false，已跳过目标“ComputeIntermediateSatelliteAssemblies”；(@(ReferenceSatellitePaths->'%(DestinationSubDirectory)') != '')的计算结果为( != '')。
-                   由于条件的计算结果为 false，已跳过目标“GenerateSatelliteAssemblies”；('@(_SatelliteAssemblyResourceInputs)' != '')的计算结果为('' != '')。
-15:08:28.688     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“CreateSatelliteAssemblies: (目标 ID: 102)”(目标“_BuildLinkAction”依赖于它):
-15:08:28.688     1>已完成在项目“try.vcxproj”中生成目标“CreateSatelliteAssemblies”的操作。: (目标 ID: 102)
-                   由于条件的计算结果为 false，已跳过目标“CopyLocalNativeReference”；('$(CopyLocalProjectReference)' == 'true')的计算结果为('false' == 'true')。
-15:08:28.688     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_Appverifier: (目标 ID: 103)”(目标“_BuildLinkAction”依赖于它):
-15:08:28.688     1>已完成在项目“try.vcxproj”中生成目标“_Appverifier”的操作。: (目标 ID: 103)
-15:08:28.688     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_Deploy: (目标 ID: 104)”(目标“_BuildLinkAction”依赖于它):
-15:08:28.688     1>已完成在项目“try.vcxproj”中生成目标“_Deploy”的操作。: (目标 ID: 104)
-                   由于条件的计算结果为 false，已跳过目标“ComputeIntermediateSatelliteAssemblies”；(@(ReferenceSatellitePaths->'%(DestinationSubDirectory)') != '')的计算结果为( != '')。
-                   由于条件的计算结果为 false，已跳过目标“_CopyFilesMarkedCopyLocal”；('@(ReferenceCopyLocalPaths)' != '')的计算结果为('' != '')。
-                   已跳过目标“AssignTargetPaths”。以前的生成已成功。
-                   已跳过目标“_SplitProjectReferencesByFileExistence”。以前的生成已成功。
-                   已跳过目标“_GetProjectReferenceTargetFrameworkProperties”。以前的生成已成功。
-15:08:28.688     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“_PopulateCommonStateForGetCopyToOutputDirectoryItems: (目标 ID: 105)”(目标“GetCopyToOutputDirectoryItems”依赖于它):
-                   设置属性: _GCTODIKeepDuplicates=false
-                   设置属性: _GCTODIKeepMetadata=CopyToOutputDirectory;TargetPath
-15:08:28.688     1>已完成在项目“try.vcxproj”中生成目标“_PopulateCommonStateForGetCopyToOutputDirectoryItems”的操作。: (目标 ID: 105)
-15:08:28.688     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Xaml.targets”中的目标“GetCopyToOutputDirectoryXamlAppDefs: (目标 ID: 106)”(目标“GetCopyToOutputDirectoryItems”依赖于它):
-                   任务“AssignTargetPath” (任务 ID: 43)
-                     任务参数:RootFolder=D:\gitTry\TRY\try\try (任务 ID: 43)
-                   已完成执行任务“AssignTargetPath”的操作。 (任务 ID: 43)
-15:08:28.688     1>已完成在项目“try.vcxproj”中生成目标“GetCopyToOutputDirectoryXamlAppDefs”的操作。: (目标 ID: 106)
-15:08:28.688     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“GetCopyToOutputDirectoryItems: (目标 ID: 107)”(目标“_CopySourceItemsToOutputDirectory”依赖于它):
-                   正在使用程序集“Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”中的“CallTarget”任务。
-                   任务“CallTarget” (任务 ID: 44)
-                     任务参数:Targets=_GetCopyToOutputDirectoryItemsFromTransitiveProjectReferences (任务 ID: 44)
-                   已跳过目标“_PopulateCommonStateForGetCopyToOutputDirectoryItems”。以前的生成已成功。
-                   已跳过目标“_AddOutputPathToGlobalPropertiesToRemove”。以前的生成已成功。
-15:08:28.689     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“_GetCopyToOutputDirectoryItemsFromTransitiveProjectReferences: (目标 ID: 108)”(目标“GetCopyToOutputDirectoryItems”依赖于它):
-                   由于 false 条件，已跳过任务“MSBuild”；('@(_MSBuildProjectReferenceExistent)' != '' and '$(_GetChildProjectCopyToOutputDirectoryItems)' == 'true' and '%(_MSBuildProjectReferenceExistent.Private)' != 'false' and '$(UseCommonOutputDirectory)' != 'true')计算为('' != '' and 'true' == 'true' and '' != 'false' and 'false' != 'true')。
-                   任务“AssignTargetPath” (任务 ID: 45)
-                     任务参数:RootFolder=D:\gitTry\TRY\try\try (任务 ID: 45)
-                   已完成执行任务“AssignTargetPath”的操作。 (任务 ID: 45)
-15:08:28.689     1>已完成在项目“try.vcxproj”中生成目标“_GetCopyToOutputDirectoryItemsFromTransitiveProjectReferences”的操作。: (目标 ID: 108)
-                   已完成执行任务“CallTarget”的操作。 (任务 ID: 44)
-                   任务“CallTarget” (任务 ID: 46)
-                     任务参数:Targets=_GetCopyToOutputDirectoryItemsFromThisProject (任务 ID: 46)
-                   已跳过目标“AssignTargetPaths”。以前的生成已成功。
-                   已跳过目标“_PopulateCommonStateForGetCopyToOutputDirectoryItems”。以前的生成已成功。
-15:08:28.689     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“_GetCopyToOutputDirectoryItemsFromThisProject: (目标 ID: 109)”(目标“GetCopyToOutputDirectoryItems”依赖于它):
-                   任务“AssignTargetPath” (任务 ID: 47)
-                     任务参数:RootFolder=D:\gitTry\TRY\try\try (任务 ID: 47)
-                   已完成执行任务“AssignTargetPath”的操作。 (任务 ID: 47)
-15:08:28.689     1>已完成在项目“try.vcxproj”中生成目标“_GetCopyToOutputDirectoryItemsFromThisProject”的操作。: (目标 ID: 109)
-                   已完成执行任务“CallTarget”的操作。 (任务 ID: 46)
-15:08:28.689     1>已完成在项目“try.vcxproj”中生成目标“GetCopyToOutputDirectoryItems”的操作。: (目标 ID: 107)
-                   由于条件的计算结果为 false，已跳过目标“_CopyOutOfDateSourceItemsToOutputDirectory”；( '@(_SourceItemsToCopyToOutputDirectory)' != '' )的计算结果为( '' != '' )。
-                   由于条件的计算结果为 false，已跳过目标“_CopyOutOfDateSourceItemsToOutputDirectoryAlways”；( '@(_SourceItemsToCopyToOutputDirectoryAlways)' != '' )的计算结果为( '' != '' )。
-15:08:28.689     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“_CopySourceItemsToOutputDirectory: (目标 ID: 110)”(目标“CopyFilesToOutputDirectory”依赖于它):
-15:08:28.689     1>已完成在项目“try.vcxproj”中生成目标“_CopySourceItemsToOutputDirectory”的操作。: (目标 ID: 110)
-                   由于条件的计算结果为 false，已跳过目标“_CopyAppConfigFile”；( '@(AppConfigWithTargetPath)' != '' )的计算结果为( '' != '' )。
-                   由于条件的计算结果为 false，已跳过目标“_CopyManifestFiles”；( '$(_DeploymentCopyApplicationManifest)'=='true' or '$(GenerateClickOnceManifests)'=='true' )的计算结果为( ''=='true' or ''=='true' )。
-15:08:28.689     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“_CheckForCompileOutputs: (目标 ID: 111)”(目标“CopyFilesToOutputDirectory”依赖于它):
-                   设置属性: _DocumentationFileProduced=false
-                   设置属性: _DebugSymbolsProduced=false
-15:08:28.689     1>已完成在项目“try.vcxproj”中生成目标“_CheckForCompileOutputs”的操作。: (目标 ID: 111)
-                   由于条件的计算结果为 false，已跳过目标“_SGenCheckForOutputs”；('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto'))的计算结果为('Off' == 'On' or (''!='' and 'Off' == 'Auto'))。
-15:08:28.689     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“CopyFilesToOutputDirectory: (目标 ID: 112)”(目标“PrepareForRun”依赖于它):
-                   设置属性: CreateHardLinksForCopyFilesToOutputDirectoryIfPossible=false
-                   设置属性: CreateSymbolicLinksForCopyFilesToOutputDirectoryIfPossible=false
-                   设置属性: ErrorIfLinkFailsForCopyFilesToOutputDirectory=false
-                   设置属性: CopyBuildOutputToOutputDirectory=true
-                   设置属性: CopyOutputSymbolsToOutputDirectory=true
-                   设置属性: CopyDocumentationFileToOutputDirectory=true
-                   由于 false 条件，已跳过任务“Copy”；('$(CopyBuildOutputToOutputDirectory)' == 'true' and '$(SkipCopyBuildProduct)' != 'true')计算为('true' == 'true' and 'true' != 'true')。
-                   由于 false 条件，已跳过任务“CopyRefAssembly”；('$(ProduceReferenceAssembly)' == 'true' and '$(CopyBuildOutputToOutputDirectory)' == 'true' and '$(SkipCopyBuildProduct)' != 'true')计算为('false' == 'true' and 'true' == 'true' and 'true' != 'true')。
-                   由于 false 条件，已跳过任务“Message”；('$(CopyBuildOutputToOutputDirectory)' == 'true' and '$(SkipCopyBuildProduct)'!='true')计算为('true' == 'true' and 'true'!='true')。
-                   由于 false 条件，已跳过任务“Copy”；('@(AddModules)' != '')计算为('' != '')。
-                   由于 false 条件，已跳过任务“Copy”；('$(_SGenDllCreated)'=='true')计算为('false'=='true')。
-                   由于 false 条件，已跳过任务“Copy”；('$(_DebugSymbolsProduced)'=='true' and '$(SkipCopyingSymbolsToOutputDirectory)' != 'true' and '$(CopyOutputSymbolsToOutputDirectory)'=='true')计算为('false'=='true' and '' != 'true' and 'true'=='true')。
-                   由于 false 条件，已跳过任务“Copy”；('$(_DocumentationFileProduced)'=='true' and '$(CopyDocumentationFileToOutputDirectory)'=='true')计算为('false'=='true' and 'true'=='true')。
-                   由于 false 条件，已跳过任务“Copy”；('@(IntermediateSatelliteAssembliesWithTargetPath)' != '')计算为('' != '')。
-                   由于 false 条件，已跳过任务“Copy”；('@(ReferenceComWrappersToCopyLocal)' != '' or '@(ResolvedIsolatedComModules)' != '' or '@(_DeploymentLooseManifestFile)' != '' or '@(NativeReferenceFile)' != '' )计算为('' != '' or '' != '' or '' != '' or '' != '' )。
-                   由于 false 条件，已跳过任务“Copy”；('$(SkipCopyWinMDArtifact)' != 'true' and '@(WinMDExpArtifacts)' != '')计算为('' != 'true' and '' != '')。
-                   由于 false 条件，已跳过任务“Message”；('$(SkipCopyWinMDArtifact)' != 'true' and '$(_WindowsMetadataOutputPath)' != '')计算为('' != 'true' and '' != '')。
-15:08:28.690     1>已完成在项目“try.vcxproj”中生成目标“CopyFilesToOutputDirectory”的操作。: (目标 ID: 112)
-15:08:28.690     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“PrepareForRun: (目标 ID: 113)”(目标“_BuildLinkAction”依赖于它):
-15:08:28.690     1>已完成在项目“try.vcxproj”中生成目标“PrepareForRun”的操作。: (目标 ID: 113)
-                   由于条件的计算结果为 false，已跳过目标“CustomBuildStep”；('@(CustomBuildStep)' != '' and '$(SelectedFiles)'=='')的计算结果为('' != '' and ''=='')。
-15:08:28.690     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets”中的目标“PostBuildEvent: (目标 ID: 114)”(目标“_BuildLinkAction”依赖于它):
-                   由于 false 条件，已跳过任务“Message”；('%(PostBuildEvent.Message)' != '' and '%(PostBuildEvent.Command)' != '')计算为('' != '' and '' != '')。
-                   由于 false 条件，已跳过任务“Exec”；('%(PostBuildEvent.Command)' != '')计算为('' != '')。
-15:08:28.690     1>已完成在项目“try.vcxproj”中生成目标“PostBuildEvent”的操作。: (目标 ID: 114)
-15:08:28.690     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“_BuildLinkAction: (目标 ID: 115)”(目标“BuildLink”依赖于它):
-15:08:28.690     1>已完成在项目“try.vcxproj”中生成目标“_BuildLinkAction”的操作。: (目标 ID: 115)
-15:08:28.690     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“BuildLink: (目标 ID: 116)”(目标“Build”依赖于它):
-15:08:28.690     1>已完成在项目“try.vcxproj”中生成目标“BuildLink”的操作。: (目标 ID: 116)
-15:08:28.690     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets”中的目标“AfterBuild: (目标 ID: 117)”(目标“Build”依赖于它):
-15:08:28.690     1>已完成在项目“try.vcxproj”中生成目标“AfterBuild”的操作。: (目标 ID: 117)
-                   已跳过目标“_CheckForCompileOutputs”。以前的生成已成功。
-                   由于条件的计算结果为 false，已跳过目标“_SGenCheckForOutputs”；('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto'))的计算结果为('Off' == 'On' or (''!='' and 'Off' == 'Auto'))。
-15:08:28.690     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“_CleanGetCurrentAndPriorFileWrites: (目标 ID: 118)”(目标“IncrementalClean”依赖于它):
-                   任务“ReadLinesFromFile” (任务 ID: 48)
-                     任务参数:File=Debug\try.vcxproj.FileListAbsolute.txt (任务 ID: 48)
-                   已完成执行任务“ReadLinesFromFile”的操作。 (任务 ID: 48)
-                   正在使用程序集“Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”中的“ConvertToAbsolutePath”任务。
-                   任务“ConvertToAbsolutePath” (任务 ID: 49)
-                   已完成执行任务“ConvertToAbsolutePath”的操作。 (任务 ID: 49)
-                   正在使用程序集“Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”中的“FindUnderPath”任务。
-                   任务“FindUnderPath” (任务 ID: 50)
-                     任务参数:UpdateToAbsolutePaths=True (任务 ID: 50)
-                     任务参数:Path=D:\gitTry\TRY\try\try (任务 ID: 50)
-                     比较路径为“D:\gitTry\TRY\try\try”。 (任务 ID: 50)
-                   已完成执行任务“FindUnderPath”的操作。 (任务 ID: 50)
-                   任务“FindUnderPath” (任务 ID: 51)
-                     任务参数:UpdateToAbsolutePaths=True (任务 ID: 51)
-                     任务参数:Path=D:\gitTry\TRY\try\Debug\ (任务 ID: 51)
-                     比较路径为“D:\gitTry\TRY\try\Debug\”。 (任务 ID: 51)
-                   已完成执行任务“FindUnderPath”的操作。 (任务 ID: 51)
-                   任务“FindUnderPath” (任务 ID: 52)
-                     任务参数:UpdateToAbsolutePaths=True (任务 ID: 52)
-                     任务参数:Path=Debug\ (任务 ID: 52)
-                     比较路径为“Debug\”。 (任务 ID: 52)
-                   已完成执行任务“FindUnderPath”的操作。 (任务 ID: 52)
-                   正在使用程序集“Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”中的“RemoveDuplicates”任务。
-                   任务“RemoveDuplicates” (任务 ID: 53)
-                   已完成执行任务“RemoveDuplicates”的操作。 (任务 ID: 53)
-15:08:28.694     1>已完成在项目“try.vcxproj”中生成目标“_CleanGetCurrentAndPriorFileWrites”的操作。: (目标 ID: 118)
-15:08:28.694     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets”中的目标“IncrementalClean: (目标 ID: 119)”(目标“Build”依赖于它):
-                   任务“FindUnderPath” (任务 ID: 54)
-                     任务参数:Path=D:\gitTry\TRY\try\Debug\ (任务 ID: 54)
-                     比较路径为“D:\gitTry\TRY\try\Debug\”。 (任务 ID: 54)
-                   已完成执行任务“FindUnderPath”的操作。 (任务 ID: 54)
-                   任务“FindUnderPath” (任务 ID: 55)
-                     任务参数:Path=Debug\ (任务 ID: 55)
-                     比较路径为“Debug\”。 (任务 ID: 55)
-                   已完成执行任务“FindUnderPath”的操作。 (任务 ID: 55)
-                   正在使用程序集“Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”中的“Delete”任务。
-                   任务“Delete” (任务 ID: 56)
-                     任务参数:TreatErrorsAsWarnings=True (任务 ID: 56)
-                   已完成执行任务“Delete”的操作。 (任务 ID: 56)
-                   任务“RemoveDuplicates” (任务 ID: 57)
-                   已完成执行任务“RemoveDuplicates”的操作。 (任务 ID: 57)
-                   由于 false 条件，已跳过任务“WriteLinesToFile”；('@(_CleanUnfilteredPriorFileWrites)'!='@(_CleanUniqueRemainingFileWritesAfterIncrementalClean)')计算为(''!='')。
-15:08:28.694     1>已完成在项目“try.vcxproj”中生成目标“IncrementalClean”的操作。: (目标 ID: 119)
-15:08:28.694     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets”中的目标“FinalizeBuildStatus: (目标 ID: 120)”(目标“Build”依赖于它):
-                   任务“Delete” (任务 ID: 58)
-                     任务参数:Files=Debug\try.tlog\unsuccessfulbuild (任务 ID: 58)
-                     正在删除文件“Debug\try.tlog\unsuccessfulbuild”。 (任务 ID: 58)
-                   已完成执行任务“Delete”的操作。 (任务 ID: 58)
-                   任务“Touch” (任务 ID: 59)
-                     任务参数:Files=Debug\try.tlog\try.lastbuildstate (任务 ID: 59)
-                     正在对“Debug\try.tlog\try.lastbuildstate”执行 Touch 任务。 (任务 ID: 59)
-                   已完成执行任务“Touch”的操作。 (任务 ID: 59)
-15:08:28.695     1>已完成在项目“try.vcxproj”中生成目标“FinalizeBuildStatus”的操作。: (目标 ID: 120)
-                   已跳过目标“_CheckForInvalidConfigurationAndPlatform”。以前的生成已成功。
-                   已跳过目标“_CheckForInvalidConfigurationAndPlatform”。以前的生成已成功。
-15:08:28.695     1>来自项目“D:\gitTry\TRY\try\try\try.vcxproj”的文件“C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets”中的目标“Build: (目标 ID: 121)”(入口点):
-15:08:28.695     1>已完成在项目“try.vcxproj”中生成目标“Build”的操作。: (目标 ID: 121)
-15:08:28.695     1>已完成生成项目“D:\gitTry\TRY\try\try\try.vcxproj”(Build 个目标)的操作。
+                   已完成执行任务“Link”的操作 - 失败。 (任务 ID: 35)
+15:20:12.405     1>已完成在项目“try.vcxproj”中生成目标“Link”的操作 - 失败。: (目标 ID: 82)
+15:20:12.406     1>已完成生成项目“D:\gitTry\TRY\try\try\try.vcxproj”(Build 个目标)的操作 - 失败。
 
 项目评估性能摘要:
-      110 毫秒 D:\gitTry\TRY\try\try\try.vcxproj          1 次调用
+       94 毫秒 D:\gitTry\TRY\try\try\try.vcxproj          1 次调用
 
 项目性能摘要:
-     1226 毫秒 D:\gitTry\TRY\try\try\try.vcxproj          1 次调用
-               1226 毫秒 Build                                      1 次调用
+     1062 毫秒 D:\gitTry\TRY\try\try\try.vcxproj          1 次调用
+               1062 毫秒 Build                                      1 次调用
 
 目标性能摘要:
-        0 毫秒 AfterBuildCompileEvent                     1 次调用
-        0 毫秒 _ALink                                     1 次调用
-        0 毫秒 _Link                                      1 次调用
-        0 毫秒 AfterLink                                  1 次调用
-        0 毫秒 ComputeLinkImportLibraryOutputsForClean    1 次调用
-        0 毫秒 ComputeLinkSwitches                        1 次调用
+        0 毫秒 _BuildGenerateSourcesAction                1 次调用
+        0 毫秒 BeforeResourceCompile                      1 次调用
+        0 毫秒 _ClCompile                                 1 次调用
+        0 毫秒 AfterClCompile                             1 次调用
         0 毫秒 PreLinkEvent                               1 次调用
+        0 毫秒 SelectClCompile                            1 次调用
+        0 毫秒 ComputeReferenceCLInput                    1 次调用
+        0 毫秒 MakeDirsForResourceCompile                 1 次调用
+        0 毫秒 FindReferenceAssembliesForReferences       1 次调用
+        0 毫秒 BeforeClCompile                            1 次调用
+        0 毫秒 BuildCompileTraverse                       1 次调用
+        0 毫秒 BuildGenerateSources                       1 次调用
+        0 毫秒 ComputeLinkSwitches                        1 次调用
+        0 毫秒 AfterBuildGenerateSourcesEvent             1 次调用
+        0 毫秒 MakeDirsForLink                            1 次调用
+        0 毫秒 ComputeCLInputPDBName                      1 次调用
+        0 毫秒 _Midl                                      1 次调用
+        0 毫秒 AfterResourceCompile                       1 次调用
+        0 毫秒 AfterBuildCompileEvent                     1 次调用
         0 毫秒 PrepareResourceNames                       1 次调用
         0 毫秒 CreateCustomManifestResourceNames          1 次调用
         0 毫秒 ComputeManifestInputsTargets               1 次调用
         0 毫秒 ComputeLinkInputsFromProject               1 次调用
-        0 毫秒 _Manifest                                  1 次调用
         0 毫秒 ComputeCLGeneratedLinkInputs               1 次调用
-        0 毫秒 ComputeRCGeneratedLinkInputs               1 次调用
+        0 毫秒 ComputeCLOutputs                           1 次调用
+        0 毫秒 _ResourceCompile                           1 次调用
+        0 毫秒 ComputeManifestGeneratedLinkerInputs       1 次调用
         0 毫秒 ComputeRCOutputs                           1 次调用
         0 毫秒 BeforeLink                                 1 次调用
         0 毫秒 ComputeLegacyManifestEmbedding             1 次调用
         0 毫秒 BuildLinkTraverse                          1 次调用
         0 毫秒 BuildCompile                               1 次调用
         0 毫秒 _BuildCompileAction                        1 次调用
-        0 毫秒 _ResourceCompile                           1 次调用
-        0 毫秒 AfterResourceCompile                       1 次调用
-        0 毫秒 BeforeResourceCompile                      1 次调用
-        0 毫秒 ComputeManifestGeneratedLinkerInputs       1 次调用
-        0 毫秒 _ClCompile                                 1 次调用
-        0 毫秒 ResolvedXDCMake                            1 次调用
-        0 毫秒 MakeDirsForXdcMake                         1 次调用
-        0 毫秒 IncrementalClean                           1 次调用
-        0 毫秒 AfterBuild                                 1 次调用
-        0 毫秒 BuildLink                                  1 次调用
-        0 毫秒 _BuildLinkAction                           1 次调用
-        0 毫秒 PostBuildEvent                             1 次调用
-        0 毫秒 PrepareForRun                              1 次调用
-        0 毫秒 _CheckForCompileOutputs                    1 次调用
-        0 毫秒 _CopySourceItemsToOutputDirectory          1 次调用
-        0 毫秒 _GetCopyToOutputDirectoryItemsFromThisProject   1 次调用
-        0 毫秒 _GetCopyToOutputDirectoryItemsFromTransitiveProjectReferences   1 次调用
-        0 毫秒 ComputeCLCompileGeneratedXDCFiles          1 次调用
-        0 毫秒 GetCopyToOutputDirectoryXamlAppDefs        1 次调用
-        0 毫秒 _Deploy                                    1 次调用
-        0 毫秒 _Appverifier                               1 次调用
-        0 毫秒 CreateSatelliteAssemblies                  1 次调用
-        0 毫秒 _GenerateSatelliteAssemblyInputs           1 次调用
-        0 毫秒 ContentFilesProjectOutputGroup             1 次调用
-        0 毫秒 MakeDirsForFxc                             1 次调用
-        0 毫秒 BuiltProjectOutputGroup                    1 次调用
-        0 毫秒 _BscMake                                   1 次调用
-        0 毫秒 ComputeCLCompileGeneratedSbrFiles          1 次调用
-        0 毫秒 _XdcMake                                   1 次调用
-        0 毫秒 _PopulateCommonStateForGetCopyToOutputDirectoryItems   1 次调用
-        0 毫秒 AfterClCompile                             1 次调用
-        0 毫秒 Build                                      1 次调用
-        0 毫秒 BeforeBuildGenerateSources                 1 次调用
-        0 毫秒 CopyFileToFolders                          1 次调用
-        0 毫秒 ComputeCustomBuildOutput                   1 次调用
-        0 毫秒 SelectCustomBuild                          1 次调用
-        0 毫秒 _SelectedFiles                             1 次调用
-        0 毫秒 SelectClCompile                            1 次调用
-        0 毫秒 ResolveReferences                          1 次调用
-        0 毫秒 AfterResolveReferences                     1 次调用
-        0 毫秒 ResolveAssemblyReferences                  1 次调用
-        0 毫秒 ExpandSDKReferences                        1 次调用
-        0 毫秒 ResolveSDKReferences                       1 次调用
-        0 毫秒 GetResolvedWinMD                           1 次调用
-        0 毫秒 SetBuildDefaultEnvironmentVariables        1 次调用
-        0 毫秒 GetReferenceAssemblyPaths                  1 次调用
-        0 毫秒 GetFrameworkPaths                          1 次调用
-        0 毫秒 PrepareProjectReferences                   1 次调用
-        0 毫秒 _AddOutputPathToGlobalPropertiesToRemove   1 次调用
-        0 毫秒 _SplitProjectReferencesByFileExistence     1 次调用
-        0 毫秒 BeforeResolveReferences                    1 次调用
-        0 毫秒 _PrepareForReferenceResolution             1 次调用
-        0 毫秒 _Xsd                                       1 次调用
-        0 毫秒 MakeDirsForMidl                            1 次调用
-        0 毫秒 PreBuildEvent                              1 次调用
-        0 毫秒 AfterBuildGenerateSourcesEvent             1 次调用
-        0 毫秒 FindReferenceAssembliesForReferences       1 次调用
-        0 毫秒 ComputeReferenceCLInput                    1 次调用
-        0 毫秒 BeforeClCompile                            1 次调用
-        0 毫秒 BuildCompileTraverse                       1 次调用
-        0 毫秒 BuildGenerateSources                       1 次调用
-        0 毫秒 _BuildGenerateSourcesAction                1 次调用
-        0 毫秒 AfterBuildGenerateSources                  1 次调用
-        0 毫秒 GetReferencedVCProjectsInfo                1 次调用
-        0 毫秒 ComputeMIDLGeneratedCompileInputs          1 次调用
-        0 毫秒 _Midl                                      1 次调用
+        0 毫秒 ComputeRCGeneratedLinkInputs               1 次调用
         0 毫秒 AfterMidl                                  1 次调用
-        1 毫秒 MakeDirsForResourceCompile                 1 次调用
+        0 毫秒 AfterBuildGenerateSources                  1 次调用
+        0 毫秒 _AddOutputPathToGlobalPropertiesToRemove   1 次调用
+        0 毫秒 ComputeMIDLGeneratedCompileInputs          1 次调用
+        0 毫秒 ResolveSDKReferences                       1 次调用
+        0 毫秒 ExpandSDKReferences                        1 次调用
+        0 毫秒 ResolveAssemblyReferences                  1 次调用
+        0 毫秒 AfterResolveReferences                     1 次调用
+        0 毫秒 ResolveReferences                          1 次调用
+        0 毫秒 PrepareProjectReferences                   1 次调用
+        0 毫秒 GetReferenceAssemblyPaths                  1 次调用
+        0 毫秒 _SplitProjectReferencesByFileExistence     1 次调用
+        0 毫秒 GetResolvedWinMD                           1 次调用
+        0 毫秒 BeforeResolveReferences                    1 次调用
+        0 毫秒 BuildGenerateSourcesTraverse               1 次调用
+        0 毫秒 BeforeBuildGenerateSources                 1 次调用
+        0 毫秒 PreBuildEvent                              1 次调用
+        0 毫秒 _SelectedFiles                             1 次调用
+        0 毫秒 SelectCustomBuild                          1 次调用
+        0 毫秒 ComputeCustomBuildOutput                   1 次调用
+        0 毫秒 AddExternalIncludDirectoriesToPaths        1 次调用
+        0 毫秒 CopyFileToFolders                          1 次调用
+        0 毫秒 _Xsd                                       1 次调用
+        0 毫秒 _PrepareForReferenceResolution             1 次调用
+        0 毫秒 _CheckWindowsSDKInstalled                  1 次调用
+        1 毫秒 GetFrameworkPaths                          1 次调用
         1 毫秒 _PrepareForBuild                           1 次调用
-        1 毫秒 MakeDirsForLink                            1 次调用
-        1 毫秒 FixupCLCompileOptions                      1 次调用
-        1 毫秒 GetCopyToOutputDirectoryItems              1 次调用
-        1 毫秒 _GetProjectReferenceTargetFrameworkProperties   1 次调用
-        1 毫秒 MakeDirsForBscMake                         1 次调用
-        1 毫秒 BuildGenerateSourcesTraverse               1 次调用
-        1 毫秒 SplitResourcesByCulture                    1 次调用
-        1 毫秒 ComputeCLInputPDBName                      1 次调用
-        1 毫秒 AddExternalIncludDirectoriesToPaths        1 次调用
-        1 毫秒 FinalizeBuildStatus                        1 次调用
-        1 毫秒 _CheckWindowsSDKInstalled                  1 次调用
-        1 毫秒 CopyFilesToOutputDirectory                 1 次调用
-        1 毫秒 DoLinkOutputFilesMatch                     1 次调用
         1 毫秒 SetCABuildNativeEnvironmentVariables       1 次调用
-        1 毫秒 ComputeCLOutputs                           1 次调用
-        2 毫秒 SatelliteDllsProjectOutputGroup            1 次调用
-        3 毫秒 AssignTargetPaths                          1 次调用
+        1 毫秒 DoLinkOutputFilesMatch                     1 次调用
+        1 毫秒 _GetProjectReferenceTargetFrameworkProperties   1 次调用
+        1 毫秒 MakeDirsForMidl                            1 次调用
+        1 毫秒 GetReferencedVCProjectsInfo                1 次调用
+        1 毫秒 SetBuildDefaultEnvironmentVariables        1 次调用
+        1 毫秒 FixupCLCompileOptions                      1 次调用
+        2 毫秒 WarnCompileDuplicatedFilename              1 次调用
+        2 毫秒 AssignProjectConfiguration                 1 次调用
+        2 毫秒 AssignTargetPaths                          1 次调用
+        2 毫秒 SplitResourcesByCulture                    1 次调用
         3 毫秒 MakeDirsForCl                              1 次调用
-        3 毫秒 WarnCompileDuplicatedFilename              1 次调用
-        4 毫秒 AssignProjectConfiguration                 1 次调用
-        4 毫秒 _CleanGetCurrentAndPriorFileWrites         1 次调用
-        5 毫秒 RegisterOutput                             1 次调用
         5 毫秒 CustomBuild                                1 次调用
-        9 毫秒 SetTelemetryEnvironmentVariables           1 次调用
-       10 毫秒 PrepareForBuild                            1 次调用
-       12 毫秒 CreateRecipeFile                           1 次调用
+        6 毫秒 SetTelemetryEnvironmentVariables           1 次调用
+        9 毫秒 PrepareForBuild                            1 次调用
+       10 毫秒 InitializeBuildStatus                      1 次调用
        13 毫秒 ResolveProjectReferences                   1 次调用
-       19 毫秒 InitializeBuildStatus                      1 次调用
-       40 毫秒 _CheckForInvalidConfigurationAndPlatform   1 次调用
-      502 毫秒 Link                                       1 次调用
-      573 毫秒 ClCompile                                  1 次调用
+       22 毫秒 _CheckForInvalidConfigurationAndPlatform   1 次调用
+      448 毫秒 Link                                       1 次调用
+      525 毫秒 ClCompile                                  1 次调用
 
 任务性能摘要:
-        1 毫秒 RemoveDuplicates                           2 次调用
+        0 毫秒 WriteLinesToFile                           1 次调用
+        1 毫秒 Message                                    2 次调用
         1 毫秒 CheckVCToolsetVersion                      1 次调用
-        1 毫秒 CallTarget                                 2 次调用
-        1 毫秒 WriteLinesToFile                           1 次调用
         1 毫秒 MSBuild                                    1 次调用
+        1 毫秒 MakeDir                                    7 次调用
         1 毫秒 AssignCulture                              1 次调用
-        1 毫秒 Delete                                     2 次调用
-        1 毫秒 ConvertToAbsolutePath                      1 次调用
-        2 毫秒 AssignTargetPath                           7 次调用
-        2 毫秒 CreateItem                                 2 次调用
-        2 毫秒 MakeDir                                   10 次调用
-        2 毫秒 FindUnderPath                              5 次调用
-        3 毫秒 AssignProjectConfiguration                 1 次调用
-        4 毫秒 ReadLinesFromFile                          2 次调用
-        4 毫秒 SetEnv                                     9 次调用
+        2 毫秒 AssignProjectConfiguration                 1 次调用
+        2 毫秒 AssignTargetPath                           4 次调用
+        2 毫秒 ReadLinesFromFile                          1 次调用
+        3 毫秒 SetEnv                                     9 次调用
         5 毫秒 GetOutOfDateItems                          3 次调用
-        8 毫秒 Message                                    3 次调用
-       12 毫秒 GenerateDesktopDeployRecipe                1 次调用
-       14 毫秒 Touch                                      2 次调用
-      502 毫秒 Link                                       1 次调用
-      573 毫秒 CL                                         1 次调用
+        7 毫秒 Touch                                      1 次调用
+      448 毫秒 Link                                       1 次调用
+      524 毫秒 CL                                         1 次调用
 
-已成功生成。
+生成失败。
+
+                   “D:\gitTry\TRY\try\try\try.vcxproj”(Build 目标) (1) ->
+                   (Link 目标) -> 
+                     main.obj : error LNK2019: 无法解析的外部符号 "public: __thiscall MySpace::String::String(void)" (??0String@MySpace@@QAE@XZ)，函数 _main 中引用了该符号
+                     main.obj : error LNK2019: 无法解析的外部符号 "public: __thiscall MySpace::String::String(char const *)" (??0String@MySpace@@QAE@PBD@Z)，函数 _main 中引用了该符号
+                     main.obj : error LNK2019: 无法解析的外部符号 "public: __thiscall MySpace::String::~String(void)" (??1String@MySpace@@QAE@XZ)，函数 _main 中引用了该符号
+                     D:\gitTry\TRY\try\Debug\try.exe : fatal error LNK1120: 3 个无法解析的外部命令
+
     0 个警告
-    0 个错误
+    4 个错误
 
-已用时间 00:00:01.21
+已用时间 00:00:01.04
