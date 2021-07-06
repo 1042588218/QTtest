@@ -15,8 +15,6 @@ int main()
     {
         double k, midx, midy, dx, length;
         length = (sqrt(pow((in[i * 4 + 1] - in[i * 4 + 3]), 2) + pow((in[i * 4] - in[i * 4 + 2]), 2)) / 2) * sqrt(3);
-        if (in[i * 4] - in[i * 4 + 2]==0)
-            printf("%.2lf %.2lf %.2lf %.2lf\n", midx, midy - length, midx, midy + length);
         k = (in[i * 4 + 1] - in[i * 4 + 3]) / (in[i * 4] - in[i * 4 + 2]);
         midx = (in[i * 4] + in[i * 4 + 2]) / 2;
         midy = (in[i * 4 + 1] + in[i * 4 + 3]) / 2;
