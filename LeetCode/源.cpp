@@ -169,7 +169,37 @@ struct ListNode {
 class Solution {
 public:
     vector<int> reversePrint(ListNode* head) {
-
+        if (head == NULL) { 
+            vector<int> t(0);
+            return t;
+        }
+        struct MyStack
+        {
+            int val;
+            MyStack* before;
+        };
+        MyStack* Result = (MyStack*)malloc(sizeof(MyStack));
+        Result->val = head->val;
+        Result->before = NULL;
+        head = head->next;
+        int num = 1;
+        while (head!=NULL)
+        {
+            MyStack* tmp = (MyStack*)malloc(sizeof(MyStack));
+            tmp->val = head->val;
+            num++;
+            head = head->next;
+            tmp->before = Result;
+            Result = tmp;
+        }
+        vector<int> result(num);
+        int i = 0;
+        while (Result!=NULL)
+        {
+            result[i++] = Result->val;
+            Result = Result->before;
+        }
+        return result;
     }
 };
 
