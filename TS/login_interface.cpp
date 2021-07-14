@@ -8,6 +8,10 @@
 #include<QValidator>
 #include<QRegExp>
 #include<QRegExpValidator>
+#include<QtNetwork/QTcpSocket>
+
+#define ip "127.0.0.1"
+#define port 8000
 
 login_interface::login_interface(QWidget *parent)
     : QWidget(parent)
@@ -116,6 +120,11 @@ login_interface::login_interface(QWidget *parent)
     findbaceBtn->setFont(*btnFont);
     findbaceBtn->setGeometry(350,280,130,50);
     findbaceBtn->show();
+    connect(loginBtn,SIGNAL(clicked()),this,SLOT(on_loginBtn_clicked()));
+    connect(registeredBtn,SIGNAL(clicked()),this,SLOT(on_registeredBtn_clicked()));
+
+    init();
+    connectServer();
 }
 
 login_interface::~login_interface()
@@ -123,6 +132,19 @@ login_interface::~login_interface()
 
 }
 
+void login_interface::init()
+{
+    tcpSocket=new QTcpSocket(this);
+    connect(tcpSocket,SIGNAL(error(QAbstractSocket::SocketError)),
+            this,SLOT(displayError(QAbstractSocket::SocketError)));   //发生错误时执行displayError函数
+}
+
+void login_interface::connectServer()
+{
+    tcpSocket->abort();   //取消已有的连接
+    tcpSocket->connectToHost(ip,port);
+    connect(tcpSocket,SIGNAL(readyRead()),this,SLOT(readMessages()));
+}
 
 /* 函数名：mouseReleaseEvent(QMouseEvent *event)
  * 函数名：mousePressEvent(QMouseEvent *event)
@@ -161,3 +183,49 @@ void login_interface::minBtn_clicked()
     }
 }
 
+void login_interface::on_loginBtn_clicked()
+{
+    QString userName=idEdit->text();
+    QString passward=passwordEdit->text();
+    if(userName=="" || passward=="")
+        QMessageBox::information(this,"警告","输入不能为空",QMessageBox::Ok);
+    QString bs="b";
+    QString data=bs+"#"+userName+"#"+passward;
+    tcpSocket->write(data.toLatin1());
+}
+
+void login_interface::on_registeredBtn_clicked()
+{
+    QString userName=idEdit->text();
+    QString passward=passwordEdit->text();
+    if(userName=="" || passward=="")
+        QMessageBox::information(this,"警告","输入不能为空",QMessageBox::Ok);
+    QString as="a";
+    QString data=as+"#"+userName+"#"+passward;
+    tcpSocket->write(data.toLatin1());
+}
+
+void login_interface::displayError(QAbstractSocket::SocketError)
+{
+    qDebug()<<tcpSocket->errorString();   //输出出错信息
+}
+
+void login_interface::readMessages()
+{
+    QString data=tcpSocket->readAll();
+    QStringList list=data.split("#");
+    if(list[0]=="a" && list[1]=="true")
+        QMessageBox::information(this,"信息提示","注册成功!",QMessageBox::Ok);
+    else if(list[0]=="a" && list[1]=="false")
+        QMessageBox::information(this,"信息提示","注册失败,用户名已经被注册!",QMessageBox::Ok);
+    else if(list[0]=="b" && list[1]=="true"){
+        QString userName=idEdit->text();
+        emit(loginUser(userName));
+        emit(loginSuccess());
+        this->close();
+    }
+    else if(list[0]=="b" && list[1]=="false")
+            QMessageBox::information(this,"信息提示","登录失败,用户名或密码错误!",QMessageBox::Ok);
+    else
+        return;
+}

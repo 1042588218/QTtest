@@ -6,6 +6,9 @@
 #include<QPushButton>
 #include<QLabel>
 #include<QLineEdit>
+#include <QtNetwork/QAbstractSocket>
+#include<QtNetwork/QTcpSocket>
+#include <QMessageBox>
 
 class login_interface : public QWidget
 {
@@ -27,6 +30,7 @@ private:
     QPushButton* loginBtn;
     QPushButton* registeredBtn;
     QPushButton* findbaceBtn;
+    QTcpSocket *tcpSocket;
 
 public:
     explicit login_interface(QWidget *parent = nullptr);
@@ -36,10 +40,20 @@ public:
     void mousePressEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
 
+protected:
+    void init();
+    void connectServer();
+
 signals:
+    QString loginSuccess();
+    QString loginUser(QString userName);
 
 public slots:
     void minBtn_clicked();
+    void on_registeredBtn_clicked();
+    void displayError(QAbstractSocket::SocketError);
+    void on_loginBtn_clicked();
+    void readMessages();
 };
 
 #endif // LOGIN_INTERFACE_H
