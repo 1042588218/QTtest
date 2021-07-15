@@ -10,7 +10,7 @@ Widget::Widget(QWidget *parent)
     chatPart=new chat_interface;
 
     connect(loginPart,SIGNAL(loginSuccess()),mainPart,SLOT(show()));
-    connect(loginPart,SIGNAL(loginUser(QString)),mainPart,SLOT(reciveUsername(QString)));
+    connect(loginPart,SIGNAL(loginUser(QString,QString)),mainPart,SLOT(reciveUsername(QString,QString)));
 }
 
 Widget::~Widget()

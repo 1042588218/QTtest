@@ -46,7 +46,7 @@ protected:
 
 signals:
     QString loginSuccess();
-    QString loginUser(QString userName);
+    QString loginUser(QString userInf,QString userName);
 
 public slots:
     void minBtn_clicked();

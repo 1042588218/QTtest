@@ -22,6 +22,7 @@ public:
 
     bool checkSignIn(QString name,QString passward);
     bool checkSignUp(QString name,QString passward);
+    QString getFriendInf(QString name);
 
 protected:
     void init();

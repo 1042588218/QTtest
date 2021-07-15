@@ -20,7 +20,7 @@ login_interface::login_interface(QWidget *parent)
     this->setWindowTitle("登陆界面");
     setFixedSize(540,380);
     QPalette pal(this->palette());
-    pal.setColor(QPalette::Background,QColor(13,20,29));
+    pal.setColor(QPalette::Background,QColor(245,245,245));
     this->setAutoFillBackground(true);
     this->setPalette(pal);
     setWindowFlags(Qt::FramelessWindowHint);
@@ -38,15 +38,15 @@ login_interface::login_interface(QWidget *parent)
     closeBtn=new QPushButton(this);
     closeBtn->setText("×");
     closeBtn->setStyleSheet(
-                "QPushButton{font-family:'微软雅黑';font-size:30px;color:rgb(212,255,255,255);}\
-                QPushButton{background:rgb(35,134,54);border:1px;border-radius:10px;padding:10px 10px}\
-                QPushButton:hover{background-color:rgb(46,160,67)}");
+                "QPushButton{font-family:'微软雅黑';font-size:30px;color:rgb(255,255,255,255);}\
+                QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
+                QPushButton:hover{background-color:rgb(253,114,109)}");
                 minBtn=new QPushButton(this);
             minBtn->setText("-");
     minBtn->setStyleSheet(
-                "QPushButton{font-family:'微软雅黑';font-size:35px;color:rgb(212,255,255,255);}\
-                QPushButton{background:rgb(35,134,54);border:1px;border-radius:10px;padding:10px 10px}\
-                QPushButton:hover{background-color:rgb(46,160,67)}");
+                "QPushButton{font-family:'微软雅黑';font-size:35px;color:rgb(255,255,255,255);}\
+                QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
+                QPushButton:hover{background-color:rgb(253,114,109)}");
                 connect(closeBtn,SIGNAL(clicked()),this,SLOT(close()));
             connect(minBtn,SIGNAL(clicked()),this,SLOT(minBtn_clicked()));
     closeBtn->setGeometry(465,0,75,35);
@@ -65,7 +65,7 @@ login_interface::login_interface(QWidget *parent)
 
     //实现账号和密码输入栏
     idLab=new QLabel("账号：",this);
-    idLab->setStyleSheet("QLabel{font-family:'微软雅黑';font-size:25px;color:rgb(255,255,255,255);}");
+    idLab->setStyleSheet("QLabel{font-family:'微软雅黑';font-size:25px;color:rgb(55,55,55,200);}");
     QFont *labFont=new QFont;
     labFont->setBold(true);
     idLab->setFont(*labFont);
@@ -79,7 +79,7 @@ login_interface::login_interface(QWidget *parent)
     idEdit->setMaxLength(12);
     idEdit->setValidator( new  QIntValidator(idEdit));
     passwordLab=new QLabel("密码：",this);
-    passwordLab->setStyleSheet("QLabel{font-family:'微软雅黑';font-size:25px;color:rgb(255,255,255,255);}");
+    passwordLab->setStyleSheet("QLabel{font-family:'微软雅黑';font-size:25px;color:rgb(55,55,55,200);}");
     passwordLab->setFont(*labFont);
     passwordEdit=new QLineEdit(this);
     passwordEdit->setEchoMode(QLineEdit::Password);
@@ -100,23 +100,23 @@ login_interface::login_interface(QWidget *parent)
     loginBtn=new QPushButton("登录",this);
     registeredBtn=new QPushButton("注册",this);
     findbaceBtn=new QPushButton("找回",this);
-    loginBtn->setStyleSheet("QPushButton{font-family:'微软雅黑';font-size:30px;color:rgb(255,255,255,255);}\
-    QPushButton{background:rgb(35,134,54);border:1px;border-radius:10px;padding:10px 10px}\
-    QPushButton:hover{background-color:rgb(46,160,67)}");
+    loginBtn->setStyleSheet("QPushButton{font-family:'微软雅黑';font-size:25px;color:rgb(255,255,255,255);}\
+    QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
+    QPushButton:hover{background-color:rgb(253,114,109)}");
     QFont* btnFont=new QFont;
     btnFont->setBold(true);
     loginBtn->setFont(*btnFont);
     loginBtn->setGeometry(60,280,130,50);
     loginBtn->show();
-    registeredBtn->setStyleSheet("QPushButton{font-family:'微软雅黑';font-size:30px;color:rgb(255,255,255,255);}\
-    QPushButton{background:rgb(35,134,54);border:1px;border-radius:10px;padding:10px 10px}\
-    QPushButton:hover{background-color:rgb(46,160,67)}");
+    registeredBtn->setStyleSheet("QPushButton{font-family:'微软雅黑';font-size:25px;color:rgb(255,255,255,255);}\
+    QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
+    QPushButton:hover{background-color:rgb(253,114,109)}");
     registeredBtn->setFont(*btnFont);
     registeredBtn->setGeometry(205,280,130,50);
     registeredBtn->show();
-    findbaceBtn->setStyleSheet("QPushButton{font-family:'微软雅黑';font-size:30px;color:rgb(255,255,255,255);}\
-    QPushButton{background:rgb(35,134,54);border:1px;border-radius:10px;padding:10px 10px}\
-    QPushButton:hover{background-color:rgb(46,160,67)}");
+    findbaceBtn->setStyleSheet("QPushButton{font-family:'微软雅黑';font-size:25px;color:rgb(255,255,255,255);}\
+    QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
+    QPushButton:hover{background-color:rgb(253,114,109)}");
     findbaceBtn->setFont(*btnFont);
     findbaceBtn->setGeometry(350,280,130,50);
     findbaceBtn->show();
@@ -220,7 +220,7 @@ void login_interface::readMessages()
         QMessageBox::information(this,"信息提示","注册失败,用户名已经被注册!",QMessageBox::Ok);
     else if(list[0]=="b" && list[1]=="true"){
         QString userName=idEdit->text();
-        emit(loginUser(userName));
+        emit(loginUser(data,userName));
         emit(loginSuccess());
         this->close();
     }

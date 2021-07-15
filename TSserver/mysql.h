@@ -14,9 +14,11 @@ public:
     void createtable_UserInf();
     bool loguser(QString name,QString passward);
     bool signup(QString name,QString passward);
+    QString getFriendInf(QString name);
 
 private:
     QSqlQuery *queryLogin;
+    QSqlQuery *queryFriend;
 };
 
 #endif // MYSQL_H

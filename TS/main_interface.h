@@ -19,7 +19,9 @@ class main_interface : public QWidget
     Q_OBJECT
 
 private:
+    QString* userInf;
     QString* userName;
+    QStringList* friendInf;
     QLabel* helloWord;
     void judgeRegionSetCursor(const QPoint&);
     const int Padding = 2;
@@ -30,10 +32,15 @@ private:
 
     QPushButton* closeBtn;
     QPushButton* minBtn;
+    QPushButton* searchBtn;
+    QLineEdit* searchLine;
+    QWidget *friendList;
+    QPushButton* addBtn;
+    QPushButton* exitBtn;
 
 public:
     explicit main_interface(QWidget *parent = nullptr);
-    ~main_interface();
+    ~main_interface()override;
     //声明三个鼠标事件函数
     void mouseMoveEvent(QMouseEvent *) override;
     void mousePressEvent(QMouseEvent *) override;
@@ -42,7 +49,7 @@ public:
 signals:
 
 public slots:
-    void reciveUsername(QString userName);
+    void reciveUsername(QString userName,QString userInf);
     void minBtn_clicked();
 };
 

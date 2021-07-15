@@ -9,6 +9,8 @@
 #include<QRegExp>
 #include<QRegExpValidator>
 #include<QtNetwork/QTcpSocket>
+#include<QHBoxLayout>
+#include<QVBoxLayout>
 
 main_interface::main_interface(QWidget *parent)
     : QWidget(parent)
@@ -22,9 +24,10 @@ main_interface::main_interface(QWidget *parent)
     this->setWindowTitle("主界面");
     setFixedWidth(400);
     setMinimumHeight(380);
+    setMaximumHeight(900);
     resize(400,900);
     QPalette pal(this->palette());
-    pal.setColor(QPalette::Background,QColor(13,20,29));
+    pal.setColor(QPalette::Background,QColor(236,65,65));
     this->setAutoFillBackground(true);
     this->setPalette(pal);
     setWindowFlags(Qt::FramelessWindowHint);
@@ -43,15 +46,15 @@ main_interface::main_interface(QWidget *parent)
     closeBtn=new QPushButton(this);
     closeBtn->setText("×");
     closeBtn->setStyleSheet(
-                "QPushButton{font-family:'微软雅黑';font-size:30px;color:rgb(212,255,255,255);}\
-                QPushButton{background:rgb(35,134,54);border:1px;border-radius:10px;padding:10px 10px}\
-                QPushButton:hover{background-color:rgb(46,160,67)}");
+                "QPushButton{font-family:'微软雅黑';font-size:30px;color:rgb(255,255,255,255);}\
+                QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
+                QPushButton:hover{background-color:rgb(253,114,109)}");
                 minBtn=new QPushButton(this);
             minBtn->setText("-");
     minBtn->setStyleSheet(
-                "QPushButton{font-family:'微软雅黑';font-size:35px;color:rgb(212,255,255,255);}\
-                QPushButton{background:rgb(35,134,54);border:1px;border-radius:10px;padding:10px 10px}\
-                QPushButton:hover{background-color:rgb(46,160,67)}");
+                "QPushButton{font-family:'微软雅黑';font-size:35px;color:rgb(255,255,255,255);}\
+                QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
+                QPushButton:hover{background-color:rgb(253,114,109)}");
                 connect(closeBtn,SIGNAL(clicked()),this,SLOT(close()));
             connect(minBtn,SIGNAL(clicked()),this,SLOT(minBtn_clicked()));
     closeBtn->setGeometry(325,0,75,35);
@@ -59,9 +62,70 @@ main_interface::main_interface(QWidget *parent)
     minBtn->setGeometry(240,0,75,35);
     minBtn->show();
 
-
+    userInf=new QString();
     userName=new QString();
     helloWord=new QLabel(this);
+    helloWord->setStyleSheet("QLabel{font-family:'宋体';font-size:22px;color:rgb(255,255,255,200);}");
+    QFont* helloFont=new QFont();
+    helloFont->setBold(true);
+    helloWord->setFont(*helloFont);
+    helloWord->setGeometry(10,10,220,35);
+    helloWord->setAlignment(Qt::AlignCenter);
+
+    QPushButton *Line=new QPushButton("",this);
+    Line->setFocusPolicy(Qt::NoFocus);
+    Line->setStyleSheet(
+                "QPushButton{font-family:'微软雅黑';font-size:18px;color:rgb(212,255,255,255);}\
+                QPushButton{background:rgb(245,245,245);border:1px;border-radius:10px;padding:5px 5px;}");
+    Line->setDisabled(true);
+    Line->setGeometry(0,60,400,840);
+    QPushButton* btnPart=new QPushButton("",this);
+    btnPart->setFocusPolicy(Qt::NoFocus);
+    btnPart->setDisabled(true);
+    btnPart->setStyleSheet(
+                "QPushButton{font-family:'微软雅黑';font-size:18px;color:rgb(212,255,255,255);}\
+                QPushButton{background:rgb(43,43,43);border:1px;border-radius:10px;padding:5px 5px;}");
+    btnPart->setGeometry(0,this->height()-80,400,80);
+
+    searchLine=new QLineEdit(this);
+    QFont *editFont=new QFont;
+    editFont->setBold(true);
+    editFont->setFamily("微软雅黑");
+    editFont->setPixelSize(18);
+    searchLine->setPlaceholderText( "请输入好友账号" );
+    searchLine->setFont(*editFont);
+    searchLine->setMaxLength(15);
+    searchLine->setValidator( new  QIntValidator(searchLine));
+    searchBtn=new QPushButton("搜索好友",this);
+    searchBtn->setStyleSheet(
+                "QPushButton{font-family:'微软雅黑';font-size:18px;color:rgb(255,255,255,255);}\
+                QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:5px 5px}\
+                QPushButton:hover{background-color:rgb(253,114,109)}");
+    friendList=new QWidget(this);
+    addBtn=new QPushButton("添加好友",this);
+    addBtn->setStyleSheet(
+                "QPushButton{font-family:'微软雅黑';font-size:20px;color:rgb(255,255,255,255);}\
+                QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
+                QPushButton:hover{background-color:rgb(253,114,109)}");
+    exitBtn=new QPushButton("退出程序",this);
+    connect(exitBtn,SIGNAL(clicked()),this,SLOT(close()));
+    exitBtn->setStyleSheet(
+                "QPushButton{font-family:'微软雅黑';font-size:20px;color:rgb(255,255,255,255);}\
+                QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
+                QPushButton:hover{background-color:rgb(253,114,109)}");
+    QHBoxLayout *searchLayout=new QHBoxLayout;
+    searchLayout->addWidget(searchLine);
+    searchLayout->addWidget(searchBtn);
+    QHBoxLayout *bottomLayout=new QHBoxLayout;
+    bottomLayout->addWidget(addBtn);
+    bottomLayout->addWidget(exitBtn);
+    QVBoxLayout *mainLayout=new QVBoxLayout;
+    mainLayout->addLayout(searchLayout);
+    mainLayout->addWidget(friendList);
+    mainLayout->addLayout(bottomLayout);
+    mainLayout->setContentsMargins(20,80,20,20);
+    setLayout(mainLayout);
+
 }
 
 main_interface::~main_interface()
@@ -69,12 +133,19 @@ main_interface::~main_interface()
 
 }
 
-void main_interface::reciveUsername(QString userName)
+void main_interface::reciveUsername(QString userInf,QString userName)
 {
     *(this->userName)=userName;
+    *(this->userInf)=userInf;
+    QStringList list=userInf.split("#");
+    list.removeFirst();
+    list.removeFirst();
+    list.removeLast();
+    friendInf=new QStringList;
+    *friendInf=list;
+    qDebug()<<*friendInf<<friendInf->size();
     qDebug()<<*(this->userName)<<"登录";
-    userName="Hello! "+*(this->userName);
-    helloWord->setText(userName);
+    helloWord->setText("Hello! "+*(this->userName)+"!");
     helloWord->show();
 }
 

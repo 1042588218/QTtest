@@ -20,6 +20,7 @@ void TSserver::init()
     this->tcpServer=new QTcpServer(this);
     this->tcpSocket=new QTcpSocket(this);
 
+
     connect(tcpServer,SIGNAL(newConnection()),this,SLOT(acceptConnection()));
     connect(tcpSocket,SIGNAL(error(QAbstractSocket::SocketError)),
                      this,SLOT(displayError(QAbstractSocket::SocketError)));
@@ -37,11 +38,16 @@ void TSserver::receiveData()
         ret=checkSignIn(list[1],list[2]);
     else
         return;
+
+
     QString sendData=list[0];
-    if(ret)
+    if(ret&&list[0]=="b")
+        sendData+="#true"+getFriendInf(list[1]);
+    else if(ret)
         sendData+="#true";
     else
         sendData+="#false";
+    qDebug()<<sendData;
     tcpSocket->write(sendData.toLatin1());
 }
 
@@ -60,7 +66,7 @@ void TSserver::on_startBtn_clicked()
 void TSserver::acceptConnection()
 {
     tcpSocket=tcpServer->nextPendingConnection();
-    connect(tcpSocket,SIGNAL(readyRead()),this,SLOT(receiveData()));   //**********
+    connect(tcpSocket,SIGNAL(readyRead()),this,SLOT(receiveData()));
 }
 
 void TSserver::displayError(QAbstractSocket::SocketError)
@@ -82,3 +88,10 @@ bool TSserver::checkSignUp(QString name, QString passward)
     bool ret=mysql->signup(name,passward);
     return ret;
 }
+
+QString TSserver::getFriendInf(QString name)
+{
+    MySql *mysql=new MySql();
+    return mysql->getFriendInf(name);
+}
+
