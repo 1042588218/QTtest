@@ -15,10 +15,24 @@ private:
     chat_interface* chatPart;
     login_interface* loginPart;
     main_interface* mainPart;
+    QTcpSocket *tcpSocket;
+
+protected:
+    void init();
+    void connectServer();
 
 public:
     explicit Widget(QWidget *parent = nullptr);
     ~Widget();
+
+signals:
+    void sendToLogin(QString loginMessage);
+    void sendToMain(QString mainMessage);
+    void sendToChat(QString chatMessage);
+
+public slots:
+    void readMessages();
+    void displayError(QAbstractSocket::SocketError);
 };
 
 #endif // WIDGET_H

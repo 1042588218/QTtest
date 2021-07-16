@@ -15,6 +15,8 @@ class login_interface : public QWidget
     Q_OBJECT
 
 private:
+    QTcpSocket *tcpSocket;
+
     //鼠标是否按下属性
     bool m_bPressed=false;
     //按下后当前鼠标位置属性
@@ -30,19 +32,14 @@ private:
     QPushButton* loginBtn;
     QPushButton* registeredBtn;
     QPushButton* findbaceBtn;
-    QTcpSocket *tcpSocket;
 
 public:
-    explicit login_interface(QWidget *parent = nullptr);
+    explicit login_interface(QWidget *parent = nullptr,QTcpSocket *tcpSocket=nullptr);
     ~login_interface();
     //声明三个鼠标事件函数
     void mouseReleaseEvent(QMouseEvent *event);
     void mousePressEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
-
-protected:
-    void init();
-    void connectServer();
 
 signals:
     QString loginSuccess();
@@ -51,9 +48,9 @@ signals:
 public slots:
     void minBtn_clicked();
     void on_registeredBtn_clicked();
-    void displayError(QAbstractSocket::SocketError);
     void on_loginBtn_clicked();
-    void readMessages();
+    void loginMessages(QString loginMessage);
+
 };
 
 #endif // LOGIN_INTERFACE_H

@@ -30,18 +30,33 @@ void TSserver::init()
 void TSserver::receiveData()
 {
     QString data=tcpSocket->readAll();
+    //qDebug()<<data;
     QStringList list=data.split("#");
-    bool ret=0;
+    int ret=0;
     if(list[0]=="a")     //注册
         ret=checkSignUp(list[1],list[2]);
     else if(list[0]=="b")  //登录
         ret=checkSignIn(list[1],list[2]);
-    else
-        return;
+    else if(list[0]=="c")  //添加好友
+        ret=addFriendInf(list[1],list[2]);
+    else if(list[0]=="d");  //开始聊天
 
 
     QString sendData=list[0];
-    if(ret&&list[0]=="b")
+    if(list[0]=="d"){
+        sendData+=+"#"+list[2]+beginChat(list[1],list[2]);
+    }
+    else if(list[0]=="c"){
+        if(ret==-1)
+            sendData+="#friendExist";
+        else if(ret==-2)
+            sendData+="#noUser";
+        else if(ret)
+            sendData+="#success"+getFriendInf(list[1]);
+        else
+            sendData+="#fail";
+    }
+    else if(ret&&list[0]=="b")
         sendData+="#true"+getFriendInf(list[1]);
     else if(ret)
         sendData+="#true";
@@ -95,3 +110,15 @@ QString TSserver::getFriendInf(QString name)
     return mysql->getFriendInf(name);
 }
 
+int TSserver::addFriendInf(QString userId, QString friendId)
+{
+    MySql *mysql=new MySql();
+    int ret=mysql->addFriend(userId,friendId);
+    return ret;
+}
+
+QString TSserver::beginChat(QString userId, QString friendId)
+{
+    MySql *mysql=new MySql();
+    return mysql->chatWithFriend(userId,friendId);
+}

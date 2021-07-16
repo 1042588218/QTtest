@@ -12,11 +12,11 @@
 #include<QHBoxLayout>
 #include<QVBoxLayout>
 
-main_interface::main_interface(QWidget *parent)
+main_interface::main_interface(QWidget *parent,QTcpSocket *tcpSocket)
     : QWidget(parent)
 {
-    isLeftPressDown = false;
-        dir = NONE;
+    this->tcpSocket=tcpSocket;
+
         // 追踪鼠标
         this->setMouseTracking(true);
 
@@ -41,6 +41,8 @@ main_interface::main_interface(QWidget *parent)
     setWindowOpacity(0.98);
     move(1500,50);
     this->close();
+    friendlayout=new QVBoxLayout;
+    myMapper = new QSignalMapper(this);
 
     //关闭最小化按钮设置，按钮功能实现
     closeBtn=new QPushButton(this);
@@ -55,7 +57,7 @@ main_interface::main_interface(QWidget *parent)
                 "QPushButton{font-family:'微软雅黑';font-size:35px;color:rgb(255,255,255,255);}\
                 QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
                 QPushButton:hover{background-color:rgb(253,114,109)}");
-                connect(closeBtn,SIGNAL(clicked()),this,SLOT(close()));
+            connect(closeBtn,SIGNAL(clicked()),this,SLOT(close()));
             connect(minBtn,SIGNAL(clicked()),this,SLOT(minBtn_clicked()));
     closeBtn->setGeometry(325,0,75,35);
     closeBtn->show();
@@ -65,12 +67,11 @@ main_interface::main_interface(QWidget *parent)
     userInf=new QString();
     userName=new QString();
     helloWord=new QLabel(this);
-    helloWord->setStyleSheet("QLabel{font-family:'宋体';font-size:22px;color:rgb(255,255,255,200);}");
-    QFont* helloFont=new QFont();
-    helloFont->setBold(true);
-    helloWord->setFont(*helloFont);
-    helloWord->setGeometry(10,10,220,35);
+    helloWord->setGeometry(20,0,140,70);
     helloWord->setAlignment(Qt::AlignCenter);
+    QPixmap pic(":/new/prefix1/src/welcome.png");
+    helloWord->setPixmap(pic.scaled(140,70));
+    helloWord->show();
 
     QPushButton *Line=new QPushButton("",this);
     Line->setFocusPolicy(Qt::NoFocus);
@@ -101,12 +102,70 @@ main_interface::main_interface(QWidget *parent)
                 "QPushButton{font-family:'微软雅黑';font-size:18px;color:rgb(255,255,255,255);}\
                 QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:5px 5px}\
                 QPushButton:hover{background-color:rgb(253,114,109)}");
+    connect(searchBtn,SIGNAL(clicked()),this,SLOT(on_searchBtn_clicked()));
+
     friendList=new QWidget(this);
+    searchResult=new QWidget;
+    searchResult->setFixedSize(400,100);
+    searchResultBtn=new QPushButton(searchResult);
+
+    addFriendPatr=new QWidget;
     addBtn=new QPushButton("添加好友",this);
     addBtn->setStyleSheet(
                 "QPushButton{font-family:'微软雅黑';font-size:20px;color:rgb(255,255,255,255);}\
                 QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
                 QPushButton:hover{background-color:rgb(253,114,109)}");
+    connect(addBtn,SIGNAL(clicked()),addFriendPatr,SLOT(show()));
+    closeAddBtn=new QPushButton(addFriendPatr);
+    addFriendPatr->setWindowTitle("添加好友");
+    addFriendPatr->setFixedSize(400,150);
+    QPalette pal1(addFriendPatr->palette());
+    pal1.setColor(QPalette::Background,QColor(245,245,245));
+    addFriendPatr->setAutoFillBackground(true);
+    addFriendPatr->setPalette(pal1);
+    addFriendPatr->setWindowFlags(Qt::FramelessWindowHint);
+    QBitmap bmp1(addFriendPatr->size());
+    bmp1.fill();
+    QPainter p1(&bmp1);
+    p1.setPen(Qt::NoPen);
+    p1.setBrush(Qt::black);
+    p1.drawRoundedRect(bmp1.rect(), 10, 10);
+    addFriendPatr->setMask(bmp1);
+    addFriendPatr->setWindowOpacity(0.98);
+    addFriendPatr->close();
+    closeAddBtn->setText("×");
+    closeAddBtn->setStyleSheet(
+                "QPushButton{font-family:'微软雅黑';font-size:30px;color:rgb(255,255,255,255);}\
+                QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
+                QPushButton:hover{background-color:rgb(253,114,109)}");
+            connect(closeAddBtn,SIGNAL(clicked()),addFriendPatr,SLOT(close()));
+    closeAddBtn->setGeometry(325,0,75,35);
+    closeAddBtn->show();
+    addLine=new QLineEdit(addFriendPatr);
+    addFriendBtn=new QPushButton(addFriendPatr);
+    QFont *addFont=new QFont;
+    addFont->setBold(true);
+    addFont->setFamily("微软雅黑");
+    addFont->setPixelSize(20);
+    addLine->setPlaceholderText( "请输入账号" );
+    addLine->setFont(*addFont);
+    addLine->setMaxLength(12);
+    addLine->setValidator( new  QIntValidator(addLine));
+    addFriendBtn->setText("添加好友");
+    addFriendBtn->setStyleSheet(
+                "QPushButton{font-family:'微软雅黑';font-size:20px;color:rgb(255,255,255,255);}\
+                QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
+                QPushButton:hover{background-color:rgb(253,114,109)}");
+    connect(addFriendBtn,SIGNAL(clicked()),this,SLOT(on_addFriendBtn_clicked()));
+    QVBoxLayout *addlayout=new QVBoxLayout();
+    QHBoxLayout *addFriendBtnlayout=new QHBoxLayout();
+    addlayout->addWidget(addLine);
+    addFriendBtnlayout->addWidget(addFriendBtn);
+    addlayout->addLayout(addFriendBtnlayout);
+    addlayout->setContentsMargins(40,40,50,20);
+    addFriendPatr->setLayout(addlayout);
+    connect(closeBtn,SIGNAL(clicked()),addFriendPatr,SLOT(close()));
+
     exitBtn=new QPushButton("退出程序",this);
     connect(exitBtn,SIGNAL(clicked()),this,SLOT(close()));
     exitBtn->setStyleSheet(
@@ -124,6 +183,7 @@ main_interface::main_interface(QWidget *parent)
     mainLayout->addWidget(friendList);
     mainLayout->addLayout(bottomLayout);
     mainLayout->setContentsMargins(20,80,20,20);
+    friendList->setLayout(friendlayout);
     setLayout(mainLayout);
 
 }
@@ -145,162 +205,134 @@ void main_interface::reciveUsername(QString userInf,QString userName)
     *friendInf=list;
     qDebug()<<*friendInf<<friendInf->size();
     qDebug()<<*(this->userName)<<"登录";
-    helloWord->setText("Hello! "+*(this->userName)+"!");
-    helloWord->show();
 }
 
-void main_interface::judgeRegionSetCursor(const QPoint& currentPoint)
-{
-    // 获取窗体在屏幕上的位置区域，tl为topleft点，rb为rightbottom点
-    QRect rect = this->rect();
-    QPoint tl = mapToGlobal(rect.topLeft());
-    QPoint rb = mapToGlobal(rect.bottomRight());
-
-    int x = currentPoint.x();
-    int y = currentPoint.y();
-
-    if (tl.x() + Padding >= x && tl.x() <= x && tl.y() + Padding >= y && tl.y() <= y) {
-        // 左上角
-        dir = LEFTTOP;
-        this->setCursor(QCursor(Qt::SizeFDiagCursor));  // 设置鼠标形状
-    }
-    else if (x >= rb.x() - Padding && x <= rb.x() && y >= rb.y() - Padding && y <= rb.y()) {
-        // 右下角
-        dir = RIGHTBOTTOM;
-        this->setCursor(QCursor(Qt::SizeFDiagCursor));
-    }
-    else if (x <= tl.x() + Padding && x >= tl.x() && y >= rb.y() - Padding && y <= rb.y()) {
-        //左下角
-        dir = LEFTBOTTOM;
-        this->setCursor(QCursor(Qt::SizeBDiagCursor));
-    }
-    else if (x <= rb.x() && x >= rb.x() - Padding && y >= tl.y() && y <= tl.y() + Padding) {
-        // 右上角
-        dir = RIGHTTOP;
-        this->setCursor(QCursor(Qt::SizeBDiagCursor));
-    }
-    else if (x <= tl.x() + Padding && x >= tl.x()) {
-        // 左边
-        dir = LEFT;
-        this->setCursor(QCursor(Qt::SizeHorCursor));
-    }
-    else if (x <= rb.x() && x >= rb.x() - Padding) {
-        // 右边
-        dir = RIGHT;
-        this->setCursor(QCursor(Qt::SizeHorCursor));
-    }
-    else if (y >= tl.y() && y <= tl.y() + Padding) {
-        // 上边
-        dir = UP;
-        this->setCursor(QCursor(Qt::SizeVerCursor));
-    }
-    else if (y <= rb.y() && y >= rb.y() - Padding) {
-        // 下边
-        dir = DOWN;
-        this->setCursor(QCursor(Qt::SizeVerCursor));
-    }
-    else {
-        // 默认
-        dir = NONE;
-        this->setCursor(QCursor(Qt::ArrowCursor));
-    }
-}
-
+/* 函数名：mouseReleaseEvent(QMouseEvent *event)
+ * 函数名：mousePressEvent(QMouseEvent *event)
+ * 函数名：mouseMoveEvent(QMouseEvent *event)
+ * 功  能：实现鼠标拖动无边框窗口
+ */
 void main_interface::mouseReleaseEvent(QMouseEvent *event)
 {
-    if (event->button() == Qt::LeftButton) {
-        isLeftPressDown = false;
-        if (dir != NONE) {
-            this->releaseMouse();
-            this->setCursor(QCursor(Qt::ArrowCursor));
-        }
-    }
+    Q_UNUSED(event);
+    m_bPressed = false;
 }
+
 void main_interface::mousePressEvent(QMouseEvent *event)
 {
-    switch (event->button()) {
-    case Qt::LeftButton:
-        isLeftPressDown = true;
-        if (dir != NONE) {
-            this->mouseGrabber();
-        }
-        else {
-            dragPosition = event->globalPos() - this->frameGeometry().topLeft();
-        }
-        break;
-    default:
-        QWidget::mousePressEvent(event);
+    if (event->button() == Qt::LeftButton)//判断左键是否按下
+    {
+        m_bPressed = true;
+        m_point = event->pos();
     }
 }
+
 void main_interface::mouseMoveEvent(QMouseEvent *event)
 {
-    QPoint gloPoint = event->globalPos();
-    QRect rect = this->rect();
-    QPoint tl = mapToGlobal(rect.topLeft());
-    QPoint rb = mapToGlobal(rect.bottomRight());
-
-    if (!isLeftPressDown) {
-        this->judgeRegionSetCursor(gloPoint);
-    }
-    else {
-
-        if (dir != NONE) {
-            QRect rMove(tl, rb);
-
-            switch (dir) {
-            case LEFT:
-                if (rb.x() - gloPoint.x() <= this->minimumWidth())
-                    rMove.setX(tl.x());
-                else
-                    rMove.setX(gloPoint.x());
-                break;
-            case RIGHT:
-                rMove.setWidth(gloPoint.x() - tl.x());
-                break;
-            case UP:
-                if (rb.y() - gloPoint.y() <= this->minimumHeight())
-                    rMove.setY(tl.y());
-                else
-                    rMove.setY(gloPoint.y());
-                break;
-            case DOWN:
-                rMove.setHeight(gloPoint.y() - tl.y());
-                break;
-            case LEFTTOP:
-                if (rb.x() - gloPoint.x() <= this->minimumWidth())
-                    rMove.setX(tl.x());
-                else
-                    rMove.setX(gloPoint.x());
-                if (rb.y() - gloPoint.y() <= this->minimumHeight())
-                    rMove.setY(tl.y());
-                else
-                    rMove.setY(gloPoint.y());
-                break;
-            case RIGHTTOP:
-                rMove.setWidth(gloPoint.x() - tl.x());
-                rMove.setY(gloPoint.y());
-                break;
-            case LEFTBOTTOM:
-                rMove.setX(gloPoint.x());
-                rMove.setHeight(gloPoint.y() - tl.y());
-                break;
-            case RIGHTBOTTOM:
-                rMove.setWidth(gloPoint.x() - tl.x());
-                rMove.setHeight(gloPoint.y() - tl.y());
-                break;
-            default:
-                break;
-            }
-            this->setGeometry(rMove);
-        }
-        else {
-            move(event->globalPos() - dragPosition);
-            event->accept();
-        }
-    }
-    QWidget::mouseMoveEvent(event);
+    if (m_bPressed)
+        move(event->pos() - m_point + pos());//移动当前窗口
 }
 
+void main_interface::on_searchBtn_clicked()
+{
+    if(searchLine->text()==""){
+        QMessageBox::information(this,"信息提示","搜索栏不可为空！",QMessageBox::Ok);
+        return;
+    }
+    for(int i=0;i<friendBtnList.size();i++){
+        if(friendBtnList.at(i)->text()==searchLine->text()){
+            searchResultBtn->setText(friendBtnList.at(i)->text());
+            searchResultBtn->setIcon(QIcon(":/new/prefix1/src/Friend.png"));
+            searchResultBtn->setIconSize(QSize(50, 50));
+            searchResultBtn->setStyleSheet(
+                        "QPushButton{font-family:'微软雅黑';font-size:30px;color:rgb(255,255,255,255);}\
+                        QPushButton{background:rgb(236,65,65);border:1px;padding:10px 10px}\
+                        QPushButton:hover{background-color:rgb(253,114,109)}");
+            searchResultBtn->setGeometry(0,0,400,100);
+            connect(searchResultBtn,SIGNAL(clicked()),myMapper,SLOT(map()));
+            myMapper->setMapping(searchResultBtn,searchResultBtn->text());
+            connect(myMapper, SIGNAL(mapped(QString)), this, SLOT(on_friendChatBtn_clicked(QString)));
+            searchResult->show();
+            return;
+        }
+    }
+    QMessageBox::information(this,"信息提示","查无此人",QMessageBox::Ok);
+}
+
+void main_interface::on_addFriendBtn_clicked()
+{
+    QString friendName=addLine->text();
+    if(friendName=="")
+        QMessageBox::information(addFriendPatr,"警告","输入不能为空",QMessageBox::Ok);
+    QString cs="c";
+    QString data=cs+"#"+userName+"#"+friendName;
+    tcpSocket->write(data.toLatin1());
+}
+
+void main_interface::on_friendChatBtn_clicked(QString friendName)
+{
+    QString ds="d";
+    QString data=ds+"#"+userName+"#"+friendName;
+    //qDebug()<<data;
+    tcpSocket->write(data.toLatin1());
+}
+
+void main_interface::mainMessages(QString mainMessage)
+{
+    qDebug()<<mainMessage;
+    QString data=mainMessage;
+    QStringList list=data.split("#");
+    if(list[1]=="friendExist")
+        QMessageBox::information(addFriendPatr,"信息提示","已存在该好友",QMessageBox::Ok);
+    else if(list[1]=="noUser")
+        QMessageBox::information(addFriendPatr,"信息提示","无法找到该用户",QMessageBox::Ok);
+    else if(list[1]=="success"){
+        QMessageBox::information(addFriendPatr,"信息提示","添加成功",QMessageBox::Ok);
+        list.removeFirst();
+        list.removeFirst();
+        list.removeLast();
+        friendInf=new QStringList;
+        *friendInf=list;
+        qDebug()<<*friendInf<<friendInf->size();
+        setFriendBtn();
+        this->show();
+    }
+    else if(list[1]=="fail")
+        QMessageBox::information(addFriendPatr,"信息提示","添加失败",QMessageBox::Ok);
+    else return;
+}
+
+void main_interface::setFriendBtn()
+{
+    friendBtnList.clear();
+    QLayoutItem *child;
+    while ((child = friendlayout->itemAt(0)) != nullptr) {
+            friendlayout->removeItem(child);
+            delete child->widget();
+            delete child;
+            child = nullptr;
+    }
+    for(int i=0;i<friendInf->length();i++){
+        QPushButton* friendBtn=new QPushButton(friendInf->at(i));
+
+        friendBtn->setIcon(QIcon(":/new/prefix1/src/Friend.png"));
+        friendBtn->setIconSize(QSize(30, 30));
+        friendBtn->setStyleSheet(
+                    "QPushButton{font-family:'微软雅黑';font-size:20px;color:rgb(50,50,50,250);}\
+                    QPushButton{background:rgb(255,255,255);border:1px;border-radius:10px;padding:10px 10px}\
+                    QPushButton:hover{background-color:rgb(253,114,109)}");
+        friendBtnList.append(friendBtn);
+        connect(friendBtnList.last(),SIGNAL(clicked()),myMapper,SLOT(map()));
+        myMapper->setMapping(friendBtnList.last(),friendBtnList.last()->text());
+    }
+
+    connect(myMapper, SIGNAL(mapped(QString)), this, SLOT(on_friendChatBtn_clicked(QString)));
+
+    for(int i=0;i<friendBtnList.size();i++){
+        friendlayout->addWidget(friendBtnList.at(i));
+    }
+    friendlayout->addStretch();
+}
 
 /* 函数名：minBtn_clicked()
  * 功  能：实现窗口最小化
