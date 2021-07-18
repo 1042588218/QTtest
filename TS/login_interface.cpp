@@ -168,6 +168,9 @@ void login_interface::minBtn_clicked()
     }
 }
 
+/* 函数名：on_loginBtn_clicked()
+ * 功  能：实现登录操作
+ */
 void login_interface::on_loginBtn_clicked()
 {
     QString userName=idEdit->text();
@@ -181,6 +184,9 @@ void login_interface::on_loginBtn_clicked()
     tcpSocket->write(data.toLatin1());
 }
 
+/* 函数名：on_registeredBtn_clicked()
+ * 功  能：实现注册操作
+ */
 void login_interface::on_registeredBtn_clicked()
 {
     QString userName=idEdit->text();
@@ -192,6 +198,9 @@ void login_interface::on_registeredBtn_clicked()
     tcpSocket->write(data.toLatin1());
 }
 
+/* 函数名：on_registeredBtn_clicked()
+ * 功  能：接受注册、登陆的信息，并对登录的结果进行判断
+ */
 void login_interface::loginMessages(QString loginMessage)
 {
     QString data=loginMessage;

@@ -29,6 +29,7 @@ private:
     QPushButton* closeChatBtn;
     QPushButton* sendBtn;
     QPushButton* backgroundBtn;
+    QString* userName;
     QLabel* chatFriendLab;
     QLabel* chatPic;
 
@@ -45,6 +46,9 @@ signals:
 public slots:
     void chatMessages(QString chatMessage);
     void minBtn_clicked();
+    void on_deletFriend_clicked();
+    void on_sendBtn_clicked();
+    void autoScroll();
 };
 
 #endif // CHAT_INTERFACE_H

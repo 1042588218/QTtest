@@ -9,11 +9,13 @@
 #include<QRegExp>
 #include<QRegExpValidator>
 #include<QtNetwork/QTcpSocket>
+#include<QDateTime>
 
 chat_interface::chat_interface(QWidget *parent,QTcpSocket *tcpSocket)
     : QWidget(parent)
 {
     this->tcpSocket=tcpSocket;
+    userName=new QString;
     //基本窗口设置
     this->setWindowTitle("聊天界面");
     setFixedSize(1000,800);
@@ -35,6 +37,7 @@ chat_interface::chat_interface(QWidget *parent,QTcpSocket *tcpSocket)
     QPixmap pic(":/new/prefix1/src/chat.png");
     chatPic->setPixmap(pic.scaled(100,100));
     chatPic->setGeometry(5,5,100,100);
+    chatFriendLab=new QLabel;
 
     //关闭最小化按钮设置，按钮功能实现
     closeBtn=new QPushButton(this);
@@ -65,7 +68,10 @@ chat_interface::chat_interface(QWidget *parent,QTcpSocket *tcpSocket)
     backgroundBtn->setGeometry(10,70,980,720);
 
     chatHistory=new QTextBrowser(this);
+    //chatHistory->setStyleSheet("QTextBrowser{font-family:'微软雅黑';font-size:25px;color:rgb(55,55,55,200);}");
+    connect(chatHistory, SIGNAL(cursorPositionChanged()),this, SLOT(autoScroll()));
     chatMessage=new QTextEdit(this);
+    chatMessage->setStyleSheet("QTextEdit{font-family:'微软雅黑';font-size:25px;color:rgb(55,55,55,200);}");
     chatMessage->setFixedSize(960,150);
     sendFile=new QPushButton("发送文件",this);
     sendFile->setStyleSheet(
@@ -77,6 +83,7 @@ chat_interface::chat_interface(QWidget *parent,QTcpSocket *tcpSocket)
                 "QPushButton{font-family:'微软雅黑';font-size:18px;color:rgb(255,255,255,255);}\
                 QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
                 QPushButton:hover{background-color:rgb(253,114,109)}");
+    connect(deletFriend,SIGNAL(clicked()),this,SLOT(on_deletFriend_clicked()));
     closeChatBtn=new QPushButton("关闭",this);
     connect(closeChatBtn,SIGNAL(clicked()),this,SLOT(close()));
     closeChatBtn->setStyleSheet(
@@ -88,6 +95,7 @@ chat_interface::chat_interface(QWidget *parent,QTcpSocket *tcpSocket)
                 "QPushButton{font-family:'微软雅黑';font-size:18px;color:rgb(255,255,255,255);}\
                 QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
                 QPushButton:hover{background-color:rgb(253,114,109)}");
+    connect(sendBtn,SIGNAL(clicked()),this,SLOT(on_sendBtn_clicked()));
     QHBoxLayout* deletlayout=new QHBoxLayout;
     deletlayout->addStretch();
     deletlayout->addWidget(deletFriend);
@@ -113,27 +121,50 @@ chat_interface::~chat_interface()
 
 }
 
+/* 函数名：chatMessages(QString chatMessage)
+ * 功  能：接收并处理widget与chat部分相关的信息
+ */
 void chat_interface::chatMessages(QString chatMessage)
 {
     qDebug()<<chatMessage;
     QString data=chatMessage;
     QStringList* list=new QStringList(data.split("#"));
-    chatFriendLab=new QLabel(this);
-    chatFriendLab->setText(list->at(1));
-    chatFriendLab->setGeometry(0,20,1000,40);
-    QFont *labFont=new QFont;
-    labFont->setBold(true);
-    chatFriendLab->setFont(*labFont);
-    chatFriendLab->setStyleSheet("QLabel{font-family:'微软雅黑';font-size:30px;color:rgb(255,255,255,255);}");
-    chatFriendLab->setAlignment(Qt::AlignCenter);
-    chatFriendLab->setAlignment(Qt::AlignHCenter);
-    if(list->size()<=5){
-
+    if((*list)[1]=="Esuccess"){
+        QMessageBox::information(this,"信息提示","删除成功!",QMessageBox::Ok);
+        this->close();
+        return;
     }
-    else {
-        int i=2;
+    else if((*list)[1]=="Efail"){
+        QMessageBox::information(this,"信息提示","删除失败!",QMessageBox::Ok);
+        return;
+    }
+    if((*list)[1]!="f"){
+        delete chatFriendLab;
+        chatHistory->clear();
+        chatFriendLab=new QLabel(this);
+        chatFriendLab->show();
+        *userName=list->at(1);
+        chatFriendLab->setText(list->at(2));
+        chatFriendLab->setGeometry(0,20,1000,40);
+        QFont *labFont=new QFont;
+        labFont->setBold(true);
+        chatFriendLab->setFont(*labFont);
+        chatFriendLab->setStyleSheet("QLabel{font-family:'微软雅黑';font-size:30px;color:rgb(255,255,255,255);}");
+        chatFriendLab->setAlignment(Qt::AlignCenter);
+        chatFriendLab->setAlignment(Qt::AlignHCenter);
+    }
+    if(list->size()>6){
+        int i=3;
         while(i<list->size()-3){
-
+            chatHistory->append("");
+            QString  str= "<font color=\"#3c3645\" size=4>" +(*list)[i]+ "</font>";
+            chatHistory->append(str);
+            str= "<font color=\"#FF0000\" size=2>" + (*list)[i+1] + "</font>";
+            chatHistory->append(str);
+            str= "<font color=\"#464547\" size=6>" +  (*list)[i+2] + "</font>";
+            chatHistory->append(str);
+            chatHistory->show();
+            i+=3;
         }
     }
     this->show();
@@ -149,6 +180,7 @@ void chat_interface::mouseReleaseEvent(QMouseEvent *event)
     Q_UNUSED(event);
     m_bPressed = false;
 }
+
 
 void chat_interface::mousePressEvent(QMouseEvent *event)
 {
@@ -174,3 +206,39 @@ void chat_interface::minBtn_clicked()
         setWindowState( Qt::WindowMinimized );
     }
 }
+
+/* 函数名：on_deletFriend_clicked()
+ * 功  能：实现好友的删除功能
+ */
+void chat_interface::on_deletFriend_clicked()
+{
+    QString es="e";
+    QString data=es+"#"+userName+"#"+chatFriendLab->text();
+    tcpSocket->write(data.toLatin1());
+}
+
+/* 函数名：on_sendBtn_clicked()
+ * 功  能：实现发送消息功能
+ */
+void chat_interface::on_sendBtn_clicked()
+{
+    if(chatMessage->toPlainText()==""){
+        QMessageBox::information(this,"警告","发送信息不可为空!",QMessageBox::Ok);
+        return;
+    }
+    QDateTime current_date_time =QDateTime::currentDateTime();
+    QString current_date =current_date_time.toString("yyyy.MM.dd hh:mm:ss");
+    qDebug()<<current_date;
+    QString fs="f";
+    QString data=fs+"#"+chatFriendLab->text()+"#"+userName+"#"+current_date+"#"+chatMessage->toPlainText();
+    qDebug()<<current_date;
+    chatMessage->clear();
+    tcpSocket->write(data.toUtf8());
+}
+
+void chat_interface::autoScroll()
+{
+    chatHistory->moveCursor(QTextCursor::End);  //将接收文本框的滚动条滑到最下面
+
+}
+

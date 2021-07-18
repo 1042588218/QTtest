@@ -193,6 +193,9 @@ main_interface::~main_interface()
 
 }
 
+/* 函数名：reciveUsername(QString userInf,QString userName)
+ * 功  能：得到登录账号的好友信息
+ */
 void main_interface::reciveUsername(QString userInf,QString userName)
 {
     *(this->userName)=userName;
@@ -203,8 +206,8 @@ void main_interface::reciveUsername(QString userInf,QString userName)
     list.removeLast();
     friendInf=new QStringList;
     *friendInf=list;
-    qDebug()<<*friendInf<<friendInf->size();
-    qDebug()<<*(this->userName)<<"登录";
+    //qDebug()<<*friendInf<<friendInf->size();
+    //qDebug()<<*(this->userName)<<"登录";
 }
 
 /* 函数名：mouseReleaseEvent(QMouseEvent *event)
@@ -233,6 +236,9 @@ void main_interface::mouseMoveEvent(QMouseEvent *event)
         move(event->pos() - m_point + pos());//移动当前窗口
 }
 
+/* 函数名：on_searchBtn_clicked()
+ * 功  能：完成好友的搜索功能
+ */
 void main_interface::on_searchBtn_clicked()
 {
     if(searchLine->text()==""){
@@ -259,27 +265,43 @@ void main_interface::on_searchBtn_clicked()
     QMessageBox::information(this,"信息提示","查无此人",QMessageBox::Ok);
 }
 
+/* 函数名：on_addFriendBtn_clicked()
+ * 功  能：完成添加好友功能
+ */
 void main_interface::on_addFriendBtn_clicked()
 {
     QString friendName=addLine->text();
-    if(friendName=="")
+    if(friendName==""){
         QMessageBox::information(addFriendPatr,"警告","输入不能为空",QMessageBox::Ok);
+        return;
+    }
+    else if(friendName==userName){
+        QMessageBox::information(addFriendPatr,"警告","不能添加自己为好友",QMessageBox::Ok);
+        return;
+    }
     QString cs="c";
     QString data=cs+"#"+userName+"#"+friendName;
+    qDebug()<<data;
     tcpSocket->write(data.toLatin1());
 }
 
-void main_interface::on_friendChatBtn_clicked(QString friendName)
+/* 函数名：on_friendChatBtn_clicked(QString friendName)
+ * 功  能：点击好友按钮，与好友开始聊天
+ */
+void main_interface::on_friendChatBtn_click(QString friendName)
 {
     QString ds="d";
-    QString data=ds+"#"+userName+"#"+friendName;
-    //qDebug()<<data;
+    QString data=ds+"#"+userName+"#"+friendName+"#";
     tcpSocket->write(data.toLatin1());
+    qDebug()<<data;
 }
 
+/* 函数名：mainMessages(QString mainMessage)
+ * 功  能：从widget获得main部分信息并进行处理
+ */
 void main_interface::mainMessages(QString mainMessage)
 {
-    qDebug()<<mainMessage;
+    //qDebug()<<mainMessage;
     QString data=mainMessage;
     QStringList list=data.split("#");
     if(list[1]=="friendExist")
@@ -291,9 +313,21 @@ void main_interface::mainMessages(QString mainMessage)
         list.removeFirst();
         list.removeFirst();
         list.removeLast();
+        delete friendInf;
         friendInf=new QStringList;
         *friendInf=list;
-        qDebug()<<*friendInf<<friendInf->size();
+        //qDebug()<<*friendInf<<friendInf->size();
+        setFriendBtn();
+        this->show();
+    }
+    else if(list[1]=="Esuccess"){
+        list.removeFirst();
+        list.removeFirst();
+        list.removeLast();
+        delete friendInf;
+        friendInf=new QStringList;
+        *friendInf=list;
+        //qDebug()<<*friendInf<<friendInf->size();
         setFriendBtn();
         this->show();
     }
@@ -302,8 +336,15 @@ void main_interface::mainMessages(QString mainMessage)
     else return;
 }
 
+/* 函数名：setFriendBtn()
+ * 功  能：对于传回的好友信息进行处理，并进行显示
+ */
 void main_interface::setFriendBtn()
 {
+    for(int i=0;i<friendBtnList.size();i++){
+        friendBtnList.at(i)->hide();
+        delete friendBtnList.at(i);
+    }
     friendBtnList.clear();
     QLayoutItem *child;
     while ((child = friendlayout->itemAt(0)) != nullptr) {
@@ -314,7 +355,6 @@ void main_interface::setFriendBtn()
     }
     for(int i=0;i<friendInf->length();i++){
         QPushButton* friendBtn=new QPushButton(friendInf->at(i));
-
         friendBtn->setIcon(QIcon(":/new/prefix1/src/Friend.png"));
         friendBtn->setIconSize(QSize(30, 30));
         friendBtn->setStyleSheet(
@@ -322,11 +362,13 @@ void main_interface::setFriendBtn()
                     QPushButton{background:rgb(255,255,255);border:1px;border-radius:10px;padding:10px 10px}\
                     QPushButton:hover{background-color:rgb(253,114,109)}");
         friendBtnList.append(friendBtn);
-        connect(friendBtnList.last(),SIGNAL(clicked()),myMapper,SLOT(map()));
-        myMapper->setMapping(friendBtnList.last(),friendBtnList.last()->text());
-    }
+        connect(friendBtn,SIGNAL(clicked()),myMapper,SLOT(map()));
+        myMapper->setMapping(friendBtn,friendBtn->text());
 
-    connect(myMapper, SIGNAL(mapped(QString)), this, SLOT(on_friendChatBtn_clicked(QString)));
+        //connect(friendBtn, SIGNAL(mapped(QString)), this, [=](){on_friendChatBtn_clicked(friendBtn->text());});
+    }
+    connect(myMapper, SIGNAL(mapped(QString)), this, SLOT(on_friendChatBtn_click(QString)));
+
 
     for(int i=0;i<friendBtnList.size();i++){
         friendlayout->addWidget(friendBtnList.at(i));

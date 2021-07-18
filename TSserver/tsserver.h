@@ -23,8 +23,11 @@ public:
     bool checkSignIn(QString name,QString passward);
     bool checkSignUp(QString name,QString passward);
     int addFriendInf(QString userId, QString friendId);
+    bool deletFriend(QString userId, QString friendId);
+    bool updateMessages(QString reciverId,QString senderId,QString timeInf,QString messageInf);
     QString beginChat(QString userId,QString friendId);
     QString getFriendInf(QString name);
+
 
 protected:
     void init();
@@ -32,14 +35,17 @@ protected:
 private slots:
     void on_startBtn_clicked();
 
-    void acceptConnection();
-
     void receiveData();
 
     void displayError(QAbstractSocket::SocketError);
 
+    void NewConnectionSlot();
+
+    void disconnectedSlot();
+
 private:
     Ui::TSserver *ui;
+    QList<QTcpSocket*> tcpClient;
     QTcpSocket *tcpSocket;
     QTcpServer *tcpServer;
     QTimer *timer;

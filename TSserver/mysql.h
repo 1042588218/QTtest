@@ -15,6 +15,8 @@ public:
     bool loguser(QString name,QString passward);
     bool signup(QString name,QString passward);
     int addFriend(QString userId,QString friendId);
+    bool delFriend(QString userId,QString friendId);
+    bool updateHistory(QString reciverId,QString senderId,QString timeInf,QString messageInf);
     QString chatWithFriend(QString userId,QString friendId);
     QString getFriendInf(QString name);
 

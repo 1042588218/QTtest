@@ -36,12 +36,18 @@ Widget::~Widget()
 
 }
 
+/* 函数名：init()
+ * 功  能：报错
+ */
 void Widget::init()
 {
     connect(tcpSocket,SIGNAL(error(QAbstractSocket::SocketError)),
             this,SLOT(displayError(QAbstractSocket::SocketError)));   //发生错误时执行displayError函数
 }
 
+/* 函数名：connectServer()
+ * 功  能：连接到服务器
+ */
 void Widget::connectServer()
 {
     tcpSocket->abort();   //取消已有的连接
@@ -49,11 +55,17 @@ void Widget::connectServer()
     connect(tcpSocket,SIGNAL(readyRead()),this,SLOT(readMessages()));
 }
 
+/* 函数名：displayError(QAbstractSocket::SocketError)
+ * 功  能：打印错误信息
+ */
 void Widget::displayError(QAbstractSocket::SocketError)
 {
     qDebug()<<tcpSocket->errorString();   //输出出错信息
 }
 
+/* 函数名：readMessages()
+ * 功  能：获取服务器返回的信息
+ */
 void Widget::readMessages()
 {
     QString data=tcpSocket->readAll();
@@ -65,6 +77,13 @@ void Widget::readMessages()
         emit(sendToMain(data));
     }
     else if(list[0]=="d"){
+        emit(sendToChat(data));
+    }
+    else if(list[0]=="e"){
+        emit(sendToMain(data));
+        emit(sendToChat(data));
+    }
+    else if(list[0]=="f"){
         emit(sendToChat(data));
     }
     else

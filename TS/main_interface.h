@@ -69,7 +69,7 @@ public slots:
     void setFriendBtn();
     void on_searchBtn_clicked();
     void on_addFriendBtn_clicked();
-    void on_friendChatBtn_clicked(QString friendName);
+    void on_friendChatBtn_click(QString friendName);
     void mainMessages(QString mainMessage);
 };
 
