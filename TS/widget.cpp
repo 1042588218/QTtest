@@ -1,7 +1,7 @@
 #include "widget.h"
 #include<QObject>
 
-#define ip "127.0.0.1"
+#define ip "192.168.31.140"
 #define port 8000
 
 Widget::Widget(QWidget *parent)

@@ -49,6 +49,7 @@ private:
     QTcpSocket *tcpSocket;
     QTcpServer *tcpServer;
     QTimer *timer;
+    QMap<QString, QTcpSocket*> map;
 };
 
 #endif // TSSERVER_H

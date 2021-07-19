@@ -138,7 +138,7 @@ void chat_interface::chatMessages(QString chatMessage)
         QMessageBox::information(this,"信息提示","删除失败!",QMessageBox::Ok);
         return;
     }
-    if((*list)[1]!="f"){
+    if((*list)[0]!="f"){
         delete chatFriendLab;
         chatHistory->clear();
         chatFriendLab=new QLabel(this);
@@ -153,13 +153,18 @@ void chat_interface::chatMessages(QString chatMessage)
         chatFriendLab->setAlignment(Qt::AlignCenter);
         chatFriendLab->setAlignment(Qt::AlignHCenter);
     }
+    chatHistory->clear();
     if(list->size()>6){
         int i=3;
         while(i<list->size()-3){
             chatHistory->append("");
-            QString  str= "<font color=\"#3c3645\" size=4>" +(*list)[i]+ "</font>";
-            chatHistory->append(str);
-            str= "<font color=\"#FF0000\" size=2>" + (*list)[i+1] + "</font>";
+            QString  str;
+            if((*list)[i]==userName){
+                str= "<font color=\"#f173ac\" size=5>" +(*list)[i]+"    "+(*list)[i+1]+ "</font>";
+            }
+            else {
+                str= "<font color=\"#007947\" size=5>" +(*list)[i]+"    "+(*list)[i+1]+ "</font>";
+            }
             chatHistory->append(str);
             str= "<font color=\"#464547\" size=6>" +  (*list)[i+2] + "</font>";
             chatHistory->append(str);
@@ -227,7 +232,7 @@ void chat_interface::on_sendBtn_clicked()
         return;
     }
     QDateTime current_date_time =QDateTime::currentDateTime();
-    QString current_date =current_date_time.toString("yyyy.MM.dd hh:mm:ss");
+    QString current_date =current_date_time.toString("MM.dd hh:mm:ss");
     qDebug()<<current_date;
     QString fs="f";
     QString data=fs+"#"+chatFriendLab->text()+"#"+userName+"#"+current_date+"#"+chatMessage->toPlainText();

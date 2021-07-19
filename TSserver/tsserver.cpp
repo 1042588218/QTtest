@@ -60,6 +60,9 @@ void TSserver::receiveData()
         else if(list[0]=="f"){
             if(ret){
                 sendData+="#"+list[1]+"#"+list[2]+beginChat(list[1],list[2]);
+                QString tmp="f"+("#"+list[2]+"#"+list[1]+beginChat(list[1],list[2]));
+                if(map.contains(list[1]))
+                    map.value(list[1])->write(tmp.toUtf8());
             }
             else{
                 sendData+="#fail";
@@ -68,8 +71,9 @@ void TSserver::receiveData()
         else if(list[0]=="e"){
             if(ret){
                 sendData+="#Esuccess"+getFriendInf(list[1]);
-                qDebug()<<getFriendInf(list[1]);
-                qDebug()<<sendData;
+                QString tmp="e#"+("Esuccess"+getFriendInf(list[2]));
+                if(map.contains(list[2]))
+                    map.value(list[2])->write(tmp.toUtf8());
             }
             else
                 sendData+="#Efail";
@@ -79,11 +83,17 @@ void TSserver::receiveData()
                 sendData+="#friendExist";
             else if(ret==-2)
                 sendData+="#noUser";
-            else
+            else{
                 sendData+="#success"+getFriendInf(list[1]);
+                QString tmp="c"+("#success"+getFriendInf(list[2]));
+                if(map.contains(list[2]))
+                    map.value(list[2])->write(tmp.toUtf8());
+            }
         }
-        else if(ret&&list[0]=="b")
+        else if(ret&&list[0]=="b"){
             sendData+="#true"+getFriendInf(list[1]);
+                map.insert(list[1],tcpClient[i]);
+        }
         else if(ret)
             sendData+="#true";
         else
@@ -138,6 +148,8 @@ void TSserver::disconnectedSlot()
     {
         if(tcpClient[i]->state() == QAbstractSocket::UnconnectedState)
         {
+            QString tmp=map.key(tcpClient[i]);
+            map.remove(tmp);
             // 删除存储在tcpClient列表中的客户端信息
              tcpClient[i]->destroyed();
              tcpClient.removeAt(i);

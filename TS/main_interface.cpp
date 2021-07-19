@@ -281,7 +281,7 @@ void main_interface::on_addFriendBtn_clicked()
     }
     QString cs="c";
     QString data=cs+"#"+userName+"#"+friendName;
-    qDebug()<<data;
+    //qDebug()<<data;
     tcpSocket->write(data.toLatin1());
 }
 
@@ -293,7 +293,6 @@ void main_interface::on_friendChatBtn_click(QString friendName)
     QString ds="d";
     QString data=ds+"#"+userName+"#"+friendName+"#";
     tcpSocket->write(data.toLatin1());
-    qDebug()<<data;
 }
 
 /* 函数名：mainMessages(QString mainMessage)
