@@ -60,6 +60,7 @@ void TSserver::receiveData()
         else if(list[0]=="f"){
             if(ret){
                 sendData+="#"+list[1]+"#"+list[2]+beginChat(list[1],list[2]);
+                qDebug()<<154236444;
                 QString tmp="f"+("#"+list[2]+"#"+list[1]+beginChat(list[1],list[2]));
                 if(map.contains(list[1]))
                     map.value(list[1])->write(tmp.toUtf8());

@@ -139,11 +139,10 @@ void chat_interface::chatMessages(QString chatMessage)
         return;
     }
     if((*list)[0]!="f"){
+        *userName=list->at(1);
         delete chatFriendLab;
-        chatHistory->clear();
         chatFriendLab=new QLabel(this);
         chatFriendLab->show();
-        *userName=list->at(1);
         chatFriendLab->setText(list->at(2));
         chatFriendLab->setGeometry(0,20,1000,40);
         QFont *labFont=new QFont;
@@ -152,11 +151,25 @@ void chat_interface::chatMessages(QString chatMessage)
         chatFriendLab->setStyleSheet("QLabel{font-family:'微软雅黑';font-size:30px;color:rgb(255,255,255,255);}");
         chatFriendLab->setAlignment(Qt::AlignCenter);
         chatFriendLab->setAlignment(Qt::AlignHCenter);
+        chatHistory->clear();
+    }
+    else{
+        delete chatFriendLab;
+        chatFriendLab=new QLabel(this);
+        chatFriendLab->show();
+        chatFriendLab->setGeometry(0,20,1000,40);
+        QFont *labFont=new QFont;
+        labFont->setBold(true);
+        chatFriendLab->setFont(*labFont);
+        chatFriendLab->setStyleSheet("QLabel{font-family:'微软雅黑';font-size:30px;color:rgb(255,255,255,255);}");
+        chatFriendLab->setAlignment(Qt::AlignCenter);
+        chatFriendLab->setAlignment(Qt::AlignHCenter);
+        chatFriendLab->setText(list->at(1));
     }
     chatHistory->clear();
     if(list->size()>6){
         int i=3;
-        while(i<list->size()-3){
+        while((*list)[i]!="root"){
             chatHistory->append("");
             QString  str;
             if((*list)[i]==userName){

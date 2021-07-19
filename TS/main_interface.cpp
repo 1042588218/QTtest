@@ -308,7 +308,7 @@ void main_interface::mainMessages(QString mainMessage)
     else if(list[1]=="noUser")
         QMessageBox::information(addFriendPatr,"信息提示","无法找到该用户",QMessageBox::Ok);
     else if(list[1]=="success"){
-        QMessageBox::information(addFriendPatr,"信息提示","添加成功",QMessageBox::Ok);
+        addFriendPatr->close();
         list.removeFirst();
         list.removeFirst();
         list.removeLast();
