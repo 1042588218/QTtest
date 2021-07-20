@@ -17,8 +17,9 @@ main_interface::main_interface(QWidget *parent,QTcpSocket *tcpSocket)
 {
     this->tcpSocket=tcpSocket;
 
-        // 追踪鼠标
-        this->setMouseTracking(true);
+    // 追踪鼠标
+    this->setMouseTracking(true);
+
 
     //基本窗口设置
     this->setWindowTitle("主界面");
@@ -44,6 +45,7 @@ main_interface::main_interface(QWidget *parent,QTcpSocket *tcpSocket)
     friendlayout=new QVBoxLayout;
     myMapper = new QSignalMapper(this);
 
+
     //关闭最小化按钮设置，按钮功能实现
     closeBtn=new QPushButton(this);
     closeBtn->setText("×");
@@ -52,18 +54,20 @@ main_interface::main_interface(QWidget *parent,QTcpSocket *tcpSocket)
                 QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
                 QPushButton:hover{background-color:rgb(253,114,109)}");
                 minBtn=new QPushButton(this);
-            minBtn->setText("-");
+    minBtn->setText("-");
     minBtn->setStyleSheet(
                 "QPushButton{font-family:'微软雅黑';font-size:35px;color:rgb(255,255,255,255);}\
                 QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
                 QPushButton:hover{background-color:rgb(253,114,109)}");
-            connect(closeBtn,SIGNAL(clicked()),this,SLOT(close()));
-            connect(minBtn,SIGNAL(clicked()),this,SLOT(minBtn_clicked()));
+    connect(closeBtn,SIGNAL(clicked()),this,SLOT(close()));
+    connect(minBtn,SIGNAL(clicked()),this,SLOT(minBtn_clicked()));
     closeBtn->setGeometry(325,0,75,35);
     closeBtn->show();
     minBtn->setGeometry(240,0,75,35);
     minBtn->show();
 
+
+    //登入用户信息，欢迎界面
     userInf=new QString();
     userName=new QString();
     helloWord=new QLabel(this);
@@ -73,6 +77,8 @@ main_interface::main_interface(QWidget *parent,QTcpSocket *tcpSocket)
     helloWord->setPixmap(pic.scaled(140,70));
     helloWord->show();
 
+
+    //美化界面控件
     QPushButton *Line=new QPushButton("",this);
     Line->setFocusPolicy(Qt::NoFocus);
     Line->setStyleSheet(
@@ -88,6 +94,8 @@ main_interface::main_interface(QWidget *parent,QTcpSocket *tcpSocket)
                 QPushButton{background:rgb(43,43,43);border:1px;border-radius:10px;padding:5px 5px;}");
     btnPart->setGeometry(0,this->height()-80,400,80);
 
+
+    //搜索好友栏
     searchLine=new QLineEdit(this);
     QFont *editFont=new QFont;
     editFont->setBold(true);
@@ -103,12 +111,13 @@ main_interface::main_interface(QWidget *parent,QTcpSocket *tcpSocket)
                 QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:5px 5px}\
                 QPushButton:hover{background-color:rgb(253,114,109)}");
     connect(searchBtn,SIGNAL(clicked()),this,SLOT(on_searchBtn_clicked()));
-
     friendList=new QWidget(this);
     searchResult=new QWidget;
     searchResult->setFixedSize(400,100);
     searchResultBtn=new QPushButton(searchResult);
 
+
+    //添加好友部分
     addFriendPatr=new QWidget;
     addBtn=new QPushButton("添加好友",this);
     addBtn->setStyleSheet(
@@ -138,7 +147,7 @@ main_interface::main_interface(QWidget *parent,QTcpSocket *tcpSocket)
                 "QPushButton{font-family:'微软雅黑';font-size:30px;color:rgb(255,255,255,255);}\
                 QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
                 QPushButton:hover{background-color:rgb(253,114,109)}");
-            connect(closeAddBtn,SIGNAL(clicked()),addFriendPatr,SLOT(close()));
+    connect(closeAddBtn,SIGNAL(clicked()),addFriendPatr,SLOT(close()));
     closeAddBtn->setGeometry(325,0,75,35);
     closeAddBtn->show();
     addLine=new QLineEdit(addFriendPatr);
@@ -166,18 +175,70 @@ main_interface::main_interface(QWidget *parent,QTcpSocket *tcpSocket)
     addFriendPatr->setLayout(addlayout);
     connect(closeBtn,SIGNAL(clicked()),addFriendPatr,SLOT(close()));
 
-    exitBtn=new QPushButton("退出程序",this);
-    connect(exitBtn,SIGNAL(clicked()),this,SLOT(close()));
-    exitBtn->setStyleSheet(
+
+    //创建群聊部分
+    groupBtn=new QPushButton("创建群聊",this);
+    groupBtn->setStyleSheet(
                 "QPushButton{font-family:'微软雅黑';font-size:20px;color:rgb(255,255,255,255);}\
                 QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
                 QPushButton:hover{background-color:rgb(253,114,109)}");
+    setGroupPatr=new QWidget;
+    closeSetGroupBtn=new QPushButton(setGroupPatr);
+    setGroupPatr->setWindowTitle("创建群聊");
+    setGroupPatr->setFixedSize(400,150);
+    QPalette pal2(setGroupPatr->palette());
+    pal2.setColor(QPalette::Background,QColor(245,245,245));
+    setGroupPatr->setAutoFillBackground(true);
+    setGroupPatr->setPalette(pal2);
+    setGroupPatr->setWindowFlags(Qt::FramelessWindowHint);
+    QBitmap bmp2(addFriendPatr->size());
+    bmp2.fill();
+    QPainter p2(&bmp2);
+    p2.setPen(Qt::NoPen);
+    p2.setBrush(Qt::black);
+    p2.drawRoundedRect(bmp2.rect(), 10, 10);
+    setGroupPatr->setMask(bmp2);
+    setGroupPatr->setWindowOpacity(0.98);
+    setGroupPatr->close();
+    closeSetGroupBtn->setText("×");
+    closeSetGroupBtn->setStyleSheet(
+                "QPushButton{font-family:'微软雅黑';font-size:30px;color:rgb(255,255,255,255);}\
+                QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
+                QPushButton:hover{background-color:rgb(253,114,109)}");
+    connect(closeSetGroupBtn,SIGNAL(clicked()),setGroupPatr,SLOT(close()));
+    closeSetGroupBtn->setGeometry(325,0,75,35);
+    closeSetGroupBtn->show();
+    setGroupPatrLine=new QLineEdit(setGroupPatr);
+    setGroupBtn=new QPushButton(setGroupPatr);
+    QFont *setGroupPatrFont=new QFont;
+    setGroupPatrFont->setBold(true);
+    setGroupPatrFont->setFamily("微软雅黑");
+    setGroupPatrFont->setPixelSize(20);
+    setGroupPatrLine->setPlaceholderText( "请输入群聊名称" );
+    setGroupPatrLine->setFont(*addFont);
+    setGroupPatrLine->setMaxLength(2);
+    setGroupPatrLine->setValidator( new  QIntValidator(addLine));
+    setGroupBtn->setText("创建群聊");
+    setGroupBtn->setStyleSheet(
+                "QPushButton{font-family:'微软雅黑';font-size:20px;color:rgb(255,255,255,255);}\
+                QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
+                QPushButton:hover{background-color:rgb(253,114,109)}");
+            QVBoxLayout *Grouplayout=new QVBoxLayout();
+    QHBoxLayout *GroupFriendBtnlayout=new QHBoxLayout();
+    Grouplayout->addWidget(setGroupPatrLine);
+    GroupFriendBtnlayout->addWidget(setGroupBtn);
+    Grouplayout->addLayout(GroupFriendBtnlayout);
+    Grouplayout->setContentsMargins(40,40,50,20);
+    setGroupPatr->setLayout(Grouplayout);
+    connect(closeSetGroupBtn,SIGNAL(clicked()),setGroupPatr,SLOT(close()));
+    connect(groupBtn,SIGNAL(clicked()),setGroupPatr,SLOT(show()));
+    connect(setGroupBtn,SIGNAL(clicked()),this,SLOT(on_setGroupBtn_clicked()));
     QHBoxLayout *searchLayout=new QHBoxLayout;
     searchLayout->addWidget(searchLine);
     searchLayout->addWidget(searchBtn);
     QHBoxLayout *bottomLayout=new QHBoxLayout;
     bottomLayout->addWidget(addBtn);
-    bottomLayout->addWidget(exitBtn);
+    bottomLayout->addWidget(groupBtn);
     QVBoxLayout *mainLayout=new QVBoxLayout;
     mainLayout->addLayout(searchLayout);
     mainLayout->addWidget(friendList);
@@ -188,10 +249,15 @@ main_interface::main_interface(QWidget *parent,QTcpSocket *tcpSocket)
 
 }
 
+
+/* 函数名：~main_interface()
+ * 功  能：析构函数
+ */
 main_interface::~main_interface()
 {
 
 }
+
 
 /* 函数名：reciveUsername(QString userInf,QString userName)
  * 功  能：得到登录账号的好友信息
@@ -209,6 +275,7 @@ void main_interface::reciveUsername(QString userInf,QString userName)
     //qDebug()<<*friendInf<<friendInf->size();
     //qDebug()<<*(this->userName)<<"登录";
 }
+
 
 /* 函数名：mouseReleaseEvent(QMouseEvent *event)
  * 函数名：mousePressEvent(QMouseEvent *event)
@@ -235,6 +302,7 @@ void main_interface::mouseMoveEvent(QMouseEvent *event)
     if (m_bPressed)
         move(event->pos() - m_point + pos());//移动当前窗口
 }
+
 
 /* 函数名：on_searchBtn_clicked()
  * 功  能：完成好友的搜索功能
@@ -265,6 +333,7 @@ void main_interface::on_searchBtn_clicked()
     QMessageBox::information(this,"信息提示","查无此人",QMessageBox::Ok);
 }
 
+
 /* 函数名：on_addFriendBtn_clicked()
  * 功  能：完成添加好友功能
  */
@@ -285,15 +354,36 @@ void main_interface::on_addFriendBtn_clicked()
     tcpSocket->write(data.toLatin1());
 }
 
+
 /* 函数名：on_friendChatBtn_clicked(QString friendName)
  * 功  能：点击好友按钮，与好友开始聊天
  */
 void main_interface::on_friendChatBtn_click(QString friendName)
 {
-    QString ds="d";
-    QString data=ds+"#"+userName+"#"+friendName+"#";
-    tcpSocket->write(data.toLatin1());
+    if(friendName.contains("group")){
+        QString hs="h";
+        QString data=hs+"#"+userName+"#"+friendName+"#";
+        tcpSocket->write(data.toLatin1());
+    }
+    else{
+        QString ds="d";
+        QString data=ds+"#"+userName+"#"+friendName+"#";
+        tcpSocket->write(data.toLatin1());
+    }
 }
+
+
+/* 函数名：on_setGroupBtn_clicked()
+ * 功  能：完成群聊组的创建功能
+ */
+void main_interface::on_setGroupBtn_clicked()
+{
+    QString gs="g";
+    QString data=gs+"#"+userName+"#"+"group"+setGroupPatrLine->text();
+    qDebug()<<data;
+    tcpSocket->write(data.toUtf8());
+}
+
 
 /* 函数名：mainMessages(QString mainMessage)
  * 功  能：从widget获得main部分信息并进行处理
@@ -316,10 +406,26 @@ void main_interface::mainMessages(QString mainMessage)
         friendInf=new QStringList;
         *friendInf=list;
         //qDebug()<<*friendInf<<friendInf->size();
+        addFriendPatr->hide();
         setFriendBtn();
         this->show();
     }
-    else if(list[1]=="Esuccess"){
+    else if(list[1]=="Gsuccess"){
+        QMessageBox::information(addFriendPatr,"信息提示","创建群聊成功",QMessageBox::Ok);
+        list.removeFirst();
+        list.removeFirst();
+        list.removeLast();
+        delete friendInf;
+        friendInf=new QStringList;
+        *friendInf=list;
+        setGroupPatr->hide();
+        setFriendBtn();
+        this->show();
+    }
+    else if(list[1]=="Gfail"){
+        QMessageBox::information(addFriendPatr,"信息提示","创建群聊失败，已存在同名群聊",QMessageBox::Ok);
+    }
+    else if(list[1]=="Esuccess"||list[1]=="Jsuccess"){
         list.removeFirst();
         list.removeFirst();
         list.removeLast();
@@ -334,6 +440,7 @@ void main_interface::mainMessages(QString mainMessage)
         QMessageBox::information(addFriendPatr,"信息提示","添加失败",QMessageBox::Ok);
     else return;
 }
+
 
 /* 函数名：setFriendBtn()
  * 功  能：对于传回的好友信息进行处理，并进行显示
@@ -353,13 +460,25 @@ void main_interface::setFriendBtn()
             child = nullptr;
     }
     for(int i=0;i<friendInf->length();i++){
-        QPushButton* friendBtn=new QPushButton(friendInf->at(i));
-        friendBtn->setIcon(QIcon(":/new/prefix1/src/Friend.png"));
-        friendBtn->setIconSize(QSize(30, 30));
-        friendBtn->setStyleSheet(
-                    "QPushButton{font-family:'微软雅黑';font-size:20px;color:rgb(50,50,50,250);}\
-                    QPushButton{background:rgb(255,255,255);border:1px;border-radius:10px;padding:10px 10px}\
-                    QPushButton:hover{background-color:rgb(253,114,109)}");
+        QPushButton* friendBtn;
+        if(friendInf->at(i).contains("group")){
+            friendBtn=new QPushButton(friendInf->at(i));
+            friendBtn->setIcon(QIcon(":/new/prefix1/src/group.png"));
+            friendBtn->setIconSize(QSize(30, 30));
+            friendBtn->setStyleSheet(
+                        "QPushButton{font-family:'微软雅黑';font-size:20px;color:rgb(50,50,50,250);}\
+                        QPushButton{background:rgb(230,230,250);border:1px;border-radius:10px;padding:10px 10px}\
+                        QPushButton:hover{background-color:rgb(253,114,109)}");
+        }
+        else{
+            friendBtn=new QPushButton(friendInf->at(i));
+            friendBtn->setIcon(QIcon(":/new/prefix1/src/Friend.png"));
+            friendBtn->setIconSize(QSize(30, 30));
+            friendBtn->setStyleSheet(
+                        "QPushButton{font-family:'微软雅黑';font-size:20px;color:rgb(50,50,50,250);}\
+                        QPushButton{background:rgb(255,255,255);border:1px;border-radius:10px;padding:10px 10px}\
+                        QPushButton:hover{background-color:rgb(253,114,109)}");
+    }
         friendBtnList.append(friendBtn);
         connect(friendBtn,SIGNAL(clicked()),myMapper,SLOT(map()));
         myMapper->setMapping(friendBtn,friendBtn->text());
@@ -374,6 +493,7 @@ void main_interface::setFriendBtn()
     }
     friendlayout->addStretch();
 }
+
 
 /* 函数名：minBtn_clicked()
  * 功  能：实现窗口最小化

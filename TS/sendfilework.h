@@ -5,6 +5,8 @@
 #include <QTcpSocket>
 #include <QThread>
 
+//文件发送线程
+
 class sendFileWork : public QThread
 {
     Q_OBJECT

@@ -14,6 +14,8 @@
 #include <QSignalMapper>
 #include<QtNetwork/QTcpSocket>
 
+//主界面
+
 enum Direction {
     UP, DOWN, LEFT, RIGHT, LEFTTOP, LEFTBOTTOM, RIGHTBOTTOM, RIGHTTOP, NONE
 };
@@ -33,7 +35,7 @@ private:
     bool m_bPressed=false;
     //按下后当前鼠标位置属性
     QPoint m_point;
-
+    //主界面控件设置
     QList<QPushButton*> friendBtnList;
     QPushButton* minBtn;
     QPushButton* searchBtn;
@@ -45,14 +47,21 @@ private:
     QVBoxLayout* friendlayout;
     QSignalMapper * myMapper;
 
+    //添加好友窗口控件设置
     QWidget* addFriendPatr;
     QPushButton* addFriendBtn;
     QLineEdit* addLine;
     QPushButton* closeAddBtn;
 
+    //创建群聊窗口控件设置
+    QWidget* setGroupPatr;
+    QPushButton* setGroupBtn;
+    QLineEdit* setGroupPatrLine;
+    QPushButton* closeSetGroupBtn;
+
 public:
     QPushButton* closeBtn;
-    QPushButton* exitBtn;
+    QPushButton* groupBtn;
     explicit main_interface(QWidget *parent = nullptr,QTcpSocket *tcpSocket=nullptr);
     ~main_interface()override;
     //声明三个鼠标事件函数
@@ -70,6 +79,7 @@ public slots:
     void on_searchBtn_clicked();
     void on_addFriendBtn_clicked();
     void on_friendChatBtn_click(QString friendName);
+    void on_setGroupBtn_clicked();
     void mainMessages(QString mainMessage);
 };
 

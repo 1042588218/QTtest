@@ -17,6 +17,7 @@ login_interface::login_interface(QWidget *parent,QTcpSocket *tcpSocket)
 {
     this->tcpSocket=tcpSocket;
 
+
     //基本窗口设置
     this->setWindowTitle("登陆界面");
     setFixedSize(540,380);
@@ -34,6 +35,7 @@ login_interface::login_interface(QWidget *parent,QTcpSocket *tcpSocket)
     setMask(bmp);
     setWindowOpacity(0.98);
     this->show();
+
 
     //关闭最小化按钮设置，按钮功能实现
     closeBtn=new QPushButton(this);
@@ -55,6 +57,7 @@ login_interface::login_interface(QWidget *parent,QTcpSocket *tcpSocket)
     minBtn->setGeometry(380,0,75,35);
     minBtn->show();
 
+
     //标签插入项目图标
     Main=new QLabel(this);
     QString filename(":/new/prefix1/src/logo.png");
@@ -63,6 +66,7 @@ login_interface::login_interface(QWidget *parent,QTcpSocket *tcpSocket)
     Main->setGeometry(220,45,100,100);
     Main->setPixmap(QPixmap::fromImage(*img));
     Main->show();
+
 
     //实现账号和密码输入栏
     idLab=new QLabel("账号：",this);
@@ -97,6 +101,7 @@ login_interface::login_interface(QWidget *parent,QTcpSocket *tcpSocket)
     inLayout->setContentsMargins(100,145,100,100);
     setLayout(inLayout);
 
+
     //实现登录、注册、找回按钮
     loginBtn=new QPushButton("登录",this);
     registeredBtn=new QPushButton("注册",this);
@@ -119,10 +124,15 @@ login_interface::login_interface(QWidget *parent,QTcpSocket *tcpSocket)
 
 }
 
+
+/* 函数名：~login_interface()
+ * 功  能：析构函数
+ */
 login_interface::~login_interface()
 {
 
 }
+
 
 /* 函数名：mouseReleaseEvent(QMouseEvent *event)
  * 函数名：mousePressEvent(QMouseEvent *event)
@@ -161,6 +171,7 @@ void login_interface::minBtn_clicked()
     }
 }
 
+
 /* 函数名：on_loginBtn_clicked()
  * 功  能：实现登录操作
  */
@@ -177,6 +188,7 @@ void login_interface::on_loginBtn_clicked()
     tcpSocket->write(data.toLatin1());
 }
 
+
 /* 函数名：on_registeredBtn_clicked()
  * 功  能：实现注册操作
  */
@@ -190,6 +202,7 @@ void login_interface::on_registeredBtn_clicked()
     QString data=as+"#"+userName+"#"+passward;
     tcpSocket->write(data.toLatin1());
 }
+
 
 /* 函数名：on_registeredBtn_clicked()
  * 功  能：接受注册、登陆的信息，并对登录的结果进行判断

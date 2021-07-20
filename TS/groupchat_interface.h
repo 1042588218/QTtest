@@ -1,5 +1,5 @@
-#ifndef CHAT_INTERFACE_H
-#define CHAT_INTERFACE_H
+#ifndef GROUPCHAT_INTERFACE_H
+#define GROUPCHAT_INTERFACE_H
 #pragma once
 #include <QObject>
 #include <QWidget>
@@ -10,12 +10,10 @@
 #include<QtNetwork/QTcpSocket>
 #include <QMessageBox>
 #include<QTextBrowser>
-#include "sendfilework.h"
-#include "recvfile.h"
 
-//聊天界面
+//群聊界面
 
-class chat_interface : public QWidget
+class groupChat_interface : public QWidget
 {
     Q_OBJECT
 private:
@@ -29,33 +27,40 @@ private:
     QPushButton* minBtn;
     QTextBrowser* chatHistory;
     QTextEdit* chatMessage;
-    QPushButton* sendFile;
-    QPushButton* deletFriend;
+    QPushButton* groupFriend;
+    QPushButton* quitGroup;
     QPushButton* closeChatBtn;
     QPushButton* sendBtn;
     QPushButton* backgroundBtn;
     QString* userName;
     QLabel* chatFriendLab;
     QLabel* chatPic;
+    //群聊管理界面控件设置
+    QWidget* management;
+    QPushButton* manageCloseBtn;
+    QPushButton* manegeMinBtn;
+    QTextBrowser* manegeTextBrowser;
+    QLineEdit* manegeLineEdit;
+    QPushButton* addBtn;
+    QPushButton* deleteBtn;
 
 public:
-    explicit chat_interface(QWidget *parent = nullptr,QTcpSocket *tcpSocket=nullptr);
-    ~chat_interface() override;
+    groupChat_interface(QWidget *parent = nullptr,QTcpSocket *tcpSocket=nullptr);
+    ~groupChat_interface() override;
     //声明三个鼠标事件函数
     void mouseMoveEvent(QMouseEvent *event) override;
     void mousePressEvent(QMouseEvent *event) override;
     void mouseReleaseEvent(QMouseEvent *event) override;
 
-signals:
-    void sendFileSignal(QString,QString);
-    void recvFileSignal(QStringList);
 public slots:
-    void chatMessages(QString chatMessage);
+    void groupChatMessages(QString chatMessage);
     void minBtn_clicked();
-    void on_deletFriend_clicked();
-    void on_sendBtn_clicked();
     void autoScroll();
-    void on_sendFile_clicked();
+    void on_sendBtn_clicked();
+    void on_quitGroup_clicked();
+    void on_groupFriend_clicked();
+    void on_addBtn_clicked();
+    void on_deletBtn_clicked();
 };
 
-#endif // CHAT_INTERFACE_H
+#endif // GROUPCHAT_INTERFACE_H

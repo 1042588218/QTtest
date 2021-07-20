@@ -18,6 +18,8 @@ chat_interface::chat_interface(QWidget *parent,QTcpSocket *tcpSocket)
 {
     this->tcpSocket=tcpSocket;
     userName=new QString;
+
+
     //基本窗口设置
     this->setWindowTitle("聊天界面");
     setFixedSize(1000,800);
@@ -41,6 +43,7 @@ chat_interface::chat_interface(QWidget *parent,QTcpSocket *tcpSocket)
     chatPic->setGeometry(5,5,100,100);
     chatFriendLab=new QLabel;
 
+
     //关闭最小化按钮设置，按钮功能实现
     closeBtn=new QPushButton(this);
     closeBtn->setText("×");
@@ -61,6 +64,8 @@ chat_interface::chat_interface(QWidget *parent,QTcpSocket *tcpSocket)
     minBtn->setGeometry(840,0,75,35);
     minBtn->show();
 
+
+    //背景美化按钮
     backgroundBtn=new QPushButton(this);
     backgroundBtn->setFocusPolicy(Qt::NoFocus);
     backgroundBtn->setStyleSheet(
@@ -69,6 +74,8 @@ chat_interface::chat_interface(QWidget *parent,QTcpSocket *tcpSocket)
     backgroundBtn->setDisabled(true);
     backgroundBtn->setGeometry(10,70,980,720);
 
+
+    //聊天主体控件设计
     chatHistory=new QTextBrowser(this);
     //chatHistory->setStyleSheet("QTextBrowser{font-family:'微软雅黑';font-size:25px;color:rgb(55,55,55,200);}");
     connect(chatHistory, SIGNAL(cursorPositionChanged()),this, SLOT(autoScroll()));
@@ -98,6 +105,9 @@ chat_interface::chat_interface(QWidget *parent,QTcpSocket *tcpSocket)
                 QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
                 QPushButton:hover{background-color:rgb(253,114,109)}");
     connect(sendBtn,SIGNAL(clicked()),this,SLOT(on_sendBtn_clicked()));
+
+
+    //聊天主体部分布局设置
     QHBoxLayout* deletlayout=new QHBoxLayout;
     deletlayout->addStretch();
     deletlayout->addWidget(deletFriend);
@@ -117,10 +127,10 @@ chat_interface::chat_interface(QWidget *parent,QTcpSocket *tcpSocket)
     mainlayout->setContentsMargins(20,80,20,20);
     setLayout(mainlayout);
 
+
     //发送文件多线程相关部分
     // 创建任务对象
     sendFileWork* worker = new sendFileWork(nullptr);
-
     worker->start();
     connect(worker, &sendFileWork::over, this, [=](){
          // 资源释放
@@ -128,6 +138,7 @@ chat_interface::chat_interface(QWidget *parent,QTcpSocket *tcpSocket)
     });
     connect(this, &chat_interface::sendFileSignal, worker, &sendFileWork::sendFile);
     connect(sendFile,SIGNAL(clicked()),this,SLOT(on_sendFile_clicked()));
+
 
     //接收文件多线程相关部分
     RecvFile* recv=new RecvFile;
@@ -140,17 +151,22 @@ chat_interface::chat_interface(QWidget *parent,QTcpSocket *tcpSocket)
     connect(this, &chat_interface::recvFileSignal, recv, &RecvFile::recv);
 }
 
+
+/* 函数名：~chat_interface()
+ * 功  能：析构函数
+ */
 chat_interface::~chat_interface()
 {
 
 }
+
 
 /* 函数名：chatMessages(QString chatMessage)
  * 功  能：接收并处理widget与chat部分相关的信息
  */
 void chat_interface::chatMessages(QString chatMessage)
 {
-    //qDebug()<<chatMessage;
+    qDebug()<<chatMessage;
     QString data=chatMessage;
     QStringList* list=new QStringList(data.split("#"));
     if((*list).contains("rootFileSend")){
@@ -222,6 +238,7 @@ void chat_interface::chatMessages(QString chatMessage)
     this->show();
 }
 
+
 /* 函数名：mouseReleaseEvent(QMouseEvent *event)
  * 函数名：mousePressEvent(QMouseEvent *event)
  * 函数名：mouseMoveEvent(QMouseEvent *event)
@@ -232,7 +249,6 @@ void chat_interface::mouseReleaseEvent(QMouseEvent *event)
     Q_UNUSED(event);
     m_bPressed = false;
 }
-
 
 void chat_interface::mousePressEvent(QMouseEvent *event)
 {
@@ -249,6 +265,7 @@ void chat_interface::mouseMoveEvent(QMouseEvent *event)
         move(event->pos() - m_point + pos());//移动当前窗口
 }
 
+
 /* 函数名：minBtn_clicked()
  * 功  能：实现窗口最小化
  */
@@ -259,6 +276,7 @@ void chat_interface::minBtn_clicked()
     }
 }
 
+
 /* 函数名：on_deletFriend_clicked()
  * 功  能：实现好友的删除功能
  */
@@ -268,6 +286,7 @@ void chat_interface::on_deletFriend_clicked()
     QString data=es+"#"+userName+"#"+chatFriendLab->text();
     tcpSocket->write(data.toLatin1());
 }
+
 
 /* 函数名：on_sendBtn_clicked()
  * 功  能：实现发送消息功能
@@ -282,17 +301,24 @@ void chat_interface::on_sendBtn_clicked()
     QString current_date =current_date_time.toString("MM.dd hh:mm:ss");
     QString fs="f";
     QString data=fs+"#"+chatFriendLab->text()+"#"+userName+"#"+current_date+"#"+chatMessage->toPlainText();
-    qDebug()<<current_date;
     chatMessage->clear();
     tcpSocket->write(data.toUtf8());
 }
 
+
+/* 函数名：autoScroll()
+ * 功  能：实现聊天历史消息部分的自动滚动
+ */
 void chat_interface::autoScroll()
 {
     chatHistory->moveCursor(QTextCursor::End);  //将接收文本框的滚动条滑到最下面
 
 }
 
+
+/* 函数名：on_sendFile_clicked()
+ * 功  能：实现发送文件功能
+ */
 void chat_interface::on_sendFile_clicked()
 {
     QString path = QFileDialog::getOpenFileName();

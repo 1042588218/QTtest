@@ -10,6 +10,8 @@
 #include<QtNetwork/QTcpSocket>
 #include <QMessageBox>
 
+//登录界面
+
 class login_interface : public QWidget
 {
     Q_OBJECT
@@ -21,7 +23,7 @@ private:
     bool m_bPressed=false;
     //按下后当前鼠标位置属性
     QPoint m_point;
-
+    //主界面控件设置
     QPushButton* closeBtn;
     QPushButton* minBtn;
     QLabel* Main;

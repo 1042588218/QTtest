@@ -4,5 +4,6 @@
         <file>src/Friend.png</file>
         <file>src/welcome.png</file>
         <file>src/chat.png</file>
+        <file>src/group.png</file>
     </qresource>
 </RCC>

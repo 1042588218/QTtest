@@ -6,6 +6,10 @@ RecvFile::RecvFile(QObject *parent) : QThread(parent)
 {
 }
 
+
+/* 函数名：recv(QStringList data)
+ * 功  能：用于完成文件接收
+ */
 void RecvFile::recv(QStringList data)
 {
     QFile* file = new QFile("D:/QT/recv.txt");

@@ -32,7 +32,8 @@ SOURCES += \
     main_interface.cpp \
     chat_interface.cpp \
     sendfilework.cpp \
-    recvfile.cpp
+    recvfile.cpp \
+    groupchat_interface.cpp
 
 HEADERS += \
         widget.h \
@@ -40,7 +41,8 @@ HEADERS += \
     main_interface.h \
     chat_interface.h \
     sendfilework.h \
-    recvfile.h
+    recvfile.h \
+    groupchat_interface.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

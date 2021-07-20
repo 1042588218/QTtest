@@ -4,6 +4,8 @@
 #include <QThread>
 #include <QTcpSocket>
 
+//文件接收线程
+
 class RecvFile : public QThread
 {
     Q_OBJECT
