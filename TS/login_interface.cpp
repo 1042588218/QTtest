@@ -100,27 +100,20 @@ login_interface::login_interface(QWidget *parent,QTcpSocket *tcpSocket)
     //实现登录、注册、找回按钮
     loginBtn=new QPushButton("登录",this);
     registeredBtn=new QPushButton("注册",this);
-    findbaceBtn=new QPushButton("找回",this);
     loginBtn->setStyleSheet("QPushButton{font-family:'微软雅黑';font-size:25px;color:rgb(255,255,255,255);}\
     QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
     QPushButton:hover{background-color:rgb(253,114,109)}");
     QFont* btnFont=new QFont;
     btnFont->setBold(true);
     loginBtn->setFont(*btnFont);
-    loginBtn->setGeometry(60,280,130,50);
+    loginBtn->setGeometry(100,280,130,50);
     loginBtn->show();
     registeredBtn->setStyleSheet("QPushButton{font-family:'微软雅黑';font-size:25px;color:rgb(255,255,255,255);}\
     QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
     QPushButton:hover{background-color:rgb(253,114,109)}");
     registeredBtn->setFont(*btnFont);
-    registeredBtn->setGeometry(205,280,130,50);
+    registeredBtn->setGeometry(310,280,130,50);
     registeredBtn->show();
-    findbaceBtn->setStyleSheet("QPushButton{font-family:'微软雅黑';font-size:25px;color:rgb(255,255,255,255);}\
-    QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
-    QPushButton:hover{background-color:rgb(253,114,109)}");
-    findbaceBtn->setFont(*btnFont);
-    findbaceBtn->setGeometry(350,280,130,50);
-    findbaceBtn->show();
     connect(loginBtn,SIGNAL(clicked()),this,SLOT(on_loginBtn_clicked()));
     connect(registeredBtn,SIGNAL(clicked()),this,SLOT(on_registeredBtn_clicked()));
 

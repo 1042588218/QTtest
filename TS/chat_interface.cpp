@@ -73,11 +73,10 @@ chat_interface::chat_interface(QWidget *parent,QTcpSocket *tcpSocket)
     chatMessage=new QTextEdit(this);
     chatMessage->setStyleSheet("QTextEdit{font-family:'微软雅黑';font-size:25px;color:rgb(55,55,55,200);}");
     chatMessage->setFixedSize(960,150);
-    sendFile=new QPushButton("发送文件",this);
+    sendFile=new QPushButton("",this);
     sendFile->setStyleSheet(
                 "QPushButton{font-family:'微软雅黑';font-size:18px;color:rgb(255,255,255,255);}\
-                QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
-                QPushButton:hover{background-color:rgb(253,114,109)}");
+                QPushButton{background:rgb(245,245,245);border:1px;border-radius:10px;padding:10px 10px}");
     deletFriend=new QPushButton("删除好友",this);
     deletFriend->setStyleSheet(
                 "QPushButton{font-family:'微软雅黑';font-size:18px;color:rgb(255,255,255,255);}\

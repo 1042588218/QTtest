@@ -31,7 +31,6 @@ private:
     QLineEdit* passwordEdit;
     QPushButton* loginBtn;
     QPushButton* registeredBtn;
-    QPushButton* findbaceBtn;
 
 public:
     explicit login_interface(QWidget *parent = nullptr,QTcpSocket *tcpSocket=nullptr);
