@@ -10,6 +10,8 @@
 #include<QRegExpValidator>
 #include<QtNetwork/QTcpSocket>
 #include<QDateTime>
+#include <QFileDialog>
+#include<QThread>
 
 chat_interface::chat_interface(QWidget *parent,QTcpSocket *tcpSocket)
     : QWidget(parent)
@@ -73,10 +75,11 @@ chat_interface::chat_interface(QWidget *parent,QTcpSocket *tcpSocket)
     chatMessage=new QTextEdit(this);
     chatMessage->setStyleSheet("QTextEdit{font-family:'微软雅黑';font-size:25px;color:rgb(55,55,55,200);}");
     chatMessage->setFixedSize(960,150);
-    sendFile=new QPushButton("",this);
+    sendFile=new QPushButton("发送文件",this);
     sendFile->setStyleSheet(
                 "QPushButton{font-family:'微软雅黑';font-size:18px;color:rgb(255,255,255,255);}\
-                QPushButton{background:rgb(245,245,245);border:1px;border-radius:10px;padding:10px 10px}");
+                QPushButton{background:rgb(236,65,65);border:1px;border-radius:10px;padding:10px 10px}\
+                QPushButton:hover{background-color:rgb(253,114,109)}");
     deletFriend=new QPushButton("删除好友",this);
     deletFriend->setStyleSheet(
                 "QPushButton{font-family:'微软雅黑';font-size:18px;color:rgb(255,255,255,255);}\
@@ -113,6 +116,28 @@ chat_interface::chat_interface(QWidget *parent,QTcpSocket *tcpSocket)
     mainlayout->addLayout(bottomlayout);
     mainlayout->setContentsMargins(20,80,20,20);
     setLayout(mainlayout);
+
+    //发送文件多线程相关部分
+    // 创建任务对象
+    sendFileWork* worker = new sendFileWork(nullptr);
+
+    worker->start();
+    connect(worker, &sendFileWork::over, this, [=](){
+         // 资源释放
+        //worker->deleteLater();
+    });
+    connect(this, &chat_interface::sendFileSignal, worker, &sendFileWork::sendFile);
+    connect(sendFile,SIGNAL(clicked()),this,SLOT(on_sendFile_clicked()));
+
+    //接收文件多线程相关部分
+    RecvFile* recv=new RecvFile;
+    recv->start();
+    connect(recv, &RecvFile::over, this, [=](){
+         // 资源释放
+        //recv->deleteLater();
+        QMessageBox::information(this,"信息提示","文件接收成功!",QMessageBox::Ok);
+    });
+    connect(this, &chat_interface::recvFileSignal, recv, &RecvFile::recv);
 }
 
 chat_interface::~chat_interface()
@@ -125,9 +150,19 @@ chat_interface::~chat_interface()
  */
 void chat_interface::chatMessages(QString chatMessage)
 {
-    qDebug()<<chatMessage;
+    //qDebug()<<chatMessage;
     QString data=chatMessage;
     QStringList* list=new QStringList(data.split("#"));
+    if((*list).contains("rootFileSend")){
+        emit(recvFileSignal(*list));
+        return;
+    }
+    if((*list).last()=="rootFileSendSuccess"||(*list).first()=="FileSendSuccessf"){
+        QMessageBox::information(this,"信息提示","文件发送成功!",QMessageBox::Ok);
+    }
+    else if((*list).last()=="rootFileSendFail"||(*list).first()=="FileSendFailf"){
+        QMessageBox::information(this,"信息提示","该用户未上线!",QMessageBox::Ok);
+    }
     if((*list)[1]=="Esuccess"){
         QMessageBox::information(this,"信息提示","删除成功!",QMessageBox::Ok);
         this->close();
@@ -245,7 +280,6 @@ void chat_interface::on_sendBtn_clicked()
     }
     QDateTime current_date_time =QDateTime::currentDateTime();
     QString current_date =current_date_time.toString("MM.dd hh:mm:ss");
-    qDebug()<<current_date;
     QString fs="f";
     QString data=fs+"#"+chatFriendLab->text()+"#"+userName+"#"+current_date+"#"+chatMessage->toPlainText();
     qDebug()<<current_date;
@@ -257,5 +291,23 @@ void chat_interface::autoScroll()
 {
     chatHistory->moveCursor(QTextCursor::End);  //将接收文本框的滚动条滑到最下面
 
+}
+
+void chat_interface::on_sendFile_clicked()
+{
+    QString path = QFileDialog::getOpenFileName();
+    if(path.isEmpty())
+    {
+        QMessageBox::warning(this, "打开文件", "选择的文件路径不能为空!");
+        return;
+    }
+    QDateTime current_date_time =QDateTime::currentDateTime();
+    QString current_date =current_date_time.toString("MM.dd hh:mm:ss");
+    QString fs="f";
+    QString data=fs+"#"+chatFriendLab->text()+"#"+userName+"#"+current_date+"#"+path;
+    tcpSocket->write(data.toUtf8());
+    QString FileSend="FileSend";
+    data=FileSend+"#"+userName+"#"+chatFriendLab->text()+"#"+path+"#";
+    emit(sendFileSignal(path,data));
 }
 

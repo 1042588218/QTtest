@@ -10,6 +10,8 @@
 #include<QtNetwork/QTcpSocket>
 #include <QMessageBox>
 #include<QTextBrowser>
+#include "sendfilework.h"
+#include "recvfile.h"
 
 class chat_interface : public QWidget
 {
@@ -42,13 +44,15 @@ public:
     void mouseReleaseEvent(QMouseEvent *event) override;
 
 signals:
-
+    void sendFileSignal(QString,QString);
+    void recvFileSignal(QStringList);
 public slots:
     void chatMessages(QString chatMessage);
     void minBtn_clicked();
     void on_deletFriend_clicked();
     void on_sendBtn_clicked();
     void autoScroll();
+    void on_sendFile_clicked();
 };
 
 #endif // CHAT_INTERFACE_H

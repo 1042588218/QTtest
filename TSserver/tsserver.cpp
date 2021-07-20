@@ -57,10 +57,23 @@ void TSserver::receiveData()
         if(list[0]=="d"){
             sendData+="#"+list[1]+"#"+list[2]+beginChat(list[1],list[2]);
         }
+        else if(list[0]=="FileSend"){
+            if(map.contains(list[2])){
+                sendData="FileSendSuccess";
+                map.value(list[1])->write(sendData.toUtf8());
+                map.value(list[2])->write(data.toUtf8());
+                return;
+            }
+            else{
+                sendData="FileSendFail";
+                map.value(list[1])->write(sendData.toUtf8());
+                qDebug()<<sendData;
+                return;
+            }
+        }
         else if(list[0]=="f"){
             if(ret){
                 sendData+="#"+list[1]+"#"+list[2]+beginChat(list[1],list[2]);
-                qDebug()<<154236444;
                 QString tmp="f"+("#"+list[2]+"#"+list[1]+beginChat(list[1],list[2]));
                 if(map.contains(list[1]))
                     map.value(list[1])->write(tmp.toUtf8());

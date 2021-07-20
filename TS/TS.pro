@@ -30,13 +30,17 @@ SOURCES += \
         widget.cpp \
     login_interface.cpp \
     main_interface.cpp \
-    chat_interface.cpp
+    chat_interface.cpp \
+    sendfilework.cpp \
+    recvfile.cpp
 
 HEADERS += \
         widget.h \
     login_interface.h \
     main_interface.h \
-    chat_interface.h
+    chat_interface.h \
+    sendfilework.h \
+    recvfile.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

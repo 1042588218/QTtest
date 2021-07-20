@@ -69,7 +69,7 @@ void Widget::displayError(QAbstractSocket::SocketError)
 void Widget::readMessages()
 {
     QString data=tcpSocket->readAll();
-    //qDebug()<<data;
+    qDebug()<<data;
     QStringList list=data.split("#");
     if(list[0]=="a" ||list[0]=="b")
         emit(sendToLogin(data));
@@ -83,7 +83,7 @@ void Widget::readMessages()
         emit(sendToMain(data));
         emit(sendToChat(data));
     }
-    else if(list[0]=="f"){
+    else if(list[0]=="f"||list[0]=="FileSendSuccessf"||list[0]=="FileSendFailf"||list[0]=="FileSend"||list[0]=="FileSendSuccess"||list[0]=="FileSendFail"){
         emit(sendToChat(data));
     }
     else
